@@ -15,6 +15,7 @@ title: Recursos
 - [Strings](strings)
 - [Mathematics](math)
 - [Geometry](geometry)
+- [Square Root Decomposition](sqrtdecomp)
 
 ---
 
