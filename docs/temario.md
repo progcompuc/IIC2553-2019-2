@@ -2,7 +2,7 @@
 title: Temario
 ---
 
-[Index](../index) > ```{{page.title}}```
+[Index](index) > ```{{page.title}}```
 
 # {{page.title}}
 
@@ -39,4 +39,4 @@ title: Temario
     - [Grafos básico (BFS/DFS/camino más corto)](resources/graphs)
     - [Matemática](resources/math)
 
-[Index](../index) > ```{{page.title}}```
+[Index](index) > ```{{page.title}}```
