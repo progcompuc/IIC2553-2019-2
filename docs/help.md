@@ -2,7 +2,7 @@
 title: Necesitas ayuda? Lee esto
 ---
 
-[Index](../index) > ```{{page.title}}```
+[Index](index) > ```{{page.title}}```
 
 # Auxilio, estoy pegad@, no sé resolver un problema, no se me ocurre, no sé implementarlo, ¿qué puedo hacer?
 
@@ -15,4 +15,4 @@ Sin embargo, sabemos que la timidez es un problema y no tod@s se sienten cómod@
  * **Google Docs con explicaciones**. como sale explicado en el [apartado sobre bonuses](getting-started/how-course-works#3-bonuses), existe un bonus para ganar décimas que consiste en explicar soluciones de problemas (por favor leer el [apartado sobre bonuses](getting-started/how-course-works#3-bonuses) para más detalles). Si bien es un bonus, la idea es que a la vez sirva como un medio solidario para la difusión del conocimiento. Aprovechen estos google docs para enriquecerse con la sabiduría de los demás ([éticamente](ethics), por supuesto) y a la vez para compartir su sabiduría con el resto.
  * **La página del curso** (i.e. esta página), y en general, **internet**: Si te gusta más estudiar por cuenta propia, en esta página encontrarás mucho material de estudio disponible sobre distintos temas (además de todo lo puedas encontrar por tu cuenta en internet).
 
- [Index](../index) > ```{{page.title}}```
+ [Index](index) > ```{{page.title}}```

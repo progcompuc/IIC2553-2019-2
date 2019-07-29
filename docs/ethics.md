@@ -2,7 +2,7 @@
 title: Ética e Integridad Académica
 ---
 
-[Index](../index) > ```{{page.title}}```
+[Index](index) > ```{{page.title}}```
 
 # {{page.title}}
 
@@ -24,4 +24,4 @@ Si llegamos a descubrir una copia, el  **castigo consistirá en lo siguiente**:\
 1) Primera copia: nota_final = max(min(nota_v3, 7) - 3, 1)\\
 2) Segunda copia: nota_final = 1 + causal de eliminación
 
-[Index](../index) > ```{{page.title}}```
+[Index](index) > ```{{page.title}}```
