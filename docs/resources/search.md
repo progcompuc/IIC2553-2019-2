@@ -1,6 +1,8 @@
 ---
-title: "Búsqueda"
+title: "(Bi|Ter)nary Search"
 ---
+
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
 # {{page.title}}
 
@@ -21,5 +23,4 @@ title: "Búsqueda"
 - <https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Search/TernarySearch.cpp>
 - **Cómo reducir Ternary Search a Binary Search**: [Codeforces - The great ternary search hoax](http://codeforces.com/blog/entry/11497)
 
-[Índice de recursos](resources)\\
-[Index](../index)
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```

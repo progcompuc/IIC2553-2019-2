@@ -1,12 +1,19 @@
 ---
-title: Introduction
+title: Introducción
 ---
-# Introducción
 
-En este curso aprenderás las técnicas y habilidades necesarias para resolver problemas algorítmicos de [programación competitiva](https://es.wikipedia.org/wiki/Usuario:Ltaravilse/Programaci%C3%B3n_competitiva) tales como los que aparecen en la [ACM ICPC](https://en.wikipedia.org/wiki/ACM_International_Collegiate_Programming_Contest), [Codeforces](http://www.codeforces.com/), [Codechef](https://www.codechef.com/), [Topcoder](https://www.topcoder.com/) y [HackerRank](https://www.hackerrank.com/). La mayor parte de tu tiempo te la pasarás escribiendo programas para resolver problemas.
+[Index](../index) > ```{{page.title}}```
 
-L@s mejores estudiantes podrán ser seleccionad@s para representar a la universidad en la [ICPC South America/South Finals](https://icpc.baylor.edu/regionals/finder/southamerica-south-2018), la competencia regional en la que Chile participa durante noviembre cada año, e inclusive posiblemente clasificar a las [World Finals](https://icpc.baylor.edu/).
+# {{page.title}}
 
-Sin embargo, las habilidades que adquirirás en este curso van mucho más allá que simplemente ganar competencias. Muchos de los algoritmos y técnicas que verás son clásicos y como tales forman parte de la "cultura general algorítmica" a la que como estudiante de Ciencia de la Computación se espera que seas expuest@ durante tu formación. Pero además también aprenderás a pensar algorítmicamente de un modo más profundo, ya que la gran mayoría de los problemas te exigirán idear un nuevo algoritmo de forma creativa e ingeniosa, en lugar de aplicar un algoritmo clásico de forma directa. Ejercitarás habilidades como descomponer problemas complejos en subproblemas más simples, considerar diferentes estrategias frente a un mismo problema, planificar soluciones paso por paso considerando aspectos como memoria disponible, tiempo de ejecución y casos bordes. En definitiva, aprenderás a **pensar cuidadosamente antes de programar**. Estas habilidades serán de gran valor en tus otros cursos, en entrevistas de trabajo (Google, Microsoft, Facebook, etc.), y a la larga en tu carrera profesional.
+Este es un curso práctico que prepara a los estudiantes para resolver problemas algorítmicos de [programación competitiva](https://es.wikipedia.org/wiki/Usuario:Ltaravilse/Programaci%C3%B3n_competitiva), como los que aparecen en competencias como la [ACM ICPC](https://en.wikipedia.org/wiki/ACM_International_Collegiate_Programming_Contest), [Google CodeJam](https://en.wikipedia.org/wiki/Google_Code_Jam), [Facebook Hacker Cup](https://en.wikipedia.org/wiki/Facebook_Hacker_Cup) y similares a los que preguntan empresas como Amazon y Google en sus entrevistas de trabajo. Los estudiantes ejercitarán sus conocimientos de estructuras de datos y algoritmos, su ingenio y sus habilidades de programación mediante la resolución semanal de problemas de programación competitiva. Además, los alumnos podrán optar a un cupo para representar a la Universidad en la competencia regional de la ICPC celebrada en Noviembre de cada año, y eventualmente en la ICPC World Final, celebrada en Abril del año siguiente.
 
-[Index](../index)
+Al tratarse de un curso práctico, la mayoría de tu tiempo te la pasarás programando. No obstante, las habilidades que adquirirás acá van más allá que simplemente ganar competencias:
+- Repasarás, expandirás y profundizarás tus conocimientos en estructuras de datos y algoritmos.
+- Te volverás un programador o programadora mucho más cuidados@ y precis@. Desarrollarás el hábito de considerar siempre los límites de tiempo y memoria al escribir tus códigos, así como estar siempre preocupad@ de los casos bordes.
+- Ejercitarás tus habilidades de debugging, y más importante aún, aprenderás a identificar cuándo hay riesgo de bugs y cómo escribir buenos códigos que permitan prevenirlos.
+- Ejercitarás la habilidad de **pensar creativamente** antes de programar. Con el tiempo verás cómo los problemas te obligarán a pensar de forma ingeniosa y creativa para diseñar soluciones eficientes y correctas, que cumplan con todas las restricciones.
+
+Todas estas habilidades son sumamente útiles no solo aquí sino también en los demás cursos de la malla de Ciencia de Computación, además de ser ampliamente valoradas y buscadas por empresas de la industria de software (ej. Google, Facebook, Microsoft) y a la larga muy útiles en tu carrera profesional.
+
+[Index](../index) > ```{{page.title}}```

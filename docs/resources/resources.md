@@ -1,16 +1,14 @@
 ---
-title: Resources
+title: Recursos
 ---
+[Index](../index) > ```{{page.title}}```
 
-# Recursos
+## [Para aprender C++](cpp)
 
-##### [Index](../index)
+## Recursos para temas específicos
 
-## Material para Temas Específicos
-
-- Trucos para problemas Ad-Hoc: <https://codeforces.com/blog/entry/48417>
 - [Backtracking](backtracking)
-- [Search](search)
+- [Binary & Ternary Search](search)
 - [Data Structures](data_structures)
 - [Dynamic Programming (DP)](dp)
 - [Graphs](graphs)
@@ -20,7 +18,7 @@ title: Resources
 
 ---
 
-## General
+## Recursos generales
 
 - Canales de Youtube con muchas explicaciones:
   - [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
@@ -71,11 +69,9 @@ title: Resources
 ## Soluciones, Inputs y Outputs oficiales de Regionales
 
 - Latinoamérica:
-  - <http://maratona.ime.usp.br/antigas18.html>
+  - <http://maratona.ime.usp.br/>
 - Norteamérica:
   - <http://acmgnyr.org>
   - <http://cs.ecs.baylor.edu/~hamerly/icpc/>
 
-## [Para aprender C++](cpp)
-
-[Index](../index)
+[Index](../index) > ```{{page.title}}```

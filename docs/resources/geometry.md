@@ -1,6 +1,7 @@
 ---
 title: "Geometría"
 ---
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
 # {{page.title}}
 
@@ -72,5 +73,4 @@ title: "Geometría"
   - <https://wcipeg.com/wiki/Convex_hull_trick>
   - <https://stackoverflow.com/questions/17834699/what-is-convex-hull-trick-exactly>
 
-[Índice de recursos](resources)\\
-[Index](../index)
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```

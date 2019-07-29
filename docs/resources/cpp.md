@@ -1,15 +1,18 @@
 ---
 title: C++
 ---
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```
+
 # C++
-Ejemplo de archivo:
+Ejemplo de Hello World:
 ```cpp
-{%include example1.cpp %}
+{%include helloworld.cpp %}
 ```
-Otro ejemplo:
+Ejemplo de Template:
 ```cpp
-{%include Programacion-Competitiva/Test.cpp%}
+{%include template.cpp %}
 ```
+
 ## Para aprender C++ (MUY RECOMENDADO)
  * INPUT / OUTPUT:
    * [Yet again on C++ input/output](http://codeforces.com/blog/entry/5217)
@@ -88,4 +91,4 @@ Otro ejemplo:
   * [Structure and Class differences in C++ C ++ Tutorial Mr. Kishore](https://youtu.be/W1f3TelobMg)
   * [CLASSES vs STRUCTS in C++](https://youtu.be/fLgTtaqqJp0)
 
-[Back](resources)
+[Index](../index) > [Recursos](resources) > ```{{page.title}}```

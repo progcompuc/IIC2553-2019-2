@@ -1,17 +1,42 @@
 ---
 title: Temario
 ---
+
+[Index](../index) > ```{{page.title}}```
+
 # {{page.title}}
 
-## Individual
-* Implementación, Fuerza Bruta, [Backtracking](resources/backtracking) (3 semanas)
-* [Binary Search](resources/search#Binary-Search) (2 semanas)
-* [DP básico](resources/dp#¿Qué#&32;es#&32;DP?) (2 semanas)
-* [Grafos básico](resources/graphs) (3 semanas)
-* [Geometría básica](resources/geometry) (1 semana)
-* [Matemática](resources/math) (3 semanas)
+- [Estructuras de Datos](resources/data_structures) (4 semanas)
+    - Estructuras de datos en C++ STL (para llegar y usar)
+    - Sparse Tables
+    - Segment Tree
+    - Segment Tree Lazy
+    - Fenwick Tree
+    - Fenwick Tree 2D
+    - Union Find
+    - Treap (?)
+- [Algoritmos de Grafos](resources/graphs) (3 semanas)
+    - MST (minimun spanning tree)
+    - Aristas de Corte, Vértices de Corte y Componentes Biconexas
+    - SCC (strongly connected components)
+    - LCA (lowest common ancestor)
+    - Flujo máximo y aplicaciones
+- [Algoritmos de Strings](resources/strings) (2 semanas)
+    - Trie
+    - Suffix Array    
+    - Rolling Hashing
+    - KMP (Knuth Morris Pratt)
+    - Shortest Repeating Cycle
+- [Geometría](resources/geometry) (1 o 2 semanas)
+    - Producto punto y producto cruz
+    - Cálculo de áreas
+    - Convex Hull
+    - Sweep Lines
+- Repaso de temas varios vistos el primer semestre
+    - [Binary & Ternary Search](resources/search)
+    - [Backtracking](resources/backtracking)
+    - [DP (programación dinámica)](resources/dp)
+    - [Grafos básico (BFS/DFS/camino más corto)](resources/graphs)
+    - [Matemática](resources/math)
 
-## Grupal
-* Tutifruti (de todo, resto del semestre)
-
-[Index](index)
+[Index](../index) > ```{{page.title}}```
