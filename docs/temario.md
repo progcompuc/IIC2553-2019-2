@@ -17,7 +17,7 @@ title: Temario
     - Treap (?)
 - [Algoritmos de Grafos](resources/graphs) (3 semanas)
     - MST (minimun spanning tree)
-    - Aristas de Corte, Vértices de Corte y Componentes Biconexas
+    - Puntos de Articulación, Aristas de Corte y Componentes Biconexas
     - SCC (strongly connected components)
     - LCA (lowest common ancestor)
     - Flujo máximo y aplicaciones
