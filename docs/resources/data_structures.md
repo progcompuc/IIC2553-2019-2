@@ -6,7 +6,7 @@ title: "Estructuras de Datos"
 
 # {{page.title}}
 
-## C++ Data Structures (para llegar y usar):
+## C++ STL Data Structures (para llegar y usar):
 
 - **Sequence Containers**:
     - [youtube: Introduction of STL #2: Sequence Containers](https://www.youtube.com/watch?v=gxZJ5JNuWMY&feature=youtu.be) (el video cubre vector, deque, list, forward list, array)
