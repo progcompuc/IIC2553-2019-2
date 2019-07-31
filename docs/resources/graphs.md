@@ -87,6 +87,23 @@ title: "Grafos"
     - (youtube) [Correctness of Kruskal's Algorithm](https://www.youtube.com/watch?v=S9PIItOUyzA)
 - [Códigos de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/MinimumSpanningTree.cpp)
 
+## Lowest Common Ancestor (LCA):
+- General Overview of Methods:
+    - <http://codeforces.com/blog/entry/16221> (skip to the LCA part)
+- (youtube) [Episode 28 - Sparse Tables and LCA](https://www.youtube.com/watch?v=EKcQt-74bNw)
+- Método 1 (**RECOMENDADO**): Binary Lifting Method (aka [jump pointers](https://en.wikipedia.org/wiki/Level_ancestor_problem#Jump_pointer_algorithm)):
+    - [Codeforces: Lowest common ancestor's binary lifting method for path queries on trees](http://codeforces.com/blog/entry/22325) Nota: como dice el post, este método es muy útil ya que se puede adaptar para computar consultas sobre caminos entre 2 nodos en un árbol.
+    - (youtube) [Episode 17 - Binary Lifting](https://www.youtube.com/watch?v=kOfa6t8WnbI)
+- Método 2: Euler Tour + Range Minimun Query:
+    - [Topcoder: range minimum query and lowest common ancestor](https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/)
+    - (youtube) [Sparse Table Algorithm Range Minimum Query](https://www.youtube.com/watch?v=c5O7E_PDO4U)
+- [Códigos de ejemplo (ambos métodos)](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LCA.cpp)
+
+- Level Ancestor:
+  - <https://en.wikipedia.org/wiki/Level_ancestor_problem>
+  - <https://www.quora.com/Why-does-storing-log-N-pointers-work-in-the-jump-pointer-solution-of-the-level-ancestor-problem>
+  - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LA.cpp)
+
 ## Puntos de articulación, Aristas de corte y Componentes Biconexas:
 - (youtube) [Graph Theory: 53. Cut-Vertices](https://www.youtube.com/watch?v=BxAgmaLWaq4)
 - (youtube) [Graph Theory: 55. Bridges and Blocks](https://www.youtube.com/watch?v=iGsxKUzW3cs)
@@ -113,24 +130,6 @@ Biconnected components](http://web.iitd.ac.in/~bspanda/biconnectedMTL776.pdf)
     - (cp-algorithms) [Finding strongly connected components, Building condensation graph](https://cp-algorithms.com/graph/strongly-connected-components.html)
 - (quora) [Diferencias entre Tarjan y Kosaraju](https://www.quora.com/Is-there-any-difference-or-advantages-or-disadvantages-between-Kosarajus-algorithm-and-Tarjans-algorithm-for-finding-strongly-connected-component-Which-one-is-most-useful)
 - [Códigos de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/SCC.cpp)
-
-## Lowest Common Ancestor (LCA):
-- General Overview of Methods:
-    - <http://codeforces.com/blog/entry/16221> (skip to the LCA part)
-- (youtube) [Episode 28 - Sparse Tables and LCA](https://www.youtube.com/watch?v=EKcQt-74bNw)
-- Método 1 (**RECOMENDADO**): Binary Lifting Method (aka [jump pointers](https://en.wikipedia.org/wiki/Level_ancestor_problem#Jump_pointer_algorithm)):
-    - [Codeforces: Lowest common ancestor's binary lifting method for path queries on trees](http://codeforces.com/blog/entry/22325) Nota: como dice el post, este método es muy útil ya que se puede adaptar para computar consultas sobre caminos entre 2 nodos en un árbol.
-    - (youtube) [Episode 17 - Binary Lifting](https://www.youtube.com/watch?v=kOfa6t8WnbI)
-- Método 2: Euler Tour + Range Minimun Query:
-    - [Topcoder: range minimum query and lowest common ancestor](https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/)
-    - (youtube) [Sparse Table Algorithm Range Minimum Query](https://www.youtube.com/watch?v=c5O7E_PDO4U)
-- [Códigos de ejemplo (ambos métodos)](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LCA.cpp)
-
-- Level Ancestor:
-  - <https://en.wikipedia.org/wiki/Level_ancestor_problem>
-  - <https://www.quora.com/Why-does-storing-log-N-pointers-work-in-the-jump-pointer-solution-of-the-level-ancestor-problem>
-  - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LA.cpp)
-
 
 ## Flujo Máximo y aplicaciones:
 - (youtube) [Episode 33 - Maximum Flow Intuition](https://www.youtube.com/watch?v=K1i-wP82Zdo)
