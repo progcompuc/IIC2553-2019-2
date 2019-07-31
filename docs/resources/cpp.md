@@ -61,7 +61,7 @@ Ejemplo de secuencia de pasos para resolver un problema en C++ en Windows usando
 	- [Learn C++ 11 in 20 Minutes - Part I](https://youtu.be/U6mgsPqV32A)
 	- [Learn C++ 11 in 20 Minutes - Part II](https://youtu.be/Lt0ASrloGSE)
 - Los beneficios de usar **references** (&) y **pointers** (\*) (**para no copiar todo por valor y así ser más eficientes**):
-	 - [Diferencia entre references y pointers explicada](http://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_pointerreference.html) **(\<\<\<\< muy buen artículo, 100% recomendado)
+	 - [Diferencia entre references y pointers explicada](http://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_pointerreference.html) **(\<\<\<\< muy buen artículo, 100% recomendado)**
 	 - [geeksforgeeks - Passing vector to a function in C++](https://www.geeksforgeeks.org/passing-vector-function-cpp/)
 	 - [geeksforgeeks - When do we pass arguments by reference or pointer?](https://www.geeksforgeeks.org/when-do-we-pass-arguments-by-reference-or-pointer/)   
 
