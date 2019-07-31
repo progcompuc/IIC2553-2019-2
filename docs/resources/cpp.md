@@ -61,9 +61,10 @@ Ejemplo de secuencia de pasos para resolver un problema en C++ en Windows usando
 	- [Learn C++ 11 in 20 Minutes - Part I](https://youtu.be/U6mgsPqV32A)
 	- [Learn C++ 11 in 20 Minutes - Part II](https://youtu.be/Lt0ASrloGSE)
 - Los beneficios de usar **references** (&) y **pointers** (\*) (**para no copiar todo por valor y así ser más eficientes**):
+	 - [Diferencia entre references y pointers explicada](http://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_pointerreference.html) **(\<\<\<\< muy buen artículo, 100% recomendado)
 	 - [geeksforgeeks - Passing vector to a function in C++](https://www.geeksforgeeks.org/passing-vector-function-cpp/)
 	 - [geeksforgeeks - When do we pass arguments by reference or pointer?](https://www.geeksforgeeks.org/when-do-we-pass-arguments-by-reference-or-pointer/)   
-	 - [Diferencia entre references y pointers explicada](http://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_pointerreference.html)
+
 - [Codeforces - Manejo de Strings en C++](https://codeforces.com/blog/entry/6230) (**buenos tips para cuando tienen que leer input**)
 - [Youtube playlist: lista exhaustiva de videos cubriendo muchísimos aspectos de C++](https://www.youtube.com/playlist?list=PLfVsf4Bjg79Cu5MYkyJ-u4SyQmMhFeC1C)
 - STL: standard template library (buen material sobre la standard library de C++, **MUY RECOMENDADO**)
