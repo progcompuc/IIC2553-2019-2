@@ -11,13 +11,18 @@ title: "Grafos"
 - Slides de Nico Lehmann sobre Grafos (muy buenas):
     - <http://campamento2015.progcomp.cl/material> (revisar la parte Grafos)
     - <http://campamento2016.progcomp.cl/material> (revisar la parte Grafos)
+- (youtube) [Data structures: Introduction to graphs](https://youtu.be/gXgEDyodOJU)
+- (youtube) [Data structures: Properties of Graphs](https://youtu.be/AfYqN3fGapc)
+- (youtube) [Graph Representation part 01 - Edge List](https://youtu.be/ZdY1Fp9dKzs)
+- (youtube) [Graph Representation part 02 - Adjacency Matrix](https://youtu.be/9C2cpQZVRBA)
+- (youtube) [Graph Representation part 03 - Adjacency List](https://youtu.be/k1wraWzqtvQ)
 - (youtube) [Graph Theory: 02. Definition of a Graph](https://www.youtube.com/watch?v=S1Zwhz-MhCs)
 - (youtube) [Graph Theory: 03. Examples of Graphs](https://www.youtube.com/watch?v=lLOvB1qFE1E)
 - (youtube) [Graph Theory: 04. Families of Graphs](https://www.youtube.com/watch?v=71XbdtoG7P8)
 - (youtube) [Graph Theory: 36. Definition of a Tree](https://www.youtube.com/watch?v=QFQlxtz7f6g)
 - Grafo dirigido vs Grafo no-dirigido:
     - (youtube) [Graph Types Directed and Undirected Graph](https://www.youtube.com/watch?v=amaH38_mXK4)
-- [geeksforgeeks: Graph and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
+- (geeksforgeeks) [Graph and its representations](https://www.geeksforgeeks.org/graph-and-its-representations/)
 
 ## Algoritmos de Graph Traversal
 
