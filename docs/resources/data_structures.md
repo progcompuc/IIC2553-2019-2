@@ -9,7 +9,7 @@ title: "Estructuras de Datos"
 ## C++ STL Data Structures (para llegar y usar):
 
 - **Utils**:
-    - pairs & tuples: [doc pairs](http://www.cplusplus.com/reference/utility/pair/), [doc tuples](http://www.cplusplus.com/reference/tuple/), [geeksforgeeks](https://www.geeksforgeeks.org/returning-multiple-values-from-a-function-using-tuple-and-pair-in-c/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/pairs%20%26%20tuples.cpp)
+    - pairs & tuples: [video](https://www.youtube.com/watch?v=33Y_5gOyi3Y), [doc pairs](http://www.cplusplus.com/reference/utility/pair/), [doc tuples](http://www.cplusplus.com/reference/tuple/), [geeksforgeeks](https://www.geeksforgeeks.org/returning-multiple-values-from-a-function-using-tuple-and-pair-in-c/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/pairs%20%26%20tuples.cpp)
     - iterators: [video](https://www.youtube.com/watch?v=vO2AlrBf5rQ), [docu](http://www.cplusplus.com/reference/iterator/), [geeksforgeeks 1](https://www.geeksforgeeks.org/introduction-iterators-c/), [geeksforgeeks 2](https://www.geeksforgeeks.org/iterators-c-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/iterators.cpp)
 
 - **Sequence Containers**:
