@@ -8,6 +8,10 @@ title: "Estructuras de Datos"
 
 ## C++ STL Data Structures (para llegar y usar):
 
+- **Utils**:
+    - pairs & tuples: [doc pairs](http://www.cplusplus.com/reference/utility/pair/), [doc tuples](http://www.cplusplus.com/reference/tuple/), [geeksforgeeks](https://www.geeksforgeeks.org/returning-multiple-values-from-a-function-using-tuple-and-pair-in-c/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/pairs%20%26%20tuples.cpp)
+    - iterators: [video](https://www.youtube.com/watch?v=vO2AlrBf5rQ), [docu](http://www.cplusplus.com/reference/iterator/), [geeksforgeeks 1](https://www.geeksforgeeks.org/introduction-iterators-c/), [geeksforgeeks 2](https://www.geeksforgeeks.org/iterators-c-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/iterators.cpp)
+
 - **Sequence Containers**:
     - [youtube: Introduction of STL #2: Sequence Containers](https://www.youtube.com/watch?v=gxZJ5JNuWMY&feature=youtu.be) (el video cubre vector, deque, list, forward list, array)
     - [youtube: C++ STL Part - 7 : The Container Adapters - Stack, Queue & Priority Queue](https://www.youtube.com/watch?v=VZh8GXQAnxY) (el video cubre stack, queue y priority_queue)
