@@ -11,10 +11,12 @@ title: "Estructuras de Datos"
 - **Sequence Containers**:
     - [youtube: Introduction of STL #2: Sequence Containers](https://www.youtube.com/watch?v=gxZJ5JNuWMY&feature=youtu.be) (el video cubre vector, deque, list, forward list, array)
     - [youtube: C++ STL Part - 7 : The Container Adapters - Stack, Queue & Priority Queue](https://www.youtube.com/watch?v=VZh8GXQAnxY) (el video cubre stack, queue y priority_queue)
-    - vector: [documentación](http://www.cplusplus.com/reference/vector/vector/), [geeksforgeeks](https://www.geeksforgeeks.org/vector-in-cpp-stl/)
-    - queue: [documentación](http://www.cplusplus.com/reference/queue/queue/), [geeksforgeeks](https://www.geeksforgeeks.org/queue-cpp-stl/)
-    - stack: [documentación](http://www.cplusplus.com/reference/stack/stack/), [geeksforgeeks](https://www.geeksforgeeks.org/stack-in-cpp-stl/)  
-    - priority_queue (minheap / maxheap): [documentación](https://en.cppreference.com/w/cpp/container/priority_queue), [geeksforgeeks](https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/)
+    - vector: [documentación](http://www.cplusplus.com/reference/vector/vector/), [geeksforgeeks](https://www.geeksforgeeks.org/vector-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/vector.cpp)
+    - deque: [documentación](http://www.cplusplus.com/reference/deque/deque/), [geeksforgeeks](https://www.geeksforgeeks.org/deque-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/deque.cpp)
+    - queue: [documentación](http://www.cplusplus.com/reference/queue/queue/), [geeksforgeeks](https://www.geeksforgeeks.org/queue-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/queue%20%26%20stack.cpp)
+    - stack: [documentación](http://www.cplusplus.com/reference/stack/stack/), [geeksforgeeks](https://www.geeksforgeeks.org/stack-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/queue%20%26%20stack.cpp)
+    - priority_queue (minheap / maxheap): [documentación](http://www.cplusplus.com/reference/queue/priority_queue/), [geeksforgeeks](https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/priority_queue.cpp)
+    - list (lista doblemente ligada): [documentación](http://www.cplusplus.com/reference/list/list/), [geeksforgeeks](https://www.geeksforgeeks.org/list-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/list.cpp)
 
 - **Associative Containers**:
     - [youtube: Introduction of STL #3: Associative Containers](https://www.youtube.com/watch?v=6iyzPed7FrM&feature=youtu.be) (el video cubre set, multiset, map, multimap)
