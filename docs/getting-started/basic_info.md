@@ -21,6 +21,6 @@ Andrés Ríos (<agrios@uc.cl>)
  \*\* Telegram tiene aplicación de escritorio por si acaso: <https://desktop.telegram.org/>
 
 ### Spreadsheet de notas y asistencia:
-Link a google spreadsheet: _pending_
+[Link a google spreadsheet](https://docs.google.com/spreadsheets/d/1Ty5mMrJmWHTnRGDhUum3pemTJL6FNnlgrM1TWpGa0rc/edit?usp=sharing)
 
 [Index](../index) > ```{{page.title}}```
