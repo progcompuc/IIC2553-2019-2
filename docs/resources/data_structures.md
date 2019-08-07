@@ -24,21 +24,22 @@ title: "Estructuras de Datos"
 
 - **Associative Containers**:
     - [youtube: Introduction of STL #3: Associative Containers](https://www.youtube.com/watch?v=6iyzPed7FrM&feature=youtu.be) (el video cubre set, multiset, map, multimap)
-    - Set: [documentación](http://www.cplusplus.com/reference/set/set/), [geeksforgeeks](https://www.geeksforgeeks.org/set-in-cpp-stl/)
-    - Multiset: [documentación](http://www.cplusplus.com/reference/set/multiset/), [geeksforgeeks](https://www.geeksforgeeks.org/multiset-in-cpp-stl/)
-    - Map: [documentación](http://www.cplusplus.com/reference/map/map/), [geeksforgeeks](https://www.geeksforgeeks.org/map-associative-containers-the-c-standard-template-library-stl/)
-    - Multimap: [documentación](http://www.cplusplus.com/reference/map/multimap/), [geeksforgeeks](https://www.geeksforgeeks.org/multimap-associative-containers-the-c-standard-template-library-stl/)
+    - Set: [documentación](http://www.cplusplus.com/reference/set/set/), [geeksforgeeks](https://www.geeksforgeeks.org/set-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/set%20%26%20multiset.cpp)
+    - Multiset: [documentación](http://www.cplusplus.com/reference/set/multiset/), [geeksforgeeks](https://www.geeksforgeeks.org/multiset-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/set%20%26%20multiset.cpp)
+    - Map: [documentación](http://www.cplusplus.com/reference/map/map/), [geeksforgeeks](https://www.geeksforgeeks.org/map-associative-containers-the-c-standard-template-library-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/map%20%26%20multimap.cpp)
+    - Multimap: [documentación](http://www.cplusplus.com/reference/map/multimap/), [geeksforgeeks](https://www.geeksforgeeks.org/multimap-associative-containers-the-c-standard-template-library-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/map%20%26%20multimap.cpp)
 
 - **Unordered Containers**:
     - [Introduction of STL #4: Unordered Containers](https://www.youtube.com/watch?v=NNLvY9O7ufU) (el video cubre unordered set/multiset/map/multimap)
-    - unordered_set: [documentación](http://www.cplusplus.com/reference/unordered_set/unordered_set/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_set-in-cpp-stl/)
-    - unordered_multiset: [documentación](http://www.cplusplus.com/reference/unordered_set/unordered_multiset/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_multiset-and-its-uses/)
-    - unordered_map: [documentación](http://www.cplusplus.com/reference/unordered_map/unordered_map/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/)
-    - unordered_multimap: [documentación](http://www.cplusplus.com/reference/unordered_map/unordered_multimap/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_multimap-and-its-application/)
+    - unordered_set: [documentación](http://www.cplusplus.com/reference/unordered_set/unordered_set/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_set-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/unordered_set%26multiset.cpp)
+    - unordered_multiset: [documentación](http://www.cplusplus.com/reference/unordered_set/unordered_multiset/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_multiset-and-its-uses/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/unordered_set%26multiset.cpp)
+    - unordered_map: [documentación](http://www.cplusplus.com/reference/unordered_map/unordered_map/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_map-in-cpp-stl/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/unordered_map%26multimap.cpp)
+    - unordered_multimap: [documentación](http://www.cplusplus.com/reference/unordered_map/unordered_multimap/), [geeksforgeeks](https://www.geeksforgeeks.org/unordered_multimap-and-its-application/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/unordered_map%26multimap.cpp)
 
 - **Policy based data structures**:
     - [codeforces: C++ STL: Policy based data structures](https://codeforces.com/blog/entry/11080)
     - [geeksforgeeks: Policy based data structures in g++](https://www.geeksforgeeks.org/policy-based-data-structures-g/)
+    - orderered_set: [geeksforgeeks](https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/ordered_set.cpp)
 
 ## Sparse Table:
 
