@@ -10,7 +10,7 @@ title: "Cómo funciona el curso"
 
 Este curso es 100% práctico. La nota final dependerá de la resolución por parte del alumno de problemas de programación competitiva. Cada semana se publicará un _contest_ (o competencia, en español). Los contests se caracterizan por lo siguiente:
 
-- Se publicarán en [vjudge.net](https://vjudge.net), un sitio web que permite crear competencias utilizando problemas obtenidos de múltiples jueces online, con un scoreboard que se actualiza en tiempo real a medida que los participantes resuelven problemas. Para competir es necesario que te crees una cuenta en [vjudge.net](https://vjudge.net) y posteriormente que te unas con dicha cuenta a los contests a medida que estos vayan siendo publicados. Para facilitarnos el registro de problemas resueltos, te pedimos por favor que registres el **nickname** de tu cuenta en el siguiente (**TODO: crear spreadsheet**)
+- Se publicarán en [vjudge.net](https://vjudge.net), un sitio web que permite crear competencias utilizando problemas obtenidos de múltiples jueces online, con un scoreboard que se actualiza en tiempo real a medida que los participantes resuelven problemas. Para competir es necesario que te crees una cuenta en [vjudge.net](https://vjudge.net) y posteriormente que te unas con dicha cuenta a los contests a medida que estos vayan siendo publicados.
 
 - La mayoría de las competencias serán **individuales**, pero al final del semestre habrá un competencia larga con una gran variedad de problemas, la cual será **grupal**, con un máximo de 3 integrantes por grupo.
 
