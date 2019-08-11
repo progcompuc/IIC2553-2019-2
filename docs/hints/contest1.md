@@ -149,7 +149,22 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 
 ### K - Who is The Boss
-<a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/VBOSS_WhoIsTheBoss.cpp">Código de ejemplo</a>
+<details> 
+  <summary>Hint 1</summary>
+   Lo ideal sería encontrar el jefe inmediato de cada empleado, teniendo eso es fácil armar un grafo (en realidad un árbol) y saber cuántos subordinados en total tiene cada empleado.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+   Para encontrar el jefe inmediato de cada empleado, piensa en alguna forma de ordenar los empleados lexicográficamente de tal modo que puedas iterar sobre ellos y en cada paso ir actualizando alguna estructura de datos que te permita encontrar el jefe inmediato del empleado actual en la iteración.
+</details>
+<details> 
+  <summary>Hint 3</summary>
+   Suponiendo que ya lograste armar el grafo (árbol), ten cuidado de no realizar cómputos innecesarios para encontrar la cantidad de subordinados .. quizás podrías usar ... (spoiler alert) ... programación dinámica sobre el árbol?
+</details>
+<details>
+  <summary>Solución + código</summary>
+   Ordena los empleados por altura de mayor a menor y en caso de empate desempata por sueldo (de mayor a menor). Así, para cada empleado se cumple que todos los empleados con altura mayor estricta están a su izquierda, y de los empleados que le empatan en altura los que le ganan en sueldo están a la izquierda también (y así, si el empleado i-ésimo tiene algún jefe inmediato, dicho jefe necesariamente aparece antes que él en la lista). Para encontrar al jefe inmediato, lo que hacemos es mantener a todos los empleados vistos hasta el momento ordenados por sueldo en un árbol binario balanceado (un set de C++). Si insertamos al empleado actual en el set, el empleado que queda justo a su derecha es el menor con sueldo mayor estricto y altura mayor o igual, así que ese es el jefe inmediato. Haciendo eso para cada empleado encontramos todos los jefes inmediatos y con eso es fácil armar un árbol y hacer programación dinámica sobre el árbol para contar los subordinados de todos los empleados, y finalmente responder las queries. La complejidad de esto O(N log N) por ordenar N empleados, O(N log N) por iterar sobre los empleados y actualizar el set en cada paso y O(N) por hacer DP sobre el árbol y responder las queries, lo que da una complejidad total de O (N log N + N). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/VBOSS_WhoIsTheBoss.cpp">Código de ejemplo</a>
+</details>
 
 ### L - Daunting device
 <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/URI/DauntingDevice.cpp">Código de ejemplo</a>
