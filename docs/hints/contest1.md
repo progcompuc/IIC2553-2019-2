@@ -1,0 +1,120 @@
+---
+title: contest 1 - hints y códigos de ejemplo
+---
+
+[Index](/index) > [Contests](/contests) > ```{{page.title}}```
+
+### A - Valeriy and Deque
+<details> 
+   <summary>Hint</summary>
+      Ver si en el algún momento las cosas comienzan a repetirse cíclicamente y aprovechar eso
+   </details>
+<details>
+   <summary>Solución + código</summary>
+   Simular hasta que el máximo quede al comienzo. De ahí en adelante los que están a la derecha del máximo van rotando. Para las queries que van antes del ciclo responde con lo simulado, y para las queries que caen dentro del ciclo calcula modularmente cual va a ser el elemento sacado. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1180C_ValeriyAndDeque.cpp">link a código</a>
+</details>
+
+
+### B - Roadwork
+<details> 
+   <summary>Hints</summary>
+   1) En vez de pensar "esta persona, en qué obra se detiene?" puedes pensar "esta obra, a qué personas detiene?".
+   2) Si una obra detiene a alguien, las obras a la derecha ya no lo pueden detener. Ve las obras en ese orden.
+   3) Si tienes a las personas ordenadas por tiempo de salida, puedes saber en log n quién va a ser la primera persona en ser bloqueada por cierta obra.
+</details>
+<details> 
+  <summary>Solución</summary>
+   Ordena las obras e itera por ellas de izquierda a derecha. 
+   Para cada obra, calcula qué tiempos de salida van a ser bloqueados, osea S-X <= D < T-X, y elimina a estas personas de la lista.
+   La posicion de la obra es el punto de llegada para estas personas.
+   Esto se puede hacer en (#personas x log n) con un multiset.
+   El tiempo total es O(N + Q log Q).
+</details>
+<details> 
+  <summary>Hints 2</summary>
+   Piensa el problema geométricamente en un plano de Tiempo vs Posición
+</details>
+<details> 
+  <summary>Solución 2 + código</summary>
+   En el plano 2D las personas se ven como rectas diagonales y los roadworks como segmentos de recta horizontales. Cada persona se detiene con el primer segmento que se intersecta. Para hacerlo eficientmente, podemos hacer un sweep line diagonal mantiendo un set de segmentos activos ordenados de menor a mayor. La complejidad es O((N+Q) log (N+Q) + N log N + Q). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/AtCoder/abc128_e_Roadwork.cpp">Código de ejemplo</a>
+</details>
+
+### C - Two Teams
+<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/C_TwoTeams.cpp">Código de ejemplo</a>
+<!-- <a href="">Código de ejemplo</a> -->
+
+### D - Memory Management
+<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/D_MemoryManagement.cpp">Código de ejemplo</a>
+
+### E - Largest Rectangle in a Histogram
+<details> 
+  <summary>Hint</summary>   
+  El rectángulo máximo necesariamente tiene una altura igual a alguna columna. Sólo hay N columnas, así que puedes ponerte en los N casos, y sólo te falta saber el ancho. Dada una columna i-ésima, piensa en alguna forma de encontrar los extremos L[i] y R[i] del rectángulo maximal que se formaría si expandimos la columna i-ésima lo más que se puede hacia ambos lados.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Primero calculamos L[i] de izquierda a derecha (para R[i] podemos hacer lo mismo al revés). Para ello mantenemos un stack, en cada instante el stack guarda los distintos mínimos acumulados de las alturas de las columnas medidos desde la columna i-1 hacia la izquierda, junto con el extremo derecho donde comienza a regir cada mínimo (para entender mejor esto, dibujar un histograma, pararse en alguna columna de al medio y dibujar la altura del mínimo acumulado hacia la izquierda, se ve como una función escalonada). Con ese stack es fácil encontrar L[i] (hacemos pop hasta que llegamos a un mínimo < H[i]) y actualizarlo (pusheamos el par (H[i],i)). Como cada columna es pusheada y popeada sólo 1 vez, la complejidad es O(N). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/HISTOGRA_LargestRectangleInAHistogram.cpp">Código de ejemplo</a>
+</details>
+
+### F - Weird Function
+
+<details> 
+  <summary>Hint</summary>
+  Piensa en una forma eficiente de trackear la mediana.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Una forma de trackear la mediana es guardando la mitad inferior de los valores en un maxheap y la mitad superior de los valores en un minheap, manteniendo la invariante de que la mediana siempre se encuentre en el tope del maxheap. Cuando agreguemos un nuevo valor, lo comparamos con la mediana actual y lo metemos en el minheap o maxheap según corresponda, teniendo cuidado de mantener los 2 contenedores balanceados en tamaño para mantener la invariante. Insertar y meter en heaps es O(log N) así que la complejidad total es O(N log N). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/WEIRDFN_WeirdFunction.cpp">Código de ejemplo</a>
+</details>
+
+### G - Criss-cross Cables
+
+<details> 
+  <summary>Hint</summary>
+  Hay N*(N-1)/2 pares de ubicaciones posibles, que si los ordenamos por largo de menor a mayor codiciosamente nos convendrían los M primeros ¿verdad? Piensa en una forma de encontrar los M primeros sin tener que generar los N*(N-1)/2 pares explícitamente.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Ordenamos los cables por largo de menor a mayor. Además, usamos un minheap (priority_queue) y primero lo llenamos con intervalos correspondientes a pares consecutivos (i, i+1). Luego de forma sincronizada iteramos sobre los cables y vamos sacando intervalos del minheap, si el algún punto el cable no se la puede o nos quedamos cortos de intervalos, no se puede. Si no, cada vez que sacamos un intervalo, metemos al minheap un nuevo intervalo alargado un índice más a la derecha (o sea, si sacamos el intervalo (i,j), metemos el intervalo (i,j+1)). La complejidad es O(M log M + M log N). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/kattis/crisscrosscables.cpp">Código de ejemplo</a>
+</details>
+
+### H - equeue
+<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/H_equeue.cpp">Código de ejemplo</a>
+
+### I - Cat Party (Hard Edition)
+
+<details> 
+  <summary>Hint</summary>
+  Imaginemos que tenemos un leaderboard / ranking donde los competidores son los colores y sus scores son sus frecuencias, y sólo aparecen colores con scores positivos. Si le quitamos 1 punto a algún color, para que en el leaderboard nos aparezcan todos empatados necesitamos que haya un color que tenga exactamente 1 punto y que todos los demás estén empatados (así le quitamos 1 al de 1 punto y se borra) o bien que haya un color que tenga 1 más que el resto (le restamos 1 a ese y todos quedan empatados). Además, cada día hay que actualizar el leaderboard ya que el score de algún color aumenta en 1. Piensa en una forma eficiente de hacer todo eso.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Básicamente hacer lo que dice el hint usando un set e iteradores. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1163B2_CatParty(HardEdition).cpp">Código de ejemplo</a>
+</details>
+
+### J - Back to the Future
+
+<details> 
+  <summary>Hint</summary>
+  Darse cuenta de que para un nodo cualquiera del grafo, para satisfacer los requisitos de A y B a ese nodo siempre le conviene que el conjunto sea lo más grande posible: para satisfacer A lo ideal es que estén la mayor cantidad de vecinos, para satisfacer B lo ideal es que estén la mayor cantidad de no-vecinos. Hay un conjunto de nodos que genera la situación ideal para todos los nodos simultáneamente: el conjunto de todos los nodos. Si en ese conjunto ideal hay nodos que no cumplen, entonces no hay ningún subconjunto en el que puedan llegar a cumplir y por ende los podemos descartar. Piensa en alguna forma eficiente de ir descartando nodos partiendo desde el conjunto universo hasta llegar a un subcojunto maximal en que todos cumplen.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Metemos todos los nodos a un set ordenados por cantidad de vecinos (y desempatados por ID para permitir duplicados), e iterativamente vamos borrando nodos por el extremo izquierdo del set cuando no cumplen A y por la derecha del set cuando no cumplen B. Cada vez que descartamos un nodo, tenemos que avisarle a cada uno de sus vecinos que ese nodo ya no está y además tenemos que actualizar la ubicación del vecino dentro del set (eso se puede hacer borrándolo y metiéndolo de nuevo con su score actualizado). La complejidad de esto es O((N+M)log(N)). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/7887_BackToTheFuture.cpp">Código de ejemplo</a>
+</details>
+
+### K - Who is The Boss
+<a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/VBOSS_WhoIsTheBoss.cpp">Código de ejemplo</a>
+
+### L - Daunting device
+<a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/URI/DauntingDevice.cpp">Código de ejemplo</a>
+
+<!-- <details> 
+  <summary>Hint</summary>   
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <a href="">Código de ejemplo</a>
+</details> -->
+
+[Index](index) > [Contests](contests) > ```{{page.title}}```
