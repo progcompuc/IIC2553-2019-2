@@ -2,7 +2,7 @@
 title: contest 1 - hints y códigos de ejemplo
 ---
 
-[Index](../index) > [Contests](../contests) > [Contests](../contests#contest-1) > ```{{page.title}}```
+[Index](../index) > [Contests](../contests) > [Contest 1](../contests#contest-1) > ```{{page.title}}```
 
 ### A - Valeriy and Deque
 <details> 
@@ -177,4 +177,4 @@ title: contest 1 - hints y códigos de ejemplo
   <a href="">Código de ejemplo</a>
 </details> -->
 
-[Index](../index) > [Contests](../contests) > [Contests](../contests#contest-1) > ```{{page.title}}```
+[Index](../index) > [Contests](../contests) > [Contest 1](../contests#contest-1) > ```{{page.title}}```
