@@ -11,7 +11,7 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 <details>
    <summary>Solución + código</summary>
-   Simular hasta que el máximo quede al comienzo. De ahí en adelante los que están a la derecha del máximo van rotando. Para las queries que van antes del ciclo responde con lo simulado, y para las queries que caen dentro del ciclo calcula modularmente cual va a ser el elemento sacado. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1180C_ValeriyAndDeque.cpp">link a código</a>
+   Simular hasta que el máximo quede al comienzo. De ahí en adelante los que están a la derecha del máximo van rotando. Para las queries que van antes del ciclo responde con lo simulado, y para las queries que caen dentro del ciclo calcula modularmente cual va a ser el elemento sacado. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1180C_ValeriyAndDeque.cpp">Código de ejemplo</a>
 </details>
 
 
@@ -36,7 +36,7 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución 2 + código</summary>
-   En el plano 2D las personas se ven como rectas diagonales y los roadworks como segmentos de recta horizontales. Cada persona se detiene con el primer segmento que se intersecta. Para hacerlo eficientmente, podemos hacer un sweep line diagonal mantiendo un set de segmentos activos ordenados de menor a mayor. La complejidad es O((N+Q) log (N+Q) + N log N + Q). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/AtCoder/abc128_e_Roadwork.cpp">Código de ejemplo</a>
+   En el plano 2D las personas se ven como rectas diagonales y los roadworks como segmentos de recta horizontales. Cada persona se detiene con el primer segmento que se intersecta. Para hacerlo eficientemente, podemos hacer un sweep line diagonal manteniendo un set de segmentos activos ordenados de menor a mayor. La complejidad es O((N+Q) log (N+Q) + N log N + Q). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/AtCoder/abc128_e_Roadwork.cpp">Código de ejemplo</a>
 </details>
 
 ### C - Two Teams
