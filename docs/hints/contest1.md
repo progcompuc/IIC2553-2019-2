@@ -8,7 +8,7 @@ title: contest 1 - hints y códigos de ejemplo
 <details> 
    <summary>Hint</summary>
       Ver si en el algún momento las cosas comienzan a repetirse cíclicamente y aprovechar eso
-   </details>
+</details>
 <details>
    <summary>Solución + código</summary>
    Simular hasta que el máximo quede al comienzo. De ahí en adelante los que están a la derecha del máximo van rotando. Para las queries que van antes del ciclo responde con lo simulado, y para las queries que caen dentro del ciclo calcula modularmente cual va a ser el elemento sacado. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1180C_ValeriyAndDeque.cpp">link a código</a>
@@ -40,11 +40,44 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 
 ### C - Two Teams
-<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/C_TwoTeams.cpp">Código de ejemplo</a>
-<!-- <a href="">Código de ejemplo</a> -->
+<details>
+  <summary> Hint </summary>
+  Puedes mantener a los estudiantes en un arbol para poder 1) Determinar quien tiene la mayor *skill* en O(log(n)), y 2) Poder eliminar a los estudiantes que van saliendo en O(log(n)) cada uno
+</details>
+<details>
+  <summary> Hint 2</summary>
+  Puedes mantener a los estudiantes en una lista ligada para poder sacarlos en O(1) (o en un arbol ordenado por indice para hacerlo en O(log(n))).
+</details>
+<details>
+  <summary> Solucion + Codigo </summary>
+  Usar los dos hints anteriores, y repetir
+  
+  1. Determinar cual es el estudiante con la mayor *skill* y sacarlo
+  2. Sacar *k* estudiantes a la derecha e izquierda utilizando la lista o arbol
+
+  hasta que ya no queden mas estudiantes. A medida que se sacan estudiantes de la lista, asignarlos al equipo 1 o 2 como corresponde.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/C_TwoTeams.cpp">Código de ejemplo</a>
+</details>
 
 ### D - Memory Management
-<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/D_MemoryManagement.cpp">Código de ejemplo</a>
+<details>
+  <summary>Hint 1</summary>
+  Puedes mantener los numeros de bloques de memoria libres en un set o priority queue para poder ver cual es el numero de bloque de memoria libre mas bajo para poder asignarlo
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Puedes mantener un set con los bloques de memoria asignados ordenados por tiempo de manera de poder 
+
+  1. Determinar el bloque mas antiguo en O(log(n)) para ser removido
+  2. Poder cambiar el tiempo de un bloque cuando se accede a el
+
+  Ademas necesitas un map de numero de bloque a bloque de memoria, para poder acceder al bloque de memoria correcto cuando llega una query por un numero de bloque.
+</details>
+<details>
+  <summary>Solucion + Codigo</summary>
+  Usar los dos hints anteriores simplemente.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/D_MemoryManagement.cpp">Código de ejemplo</a>
+</details>
 
 ### E - Largest Rectangle in a Histogram
 <details> 
@@ -79,7 +112,19 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 
 ### H - equeue
-<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/H_equeue.cpp">Código de ejemplo</a>
+<details>
+  <summary>Hint</summary>
+  Nunca es necesario botar items de la mano y luego seguir tomando items. Siempre se pueden botar todos los items al final.
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Si todos los items se van a botar al final, entonces no importa el orden en el que se tomen items de la derecha e izquierda del cilindro
+</details>
+<details>
+  <summary>Solucion + Codigo</summary>
+  Sea L el numero de items que tomamos de la izquierda, R el numero de items que tomamos de la derecha, y V(L,R) el valor que obtenemos de tomar estos items y luego botar los K-(L+R) items mas negativos (o botar todos los items negativos si hay menos que K-(L+R)). Podemos calcular V(L,R) en O(n), y hay n^2 combinaciones posibles de L,R. Por lo tanto, podemos calcular todos los posibles valores de V(L,R) en O(N^3) y quedarnos con el maximo.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest1/H_equeue.cpp">Código de ejemplo</a>
+</details>
 
 ### I - Cat Party (Hard Edition)
 
