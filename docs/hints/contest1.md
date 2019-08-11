@@ -42,11 +42,11 @@ title: contest 1 - hints y códigos de ejemplo
 ### C - Two Teams
 <details>
   <summary> Hint </summary>
-  Puedes mantener a los estudiantes en un arbol para poder 1) Determinar quien tiene la mayor *skill* en O(log(n)), y 2) Poder eliminar a los estudiantes que van saliendo en O(log(n)) cada uno
+  Puedes mantener a los estudiantes en un arbol ordenado por *skill* para poder 1) Determinar quien tiene la mayor *skill* en O(log(n)), y 2) Poder eliminar a los estudiantes que van saliendo en O(log(n)) cada uno
 </details>
 <details>
   <summary> Hint 2</summary>
-  Puedes mantener a los estudiantes en una lista ligada para poder sacarlos en O(1) (o en un arbol ordenado por indice para hacerlo en O(log(n))).
+  Puedes mantener a los estudiantes en una lista ligada para poder en O(1) determinar quien esta al lado de otro y sacarlo (o en un arbol ordenado por indice para hacerlo en O(log(n))).
 </details>
 <details>
   <summary> Solucion + Codigo </summary>
