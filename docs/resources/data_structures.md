@@ -44,6 +44,8 @@ title: "Estructuras de Datos"
 
 ## Sparse Table:
 
+- (youtube)[Sparse Table Algorithm Range Minimum Query](https://www.youtube.com/watch?v=c5O7E_PDO4U)
+- (youtube)[Sparse Table Tutorial / RMQ](https://www.youtube.com/watch?v=9FLPwDn6L08)
 - [cp-algorithms: sparse table](https://cp-algorithms.com/data_structures/sparse-table.html)
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/sparse-table.cpp)
 
@@ -51,7 +53,7 @@ title: "Estructuras de Datos"
 
 - [cp-algorithms: segment tree](https://cp-algorithms.com/data_structures/segment_tree.html)
 - <http://progcomp.cl/segmenttree>
-- [youtube: Segment Tree Range Minimum Query](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
+- (youtube) [Segment Tree Range Minimum Query](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
 
 ## Segment Tree Lazy:
@@ -62,9 +64,10 @@ title: "Estructuras de Datos"
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree-lazy.cpp)
 
 ## Fenwick Tree (a.k.a. BIT o Binary Indexed Tree):
-- (RECOMENDADO) [youtube: explicación de Jorge Pérez](https://youtu.be/0PzR0IoqkkU?t=2160)
+- (youtube) [Tutorial: Binary Indexed Tree (Fenwick Tree)](https://youtu.be/v_wj_mOAlig)
+- (youtube) [Fenwick Tree explicado por Jorge Pérez](https://youtu.be/0PzR0IoqkkU?t=2160)
     - <https://youtu.be/0PzR0IoqkkU?t=1453> (por si quieren ver la explicación de **sweep line** también que viene justo antes)
-- (RECOMENDADO) [youtube: Fenwick Tree or Binary Indexed Tree](https://www.youtube.com/watch?v=CWDQJGaN1gY)
+- (youtube) [youtube: Fenwick Tree or Binary Indexed Tree](https://www.youtube.com/watch?v=CWDQJGaN1gY)
 - [cp-algorithms: fenwick tree](https://cp-algorithms.com/data_structures/fenwick.html)
 - [HackerEarth - binary indexed tree made easy](https://www.hackerearth.com/practice/notes/binary-indexed-tree-made-easy-2/)
 - <http://progcomp.cl/fenwicktree>
@@ -81,7 +84,8 @@ title: "Estructuras de Datos"
 ## Union Find (a.k.a. DSU o Disjoint Set Union):
 
 - [cp-algorithms: Disjoint Set Union](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
-- [youtube: Disjoint Sets using union by rank and path compression Graph Algorithm](https://www.youtube.com/watch?v=ID00PMy0-vE)
+- (youtube) [Disjoint Sets using union by rank and path compression Graph Algorithm](https://www.youtube.com/watch?v=ID00PMy0-vE)
+- (youtube) [Union Find Path Compression](https://www.youtube.com/watch?v=VHRhJWacxis)
 - [geeksforgeeks: Disjoint Set (Or Union-Find) \| Set 1 (Detect Cycle in an Undirected Graph)](https://www.geeksforgeeks.org/union-find/)
 - [geeksforgeeks: Union-Find Algorithm \| Set 2 (Union By Rank and Path Compression)](https://www.geeksforgeeks.org/union-find-algorithm-set-2-union-by-rank/)
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/unionfind.cpp)
