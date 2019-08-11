@@ -2,7 +2,7 @@
 title: contest 1 - hints y códigos de ejemplo
 ---
 
-[Index](/index) > [Contests](/contests) > ```{{page.title}}```
+[Index](../index) > [Contests](../contests) > ```{{page.title}}```
 
 ### A - Valeriy and Deque
 <details> 
