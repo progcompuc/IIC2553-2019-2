@@ -84,6 +84,7 @@ title: "Estructuras de Datos"
 ## Union Find (a.k.a. DSU o Disjoint Set Union):
 
 - [cp-algorithms: Disjoint Set Union](https://cp-algorithms.com/data_structures/disjoint_set_union.html)
+- (youtube) [1.12 Disjoint Sets Data Structure - Weighted Union and Collapsing Find](https://www.youtube.com/watch?v=wU6udHRIkcc)
 - (youtube) [Disjoint Sets using union by rank and path compression Graph Algorithm](https://www.youtube.com/watch?v=ID00PMy0-vE)
 - (youtube) [Union Find Path Compression](https://www.youtube.com/watch?v=VHRhJWacxis)
 - [geeksforgeeks: Disjoint Set (Or Union-Find) \| Set 1 (Detect Cycle in an Undirected Graph)](https://www.geeksforgeeks.org/union-find/)
