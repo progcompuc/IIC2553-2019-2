@@ -25,7 +25,6 @@ params:
 
 # Build settings
 markdown: kramdown
-# markdown: CommonMarkGhPages
 theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
