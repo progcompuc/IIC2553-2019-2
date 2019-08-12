@@ -66,12 +66,7 @@ title: contest 1 - hints y códigos de ejemplo
 </details>
 <details>
   <summary>Hint 2</summary>
-  Puedes mantener un set con los bloques de memoria asignados ordenados por tiempo de manera de poder 
-
-  1. Determinar el bloque mas antiguo en O(log(n)) para ser removido
-  2. Poder cambiar el tiempo de un bloque cuando se accede a el
-
-  Ademas necesitas un map de numero de bloque a bloque de memoria, para poder acceder al bloque de memoria correcto cuando llega una query por un numero de bloque.
+  Puedes mantener un set con los bloques de memoria asignados ordenados por tiempo de manera de poder 1) Determinar el bloque mas antiguo en O(log(n)) para ser removido, y 2) Poder cambiar el tiempo de un bloque cuando se accede a el. Ademas necesitas un map de numero de bloque a bloque de memoria, para poder acceder al bloque de memoria correcto cuando llega una query por un numero de bloque.
 </details>
 <details>
   <summary>Solucion + Codigo</summary>
