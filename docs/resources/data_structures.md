@@ -54,6 +54,7 @@ title: "Estructuras de Datos"
 - [cp-algorithms: segment tree](https://cp-algorithms.com/data_structures/segment_tree.html)
 - <http://progcomp.cl/segmenttree>
 - (youtube) [Segment Tree Range Minimum Query](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
+- (youtube) [Segment Tree [ICPCCL 2016]](https://youtu.be/AcebT9OvynI)
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
 
 ## Segment Tree Lazy:
