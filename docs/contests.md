@@ -11,6 +11,12 @@ Julio 30, 20 días, [link a **contest**](https://vjudge.net/contest/315726), [go
 **Puntaje Mínimo Esperado**: 6\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest1)
 
+## Contest 2
+Agosto 14, 12 días, [link a **contest**](https://vjudge.net/contest/319831), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [Estructuras de Datos](resources/data_structures): sparse table, fenwick tree, segment tree\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest2)
 
 [Index](index) > ```{{page.title}}```
 
