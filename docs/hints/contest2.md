@@ -19,6 +19,27 @@ title: contest 2 - hints y códigos de ejemplo
 ">Código de ejemplo</a>
 </details>
 
+
+### D - Weird Points
+<details>
+  <summary>Hint 1</summary>
+  Si procesamos los puntos en orden segun su coordenada x y los vamos ingresando a una estructura de datos, al procesar un punto *p*=(x_i, y_i) podemos determinar cuantos puntos son dominados por *p* si somos capaces de contar cuantos puntos de los que ya hemos procesado tienen y <= y_i. ¿Que estructura nos permite contar esto?
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto y_i de manera eficiente. Lo mas simple es usar una policy based data structure (<a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">link</a>). Con esto la solucion consiste en:
+  
+  1. Instanciar el ```ordered_set``` como explica el link anterior, pero para ```pair<int,int>```. El primer elemento del par va a ser la coordenada y de cada punto, y el segundo elemento es el indice ```i``` del punto en el arreglo ordenado segun coordenada x. Esto es por si hay puntos distintos con la misma coordenada ```y```.
+  2. Iterar sobre los puntos segun su coordenada x. Para el i-esimo punto realizar lo siguiente:
+      1. Ver cuantos elementos en el set son menores a ```(y_i,i)```. Sea este numero ```d0```.
+      2. Calcular la dominancia del punto i como ```abs(2*d0 - n + 1)```.
+      3. Si la dominancia del punto i es mayor o igual a ```k```, es un Wierd Point.
+      4. Ingresar el par ```(y_i,i)``` al ordered_set.
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/D_WeirdPoints.cpp">Codigo de ejemplo</a>
+</details>
+
+
 ### G - Youngling Tournament
 
 <details> 
