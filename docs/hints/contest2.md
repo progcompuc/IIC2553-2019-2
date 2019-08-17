@@ -40,7 +40,7 @@ title: contest 2 - hints y códigos de ejemplo
 
 <details>
   <summary>Solucion Alternativa + codigo</summary>
-  Otra solucion conceptualmente mas simple (pero menos eficiente) es utilizar un Lazy Segment Tree. Esta estructura de datos permite en tiempo logaritmico realizar updates y consultas en rangos, que son precisamente las operaciones que necesitamos. La solucion es O(n+(u+q)*log(n)). 
+  Otra solucion conceptualmente mas simple (pero menos eficiente) es utilizar un Lazy Segment Tree. Esta estructura de datos permite en tiempo logaritmico realizar updates y consultas en rangos, que son precisamente las operaciones que necesitamos. La solucion es O(n+u*log(n)+q). 
   
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/B_UpdateTheArray_lazyST.cpp">Codigo de ejemplo</a>
 </details>
