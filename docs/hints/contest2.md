@@ -25,23 +25,23 @@ title: contest 2 - hints y códigos de ejemplo
 
   <summary>Hint 1</summary>
 
-  Si procesamos los puntos en orden segun su coordenada <b>x</b> y los vamos ingresando a una estructura de datos, al procesar un punto <b>p=(x_i, y_i)</b> podemos determinar cuantos puntos son dominados por <b>p</b> si somos capaces de contar cuantos puntos de los que ya hemos procesado tienen <b>y &lt;= y_i</b>. ¿Que estructura nos permite contar esto?
+  Si procesamos los puntos en orden segun su coordenada <strong>x</strong> y los vamos ingresando a una estructura de datos, al procesar un punto <strong>p=(x_i, y_i)</strong> podemos determinar cuantos puntos son dominados por <strong>p</strong> si somos capaces de contar cuantos puntos de los que ya hemos procesado tienen <strong>y &lt;= y_i</strong>. ¿Que estructura nos permite contar esto?
 
 </details>
 <details>
 
   <summary>Solución + código</summary>
 
-  Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto <b>y_i</b> de manera eficiente. Lo mas simple es usar una policy based data structure (<a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">link</a>). Con esto la solucion consiste en:
+  Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto <strong>y_i</strong> de manera eficiente. Lo mas simple es usar una policy based data structure (<a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">link</a>). Con esto la solucion consiste en:
   
   <ol>
-    <li>Instanciar el <b>ordered_set</b> como explica el link anterior, pero para <b>pair&lt;int,int&gt;</b>. El primer elemento del par va a ser la coordenada <b>y</b> de cada punto, y el segundo elemento es el indice <b>i</b> del punto en el arreglo ordenado segun coordenada <b>x</b>. Esto es por si hay puntos distintos con la misma coordenada <b>y</b>.</li>
-    <li>Iterar sobre los puntos segun su coordenada <b>x</b>. Para el <b>i</b>-esimo punto realizar lo siguiente:
+    <li>Instanciar el <strong>ordered_set</strong> como explica el link anterior, pero para <strong>pair&lt;int,int&gt;</strong>. El primer elemento del par va a ser la coordenada <strong>y</strong> de cada punto, y el segundo elemento es el indice <strong>i</strong> del punto en el arreglo ordenado segun coordenada <strong>x</strong>. Esto es por si hay puntos distintos con la misma coordenada <strong>y</strong>.</li>
+    <li>Iterar sobre los puntos segun su coordenada <strong>x</strong>. Para el <strong>i</strong>-esimo punto realizar lo siguiente:
         <ol>
-        <li> Ver cuantos elementos en el set son menores a <b>(y_i,i)</b>. Sea este numero <b>d0</b>.</li>
-        <li> Calcular la dominancia del punto <b>i</b> como <b>abs(2*d0 - n + 1)</b>.</li>
-        <li> Si la dominancia del punto <b>i</b> es mayor o igual a <b>k</b>, es un Wierd Point.</li>
-        <li> Ingresar el par <b>(y_i,i)</b> al ordered_set.</li>
+        <li> Ver cuantos elementos en el set son menores a <strong>(y_i,i)</strong>. Sea este numero <strong>d0</strong>.</li>
+        <li> Calcular la dominancia del punto <strong>i</strong> como <strong>abs(2*d0 - n + 1)</strong>.</li>
+        <li> Si la dominancia del punto <strong>i</strong> es mayor o igual a <strong>k</strong>, es un Wierd Point.</li>
+        <li> Ingresar el par <strong>(y_i,i)</strong> al ordered_set.</li>
         </ol>
     </li>
   </ol>
