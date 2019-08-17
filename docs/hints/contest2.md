@@ -22,12 +22,14 @@ title: contest 2 - hints y códigos de ejemplo
 
 ### D - Weird Points
 <details>
+
   <summary>Hint 1</summary>
 
   Si procesamos los puntos en orden segun su coordenada x y los vamos ingresando a una estructura de datos, al procesar un punto p=(x_i, y_i) podemos determinar cuantos puntos son dominados por p si somos capaces de contar cuantos puntos de los que ya hemos procesado tienen y <= y_i. ¿Que estructura nos permite contar esto?
 
 </details>
 <details>
+
   <summary>Solución + código</summary>
 
   Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto y_i de manera eficiente. Lo mas simple es usar una policy based data structure (<a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">link</a>). Con esto la solucion consiste en:
