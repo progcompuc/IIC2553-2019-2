@@ -19,6 +19,22 @@ title: contest 2 - hints y códigos de ejemplo
 ">Código de ejemplo</a>
 </details>
 
+### G - Youngling Tournament
+
+<details> 
+  <summary>Hint 1</summary>
+  Notar que la cantidad de ganadores es a lo más log_2(10^12), esto lo podemos notar si codiciosamente tratamos de generar el caso con mayor cantidad de ganadores, que sería con las fuerzas 1, 1, 2, 4, 8, 16, 32, ...
+  Quizás podrías aprovechar eso para encontrar a esos poquitos ganadores.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  En este problema tienes un ranking dinámico, en el cual para un instante dado los jugadores tienen ciertas fuerzas y están rankeados de una cierta manera, y en otro instante algunos jugadores tienen fuerzas distintas y por lo tanto el ranking puede cambiar. Si sólo se tratara de mantener un ranking dinámico, eso se puede hacer fácilmente con un set de C++, o incluso con un ordered_set (policy based data structures de C++). El problema es que además te interesa saber la suma acumulada de las fuerzas de una cierta posición a la izquierda. Sabemos que calcular sumas acumuladas es trivial con fenwick tree o segment tree, ¿pero cómo podemos tener un ranking dinámico a la vez? Hay un trucazo muy ingenioso: si tenemos N jugadores y M updates, podemos suponer que tenemos N+M jugadores, y que en cada instante N jugadores están "activados" y M jugadores están "desactivados", entonces procesar un update se reduce a desactivar la versión obsoleta de un jugador y activar su versión nueva.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Básicamente ponemos en un mismo arreglo los N jugadores iniciales y los M jugadores "actualizados" (un arreglo de largo N+M). Lo ordenamos de menor a mayor. Las N posiciones originales aparecen con sus fuerzas tal cual, mientras que las M posiciones de las queries inicialmente las "desactivamos" asignándoles fuerza = 0. Luego construimos un fenwick tree (o segment tree) sobre el arreglo. De esta manera, cuando consultamos la fuerza acumulada desde el principio hasta una posición i, las posiciones con fuerza = 0 no alteran la suma acumulada. Dado un estado actual del arreglo y del fenwick tree (segment tree) asociado, podemos contar la cantidad de ganadores usando búsqueda binaria. El primer jugador siempre es ganador, de ahí en adelante podemos considerar al jugador i-ésimo como un ancla y buscar el primer jugador j-ésimo a la derecha (j > i) que su fuerza acumulada hasta su posición sea >= al doble de la fuerza acumulada hasta la posición del ancla. Ese jugador se considera como "candidato" a ser ganador. Para confirmar si es ganador, chequeamos si su fuerza es >= a la fuerza acumulada en la posición j-1. Luego consideramos al jugador j-ésimo como nueva ancla y volvemos a hacer búsqueda binaria hacia la derecha, y así sucesivamente hasta que se nos acaba el arreglo. Cada vez que necesitamos consultar la suma acumulada hasta una cierta posición, podemos usar nuestro fenwick/segment tree. Cuando procesamos un update de fuerza, lo que hacemos es setear fuerza = 0 en la posición anterior del jugador, y setear la nueva fuerza en la posición nueva del jugador (esto requiere que en nuestra implementación recordemos las posiciones de los jugadores). La complejidad de esto es O(M*log(max_fuerza)*log(M+N)^2 + M*log(M+N)). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/gym_100960G_YounglingTournament.cpp">Código de ejemplo</a>
+</details>
+
 <!-- <details> 
   <summary>Hint</summary>   
 </details>
