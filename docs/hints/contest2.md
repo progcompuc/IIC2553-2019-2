@@ -19,11 +19,32 @@ title: contest 2 - hints y códigos de ejemplo
 ">Código de ejemplo</a>
 </details>
 
+### B - Update the array
+
+<details>
+  <summary>Hint 1</summary>
+  ¿Hay alguna manera de rapidamente almacenar la informacion de los updates de manera que al preguntar por la suma acumulada en el rango [0, i], obtengamos el valor final del elemento i-esimo? Si tuvieramos eso podriamos primero almacenar rapidamente la informacion de todos los updates, y luego calcular todas las sumas acumuladas en tiempo lineal.
+</details>
+
+<details>
+  <summary>Hint 2</summary>
+  ¿Que sucede si para un update de la forma (l,r,val), sumamos val a arr[l] y restamos val a arr[r+1]?
+</details>
+
+<details>
+  <summary>Solucion + codigo</summary>
+  Seguir los dos hints anteriores: Para cada update de la forma (l,r,val) hay que sumarle val a arr[l] y restarselo a arr[r+1]. Luego hay que iterar sobre el arreglo calculando las sumas acumuladas. Para cada query i responder la suma acumulada hasta el indice i. Con esto la solucion es O(n+u+q).<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/B_UpdateTheArray.cpp">Codigo de ejemplo</a>
+</details>
+
+<details>
+  <summary>Solucion Alternativa + codigo</summary>
+  Otra solucion conceptualmente mas simple (pero menos eficiente) es utilizar un Lazy Segment Tree. Esta estructura de datos permite en tiempo logaritmico realizar updates y consultas en rangos, que son precisamente las operaciones que necesitamos. La solucion es O(n+(u+q)*log(n)). <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/B_UpdateTheArray_lazyST.cpp">Codigo de ejemplo</a>
+</details>
 
 ### D - Weird Points
 <details>
 
-  <summary>Hint 1</summary>
+  <summary>Hint</summary>
 
   Si procesamos los puntos en orden segun su coordenada <strong>x</strong> y los vamos ingresando a una estructura de datos, al procesar un punto <strong>p=(x_i, y_i)</strong> podemos determinar cuantos puntos son dominados por <strong>p</strong> si somos capaces de contar cuantos puntos de los que ya hemos procesado tienen <strong>y &lt;= y_i</strong>. ¿Que estructura nos permite contar esto?
 
@@ -32,9 +53,10 @@ title: contest 2 - hints y códigos de ejemplo
 
   <summary>Solución + código</summary>
 
-  Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto <strong>y_i</strong> de manera eficiente. Lo mas simple es usar una policy based data structure (<a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">link</a>). Con esto la solucion consiste en:
+  Primero hay que ordenar los puntos segun su coordenada x segun dice el Hint 1. Luego hay varias elecciones de estructuras de datos que nos permite contar cuantos puntos existen menor a un cierto <strong>y_i</strong> de manera eficiente. Lo mas simple es usar una <a href="https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/">policy based data structure</a>. Con esto la solucion consiste en:
   
   <ol>
+    <li>Ordenar los puntos segun su coordenada <strong>x</strong></li>
     <li>Instanciar el <strong>ordered_set</strong> como explica el link anterior, pero para <strong>pair&lt;int,int&gt;</strong>. El primer elemento del par va a ser la coordenada <strong>y</strong> de cada punto, y el segundo elemento es el indice <strong>i</strong> del punto en el arreglo ordenado segun coordenada <strong>x</strong>. Esto es por si hay puntos distintos con la misma coordenada <strong>y</strong>.</li>
     <li>Iterar sobre los puntos segun su coordenada <strong>x</strong>. Para el <strong>i</strong>-esimo punto realizar lo siguiente:
         <ol>
@@ -45,6 +67,8 @@ title: contest 2 - hints y códigos de ejemplo
         </ol>
     </li>
   </ol>
+
+  La solucion es O(n*log(n)).
 
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/D_WeirdPoints.cpp">Codigo de ejemplo</a>
 
