@@ -33,7 +33,7 @@ title: contest 2 - hints y códigos de ejemplo
 
 <details>
   <summary>Solucion + codigo</summary>
-  Seguir los dos hints anteriores: Para cada update de la forma (l,r,val) hay que sumarle val a arr[l] y restarselo a arr[r+1]. Luego hay que iterar sobre el arreglo calculando las sumas acumuladas. Para cada query i responder la suma acumulada hasta el indice i. Con esto la solucion es O(n+u+q).
+  Seguir los dos hints anteriores: Para cada update de la forma (l,r,val) hay que sumarle val a arr[l] y restarselo a arr[r+1]. Luego hay que iterar sobre el arreglo calculando las sumas acumuladas. Para cada query i responder la suma acumulada hasta el indice i. Con esto la solucion es O(n+u+q). 
   
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/B_UpdateTheArray.cpp">Codigo de ejemplo</a>
 </details>
