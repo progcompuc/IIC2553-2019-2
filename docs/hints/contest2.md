@@ -78,6 +78,29 @@ title: contest 2 - hints y códigos de ejemplo
 
 </details>
 
+### E - Turn Off The TV
+<details>
+  <summary>Hint 1</summary>
+  Es más fácil determinar que TVs <strong>no</strong> son redundantes.
+</details>
+
+<details>
+  <summary>Hint 2</summary>
+  Es posible seguir una estrategia similar al problema B del contest 1: crear "eventos" de encendido/apagado de TVs, ordenarlos por tiempo, y de alguna manera determinar en que tiempos hay solo 1 TV funcionando (lo que hace que esa TV no sea redundante).
+</details>
+
+<details>
+  <summary>Solución + código</summary>
+  Por cada tv, crear un evento de encendido en el tiempo <strong>l</strong> y un evento de apagado en el tiempo <strong>r+1</strong>. Ordenar los eventos por tiempo.
+  Luego iterar sobre los eventos, manteniendo un <strong>set</strong> con las TVs encendidas actualmente. Cada vez que cambia el tiempo de un evento a otro (es decir, despues de procesar todos los eventos en el tiempo actual <strong>t</strong>), revisar si hay solo una TV encendida actualmente. Si hay solo 1, entonces esa TV no es redundante.
+
+  De esta manera se pueden identificar todas las TVs no redundantes. Elegir una TV que no este en este conjunto si existe, sino imprimir -1.
+
+  La solucion es O(n*log(n)).
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/D_WeirdPoints.cpp">Codigo de ejemplo</a>
+</details>
+
 
 ### G - Youngling Tournament
 
