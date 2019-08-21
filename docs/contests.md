@@ -18,5 +18,12 @@ Agosto 14, 12 días, [link a **contest**](https://vjudge.net/contest/319831), go
 **Puntaje Mínimo Esperado**: 6\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest2)
 
+## Contest 3
+Agosto 22, 11 días, [link a **contest**](https://vjudge.net/contest/321522), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [Estructuras de Datos](resources/data_structures): Lazy Segment Tree, Fenwick Tree 2D\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest3)
+
 [Index](index) > ```{{page.title}}```
 
