@@ -25,7 +25,7 @@ title: contest 3 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Aplanamos la jerarquía usando DFS (depth first search), a cada nodo le asignamos como índice el instante en que es visitado por el DFS, partiendo de la raíz (0). Cuando terminamos de explorar todo el subárbol de un nodo u, vemos el índice del último nodo visitado y así obtenemos el rango L[u] - R[u] del nodo u. Además, los salaries los ordenamos según el órden del dfs (para mantener todo consistente), y finalmente hacemos las operaciones que nos piden usando 2 lazy segment trees, uno para RMQ (range minimun query) y otro para RSQ (range sum query). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/SALMAN_SalaryManagement.cpp">Código de ejemplo</a>
+  Aplanamos la jerarquía usando DFS (depth first search), a cada nodo le asignamos como índice el instante en que es visitado por el DFS, partiendo de la raíz (0). Cuando terminamos de explorar todo el subárbol de un nodo u, vemos el índice del último nodo visitado y así obtenemos el rango L[u] - R[u] del nodo u. Además, los salarios los ordenamos según el orden del DFS (para mantener todo consistente), y finalmente hacemos las operaciones que nos piden usando 2 lazy segment trees, uno para RMQ (range minimun query) y otro para RSQ (range sum query). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/SALMAN_SalaryManagement.cpp">Código de ejemplo</a>
 </details>
 
 <!-- <details> 
