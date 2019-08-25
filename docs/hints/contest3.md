@@ -4,6 +4,58 @@ title: contest 3 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 3](../contests#contest-3) > ```{{page.title}}```
 
+### A - GM plants
+<details> 
+  <summary>Hint</summary>
+  No es necesario guardar explicitamente el cubo. Es posible computar las respuestas guardando los updates en cada eje por separado.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Si tengo una query (x1,y1,z1,x2,y2,z2), y se que en el rango (x1,x2) hay rx posiciones rojas y gx posiciones verdes para el eje x, y similarmente ry, gy, rz, gz para los otros ejes, entonces hay rx * ry * rz + rx * gy * gz + gx * ry * gz + gx * gy * rz posiciones rojas en el cubo. 
+  
+  ¿Como hacer eficientemente estas modificaciones y queries por rangos?
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Mantener por cada eje un lazy segment tree donde cada nodo guarda la cantidad de posiciones rojas en su rango, y la funcion de update esta modificada para hacer flip de los colores en el rango. Luego las queries de tipo 0,1,2 se reducen a hacer un update en el lazy segment tree correspondiente, mientras que las queries de tipo 3 requieren consultar los arboles y calcular las posiciones rojas segun dice el hint 2.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest3/A_GM_plants.cpp">Código de ejemplo</a>
+</details>
+
+### B - K12-Bored of Suffixes and Prefixes
+<details> 
+  <summary>Hint</summary>   
+  Puedes pensar cada letra como una matriz con valores binarios. Ejemplo:
+
+  <pre><code>
+    ABC
+    ACB
+  </code></pre>
+
+  Se traduce en las matrices
+
+  <pre><code>
+    1 0 0
+    1 0 0
+
+    0 1 0
+    0 0 1
+
+    0 0 1
+    0 1 0
+  </code></pre>
+  
+  y otras 23 matrices llenas de 0s.
+</details>
+<details> 
+  <summary>Hint2</summary>
+  Siguiendo el Hint anterior, el problema se reduce a realizar updates puntuales y sumas acumuladas en estas matrices.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Mantener 26 fenwick trees 2D (un arbol por cada letra) para poder realizar eficientemente las sumas acumuladas. Los updates se reducen a restar 1 en un fenwick tree y sumar 1 en otro fenwick tree por cada letra del nuevo string. Las queries requieren iterar sobre los fenwick trees calculando sumas acumuladas en el rectangulo pedido.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest3/B_K12_Bored_of_Suffixes_and_Prefixes.cpp">Código de ejemplo</a>
+</details>
+
 ### C - Matrix Summation
 <details> 
   <summary>Hint</summary>

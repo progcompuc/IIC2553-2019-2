@@ -98,7 +98,7 @@ title: contest 2 - hints y códigos de ejemplo
 
   La solucion es O(n*log(n)).
 
-  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/D_WeirdPoints.cpp">Codigo de ejemplo</a>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest2/E_TurnOffTheTV.cpp">Codigo de ejemplo</a>
 </details>
 
 ### F - Gravel
