@@ -29,7 +29,7 @@ title: Recursos
   - [Tushar Roy - Coding Made Simple](https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw)
   - [Programación Competitiva CL](https://www.youtube.com/channel/UCmVg7YyMS8H-65WCmkVHB9g/feed)
 - Repositorios con muchos códigos de ejemplo (implementaciones de algoritmos y estructuras de datos típicos):
-  - [Apuntes ICPC Universidad de Chile (C++)](https://docs.google.com/document/d/1rcex_saP4tExbbU62qGUjR3eenxOh-50i9Y45WtHkc4/edit) **<<< MUY BUENOS, RECOMENDADO**
+  - [Apuntes ICPC Universidad de Chile (C++)](https://docs.google.com/document/d/1rcex_saP4tExbbU62qGUjR3eenxOh-50i9Y45WtHkc4/edit) **\<\<\< MUY BUENOS, RECOMENDADO**
   - [Apuntes ICPC de Robinson Castro et al (C++)](https://docs.google.com/document/d/1pan53PU9_PIrPPVyNrbfXIAU-B6YnIaSBcB9lP9j0jE/edit)
   - [Apuntes ICPC de Ignacio Hermosilla (C++)](https://github.com/ignaciohermosillacornejo/apuntes_icpc)
   - [C++ Cheat Sheet for ACM ICPC](https://github.com/ntuorangejuice/cheat-sheet)
