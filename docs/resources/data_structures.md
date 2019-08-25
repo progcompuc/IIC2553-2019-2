@@ -55,7 +55,8 @@ title: "Estructuras de Datos"
 - <http://progcomp.cl/segmenttree>
 - (youtube) [Segment Tree Range Minimum Query](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 - (youtube) [Segment Tree [ICPCCL 2016]](https://youtu.be/AcebT9OvynI)
-- [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
+- (codeforces) [Efficient and easy segment trees (cómo hacer segment trees **iterativos**)](https://codeforces.com/blog/entry/18051)
+- [Códigos de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
 
 ## Segment Tree Lazy:
 
