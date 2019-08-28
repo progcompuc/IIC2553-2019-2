@@ -26,7 +26,7 @@ Agosto 22, 11 días, [link a **contest**](https://vjudge.net/contest/321522), go
 **Hints** y **códigos de ejemplo**: [link](hints/contest3)
 
 ## Contest 4
-Agosto 22, 11 días, [link a **contest**](https://vjudge.net/contest/322871), google doc para bonus de **explicaciones**: _pending_\\
+Agosto 28, 12 días, [link a **contest**](https://vjudge.net/contest/322871), google doc para bonus de **explicaciones**: _pending_\\
 **Tópicos**: [Estructuras de Datos](resources/data_structures): DSU / Union-Find\\
 **Puntos**: _pending_ \\
 **Puntaje Mínimo Esperado**: _pending_\\
