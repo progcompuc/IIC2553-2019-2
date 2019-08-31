@@ -38,7 +38,7 @@ title: contest 4 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución Alternativa + código</summary>
- El problema se puede hacer trivialmente también aplicando el [algoritmo de MO](../resources/sqrtdecomp). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/DQUERY_D-query_v2.cpp">Código de ejemplo</a>
+  El problema se puede hacer trivialmente también aplicando el <a href="../resources/sqrtdecomp">algoritmo de MO</a>. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/DQUERY_D-query_v2.cpp">Código de ejemplo</a>
 </details>
 
 
