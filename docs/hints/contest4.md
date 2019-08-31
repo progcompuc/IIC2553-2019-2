@@ -27,6 +27,17 @@ title: contest 4 - hints y códigos de ejemplo
   Simplemente usamos un UnionFind para fusionar las posibilidades de las filas y columnas a medida que nos van dando información sobre las celdas. Conceptualmente, si dos posibilidades pertenecen al mismo conjunto significa que ambas posibilidades están amarradas (si una posibilidad ocurre entonces todas las demás posibilidades en el mismo conjunto deben ocurrir también). Si en algún punto se da que una misma fila o columna debe ser par e impar simultáneamente, esto genera una contradicción lógica y por tanto de ahí en adelante ya no se puede. Para lidiar con los valores gigantes simplemente los mapeamos a un rango compacto usando por ejemplo un unordered_map. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/gym_100570D_TROYQuery.cpp">Código de ejemplo</a>
 </details>
 
+### E - D-query
+<details> 
+  <summary>Hint</summary>
+  Piensa en una forma de ordenar las queries, de tal manera que al ir iterando sobre ellas puedas ir actualizando una estructura de datos que te permita contar cuántos números están activos (teniendo cuidado de nunca activar números duplicados simultáneamente).
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Lo que hacemos es ordenar las queries (L,R) de forma creciente en R. Además, creamos un fenwick tree de tamaño N en el cual vamos trackeando con 0s y 1s los números del arreglo actualmente activos (inicialmente partimos con puros 0s, i.e. ningún número activo). Luego vamos iterando sobre las queries (crecientes en R) y para cada query hacemos avanzar un puntero r hasta alcanzar el R actual, y en cada paso activamos el número r-ésimo (sumamos 1 en la posición r-ésima del fenwick tree, indicando que el número r-ésimo está activo), <strong>PERO</strong> pero si el número r-ésimo ya estaba activo en una posición anterior, lo desactivamos (sumamos -1 en su posición anterior). De esta manera si un número está duplicado, siempre mantenemos activa la posición más a la derecha en la que aparece. Con eso logramos que se cumpla la invariante de que de todos los distintos números dentro del intervalo [1,R] estén activados en sus respectivas posiciones más a la derecha (dentro de [1,R]), y todo el resto está desactivado. Luego, para saber cuántos números distintos hay consultamos al fenwick tree la suma acumulada de 1s en el intervalo [L,R]. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/DQUERY_D-query.cpp">Código de ejemplo</a>
+</details>
+
+
 <!-- <details> 
   <summary>Hint</summary>   
 </details>
