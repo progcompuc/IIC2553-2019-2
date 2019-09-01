@@ -44,6 +44,7 @@ title: contest 4 - hints y códigos de ejemplo
   <summary>Hint 3</summary>
   Puede ser util hacer sweep line, similar al problema "Fundraising" del contest pasado.
 </details>
+<details>
   <summary>Solución + código</summary>
   <p>
   Ordenar los puntos segun su beauty de derecha a izquierda (e intellect de abajo para arriba si tienen igual beauty). Ademas comprimir el espacio en la dimension intellect.
