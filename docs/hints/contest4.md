@@ -27,6 +27,63 @@ title: contest 4 - hints y códigos de ejemplo
   Simplemente usamos un UnionFind para fusionar las posibilidades de las filas y columnas a medida que nos van dando información sobre las celdas. Conceptualmente, si dos posibilidades pertenecen al mismo conjunto significa que ambas posibilidades están amarradas (si una posibilidad ocurre entonces todas las demás posibilidades en el mismo conjunto deben ocurrir también). Si en algún punto se da que una misma fila o columna debe ser par e impar simultáneamente, esto genera una contradicción lógica y por tanto de ahí en adelante ya no se puede. Para lidiar con los valores gigantes simplemente los mapeamos a un rango compacto usando por ejemplo un unordered_map. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/gym_100570D_TROYQuery.cpp">Código de ejemplo</a>
 </details>
 
+### C - Ball
+
+<details> 
+  <summary>Hint</summary>
+  Puede ser útil pensar en cada persona como un punto en el plano (beauty, intellect) que ademas tiene un valor asociado (su richness).
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Otra forma de ver si una persona P se suicida es: Sea r_max la riqueza maxima de las personas con beauty e intellect mayores a P. ¿Es r_max mayor a la riqueza de P?
+
+  ¿Como hacer esa consulta por rango de forma eficiente?
+</details>
+<details> 
+<details> 
+  <summary>Hint 3</summary>
+  Puede ser util hacer sweep line, similar al problema "Fundraising" del contest pasado.
+</details>
+  <summary>Solución + código</summary>
+  <p>
+  Ordenar los puntos segun su beauty de derecha a izquierda (e intellect de abajo para arriba si tienen igual beauty). Ademas comprimir el espacio en la dimension intellect.
+  </p>
+  <p>
+  Luego, hacer sweep line sobre los puntos ordenados. Mantener un SegmentTree o FenwickTree que va a guardar el richness de los puntos que ya hemos procesado, y un contador global para contar cuantas personas se suicidan. 
+  </p>
+  <p>
+  Cada vez que procesamos un punto, preguntamos por el maximo en richness de los puntos que tienen un intellect mayor. Si es mayor al intellect del punto que estamos procesando, aumentar el contador global en 1. Luego actualizar el Fenwick Tree o Segment Tree con el punto actual.
+  </p>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest4/C_Ball.cpp">Código de ejemplo</a>
+</details>
+
+### D - K-query
+
+<details> 
+  <summary>Hint</summary>
+  Puede ser util leer todas las queries, ordenarlas de alguna forma, resolverlas en ese orden, y luego responderlas todas al final.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Tambien es util comenzar con un arreglo "vacio" e ir rellenandolo de alguna forma a medida que respondemos queries.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Sea A un arreglo de 1s y 0s de largo n, inicialmente lleno de 0s. Sea B un arreglo de tuplas de la forma (a_i,i), ordenados decrecientemente segun el primer elemento (a_i). Sea C un arreglo de queries de la forma (i,j,k), ordenadas decrecientemente segun el tercer elemento (k).
+  </p>
+  <p>
+  Para responder una query de la forma (i,j,k), lo que podemos hacer es iterar sobre B mientras a_i sea mayor a k. Por cada elemento (a_i,i) de B, sumarle 1 a A[i]. Luego podemos consultar la suma por rango de A[i:j] para obtener la respuesta.
+  </p>
+  <p>
+  Una vez que respondemos una query (i,j,k), para responder la siguiente query (i',j',k') no necesitamos iterar desde el comienzo de B, sino que podemos continuar desde donde quedamos en la query anterior (porque sabemos que k' es menor a k).
+  </p>
+  <p>
+  Para poder realizar las sumas por rango de manera eficiente hay que usar un SegmentTree o FenwickTree.
+  </p>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest4/D_K_Query.cpp">Código de ejemplo</a>
+</details>
+
 ### E - D-query
 <details> 
   <summary>Hint</summary>
