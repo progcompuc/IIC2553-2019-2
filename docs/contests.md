@@ -21,15 +21,15 @@ Agosto 14, 12 días, [link a **contest**](https://vjudge.net/contest/319831), go
 ## Contest 3
 Agosto 22, 11 días, [link a **contest**](https://vjudge.net/contest/321522), google doc para bonus de **explicaciones**: _pending_\\
 **Tópicos**: [Estructuras de Datos](resources/data_structures): Lazy Segment Tree, Fenwick Tree 2D\\
-**Puntos**: 4, 4, 3, 4, 2, 5, 3 \\
+**Puntos**: 4, 4, 3, 4, 2, 5, 3\\
 **Puntaje Mínimo Esperado**: 5\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest3)
 
 ## Contest 4
 Agosto 28, 12 días, [link a **contest**](https://vjudge.net/contest/322871), google doc para bonus de **explicaciones**: _pending_\\
 **Tópicos**: [Estructuras de Datos](resources/data_structures): DSU / Union-Find\\
-**Puntos**: _pending_ \\
-**Puntaje Mínimo Esperado**: _pending_\\
+**Puntos**: 4, 2, 5, 5, 5, 3, 3\\
+**Puntaje Mínimo Esperado**: 5\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest4)
 
 
