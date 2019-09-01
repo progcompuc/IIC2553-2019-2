@@ -40,7 +40,6 @@ title: contest 4 - hints y códigos de ejemplo
   ¿Como hacer esa consulta por rango de forma eficiente?
 </details>
 <details> 
-<details> 
   <summary>Hint 3</summary>
   Puede ser util hacer sweep line, similar al problema "Fundraising" del contest pasado.
 </details>
