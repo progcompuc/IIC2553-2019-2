@@ -75,5 +75,6 @@ title: Recursos
 - Norteamérica:
   - <http://acmgnyr.org>
   - <http://cs.ecs.baylor.edu/~hamerly/icpc/>
+  - <http://www.acmicpc-pacnw.org/results.htm>
 
 [Index](../index) > ```{{page.title}}```
