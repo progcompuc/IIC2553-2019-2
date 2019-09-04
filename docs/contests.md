@@ -32,7 +32,12 @@ Agosto 28, 12 días, [link a **contest**](https://vjudge.net/contest/322871), go
 **Puntaje Mínimo Esperado**: 5\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest4)
 
-
+## Contest 5
+Septiembre 04, 12 días, [link a **contest**](https://vjudge.net/contest/324233), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [Grafos](resources/graphs): MST (minimum spanning tree) y LCA (lowest common ancestor)\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest5)
 
 [Index](index) > ```{{page.title}}```
 
