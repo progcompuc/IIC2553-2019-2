@@ -80,6 +80,7 @@ title: "Grafos"
             - [Floyd-Warshall with negative cycles. How do I find all undefined paths?](https://stackoverflow.com/questions/15709277/floyd-warshall-with-negative-cycles-how-do-i-find-all-undefined-paths)
 
 ## Minimum Spanning Tree (MST):
+- (youtube) [3.5 Prims and Kruskals Algorithms - Greedy Method](https://youtu.be/4ZlRH0eK-qQ)
 - Kruskal's Algorithm:
     - (youtube) [Kruskal's algorithm in 2 minutes — Review and example](https://www.youtube.com/watch?v=71UQH7Pr9kU)
     - (youtube) [Kruskal's algorithm Minimum Spanning Tree Graph Algorithm](https://www.youtube.com/watch?v=fAuF0EuZVCk)
