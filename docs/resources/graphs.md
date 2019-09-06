@@ -91,6 +91,11 @@ title: "Grafos"
     - (youtube) [Proof of Cut Property](https://www.youtube.com/watch?v=P7K7mG8QDVM)
     - (youtube) [Proof of Prim's MST algorithm using cut property](https://www.youtube.com/watch?v=UfhUr5QzfiI)
     - (youtube) [Correctness of Kruskal's Algorithm](https://www.youtube.com/watch?v=S9PIItOUyzA)
+- cp-algorithms:
+    - [Minimum Spanning Tree - Prim's Algorithm](https://cp-algorithms.com/graph/mst_prim.html)
+    - [Minimum Spanning Tree - Kruskal](https://cp-algorithms.com/graph/mst_kruskal.html)
+    - [Minimum Spanning Tree - Kruskal with Disjoint Set Union](https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html)
+    - [Second best Minimum Spanning Tree - Using Kruskal and Lowest Common Ancestor](https://cp-algorithms.com/graph/second_best_mst.html)
 - [Códigos de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/MinimumSpanningTree.cpp)
 
 ## Lowest Common Ancestor (LCA):
