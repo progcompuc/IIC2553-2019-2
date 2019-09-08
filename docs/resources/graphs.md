@@ -101,12 +101,12 @@ title: "Grafos"
 ## Lowest Common Ancestor (LCA):
 - General Overview of Methods:
     - <http://codeforces.com/blog/entry/16221> (skip to the LCA part)
-- (youtube) [Episode 28 - Sparse Tables and LCA](https://www.youtube.com/watch?v=EKcQt-74bNw)
 - Método 1 (**RECOMENDADO**): Binary Lifting Method (aka [jump pointers](https://en.wikipedia.org/wiki/Level_ancestor_problem#Jump_pointer_algorithm)):
     - [Codeforces: Lowest common ancestor's binary lifting method for path queries on trees](http://codeforces.com/blog/entry/22325) Nota: como dice el post, este método es muy útil ya que se puede adaptar para computar consultas sobre caminos entre 2 nodos en un árbol.
     - (youtube) [Episode 17 - Binary Lifting](https://www.youtube.com/watch?v=kOfa6t8WnbI)
 - Método 2: Euler Tour + Range Minimun Query:
     - [Topcoder: range minimum query and lowest common ancestor](https://www.topcoder.com/community/data-science/data-science-tutorials/range-minimum-query-and-lowest-common-ancestor/)
+    - (youtube) [Episode 28 - Sparse Tables and LCA](https://www.youtube.com/watch?v=EKcQt-74bNw)
     - (youtube) [Sparse Table Algorithm Range Minimum Query](https://www.youtube.com/watch?v=c5O7E_PDO4U)
 - [Códigos de ejemplo (ambos métodos)](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Graphs/LCA.cpp)
 
