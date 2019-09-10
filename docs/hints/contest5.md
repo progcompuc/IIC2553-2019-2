@@ -15,6 +15,51 @@ title: contest 5 - hints y códigos de ejemplo
   <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/LCA_LowestCommonAncestor.cpp">Código de ejemplo</a>
 </details>
 
+### C - Tree 2
+
+<details> 
+  <summary>Hint</summary>
+  Un diametro de un grafo se define como un par de nodos (a,b) tal que la distancia entre ellos es maxima. Un grafo puede tener multiples diametros. Los diametros cumplen varias propiedades interesantes:
+
+<ol>
+    <li>Dado un nodo cualquiera u, sea v el nodo mas lejano de u. Esta garantizado que v es el extremo de un diametro.</li>
+    <li>Dado un diametro (a,b) y un nodo u cualquiera, esta garantizado que a o b es uno de los nodos mas lejanos a u (es decir, no existe un nodo x tal que dist(x,u) sea mayor a max(dist(a,u),dist(b,u)).</li>
+</ol>
+
+La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede usarse para encontrar un diametro del arbol, y la propiedad 2 puede usarse para responder las queries de manera eficiente.
+
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Para encontrar un diametro del arbol, puede hacerse bfs desde un nodo cualquiera. Sea <strong>a</strong> el ultimo nodo visitado (que sabemos es el extremo de un diametro). Luego podemos hacer bfs de nuevo partiendo desde <strong>a</strong> y guardando en <strong>b</strong> el ultimo nodo visitado. Tenemos que (<strong>a</strong>,<strong>b</strong>) es un diametro del arbol.
+
+  Ahora supongamos que nos dan una query <strong>v</strong>,<strong>d</strong>. Sabemos que solo necesitamos revisar <strong>a</strong> y <strong>b</strong> para encontrar un nodo mas lejano de <strong>v</strong>. Sea <strong>w</strong> este nodo. Si dist(<strong>v</strong>, <strong>w</strong>) es menor a <strong>d</strong>, podemos responder inmediatamente 0. Si la profundidad de <strong>v</strong> es menor o igual a <strong>d</strong>, entonces basta responder el <strong>d</strong>-esimo ancestro de v. En otro caso, podemos responder el ancestro (dist(<strong>v</strong>,<strong>w</strong>)-<strong>d</strong>)-esimo de <strong>w</strong>.
+
+  Para calcular distancias y ancestros en tiempo logaritmico podemos utilizar el metodo de Binary Lifting.
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest5/C_Tree_2.cpp">Código de ejemplo</a>
+</details>
+
+### E - Minimum spanning tree for each edge
+
+<details> 
+  <summary>Hint1</summary>
+  Es posible computar el MST una vez, y luego usar ese MST como punto de partida para responder las queries eficientemente.
+</details>
+<details>
+    <summary>Hint2</summary>
+    Dado un MST del grafo y una arista (u,v) cualquiera del grafo que no este en el MST, si agregamos la arista (u,v) al MST se forma un ciclo. Que arista (distinta de (u,v)) nos conviene sacar para eliminar este ciclo y minimizar el costo?
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Dado una arista (u,v), el MST que la contiene es equivalente a un MST cualquiera al que se le remueve la arista mas cara en el camino u-v y luego se agrega la arista (u,v).
+
+  Para calcular la arista mas cara entre u y v en el MST se puede utilizar Binary Lifting.
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest5/E_MST_for_each_edge.cpp">Código de ejemplo</a>
+</details>
+
+
 ### I - Roads in Hackerland
 <details> 
   <summary>Hint 1</summary>
