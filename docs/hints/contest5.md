@@ -30,7 +30,7 @@ title: contest 5 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Encontramos el MST del grafo y luego corremos un DFS sobre el MST calculando por cada nodo el tamaño de subárbol (cuántos nodos hay en su subárbol incluyéndolo), entonces la contribución de la arista que va de ese nodo a su padre inmediato es igual a su costo multiplicado por (N-K)*K, donde K es el tamaño del subárbol del nodo. Dado que la suma es gigante, la podemos guardar la representación binaria en un arreglo de ints suficientemente grande, entonces sumar 2^C * (N-K)*K se puede hacer calculando (N-k)*K en un long long y luego sumando "a mano" sobre el arreglo shifteados C posiciones.
+  Encontramos el MST del grafo y luego corremos un DFS sobre el MST calculando por cada nodo el tamaño de su subárbol (cuántos nodos hay en su subárbol incluyéndolo), entonces la contribución de la arista que va de ese nodo a su padre inmediato es igual a su costo multiplicado por (N-K)*K, donde K es el tamaño del subárbol del nodo. Dado que la suma es gigante, podemos guardar su representación binaria en un arreglo de ints suficientemente grande, entonces sumar 2^C * (N-K)*K se puede hacer calculando (N-k)*K en un long long y luego sumando sus bits "a mano" sobre el arreglo shifteados C posiciones.
   <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/hackerrank/RoadsInHackerLand.cpp">Código de ejemplo</a>
 </details>
 
