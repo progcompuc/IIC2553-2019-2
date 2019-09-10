@@ -31,12 +31,13 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
 </details>
 <details> 
   <summary>Solución + código</summary>
+  <p>
   Para encontrar un diametro del arbol, puede hacerse bfs desde un nodo cualquiera. Sea <strong>a</strong> el ultimo nodo visitado (que sabemos es el extremo de un diametro). Luego podemos hacer bfs de nuevo partiendo desde <strong>a</strong> y guardando en <strong>b</strong> el ultimo nodo visitado. Tenemos que (<strong>a</strong>,<strong>b</strong>) es un diametro del arbol.
-
+    </p><p>
   Ahora supongamos que nos dan una query <strong>v</strong>,<strong>d</strong>. Sabemos que solo necesitamos revisar <strong>a</strong> y <strong>b</strong> para encontrar un nodo mas lejano de <strong>v</strong>. Sea <strong>w</strong> este nodo. Si dist(<strong>v</strong>, <strong>w</strong>) es menor a <strong>d</strong>, podemos responder inmediatamente 0. Si la profundidad de <strong>v</strong> es menor o igual a <strong>d</strong>, entonces basta responder el <strong>d</strong>-esimo ancestro de v. En otro caso, podemos responder el ancestro (dist(<strong>v</strong>,<strong>w</strong>)-<strong>d</strong>)-esimo de <strong>w</strong>.
-
+</p><p>
   Para calcular distancias y ancestros en tiempo logaritmico podemos utilizar el metodo de Binary Lifting.
-
+</p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest5/C_Tree_2.cpp">Código de ejemplo</a>
 </details>
 
@@ -52,10 +53,11 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
 </details>
 <details> 
   <summary>Solución + código</summary>
+  <p>
   Dado una arista (u,v), el MST que la contiene es equivalente a un MST cualquiera al que se le remueve la arista mas cara en el camino u-v y luego se agrega la arista (u,v).
-
+</p><p>
   Para calcular la arista mas cara entre u y v en el MST se puede utilizar Binary Lifting.
-
+</p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest5/E_MST_for_each_edge.cpp">Código de ejemplo</a>
 </details>
 
