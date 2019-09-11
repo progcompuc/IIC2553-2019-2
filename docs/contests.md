@@ -39,5 +39,12 @@ Septiembre 04, 12 días, [link a **contest**](https://vjudge.net/contest/324233)
 **Puntaje Mínimo Esperado**: _pending_\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest5)
 
+## Contest 6
+Septiembre 11, 12 días, [link a **contest**](https://vjudge.net/contest/325517), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [Grafos](resources/graphs): LCA (lowest common ancestor) y más cosas ...\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest6)
+
 [Index](index) > ```{{page.title}}```
 
