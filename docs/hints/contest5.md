@@ -48,13 +48,13 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
   Es posible computar el MST una vez, y luego usar ese MST como punto de partida para responder las queries eficientemente.
 </details>
 <details>
-    <summary>Hint2</summary>
-    Dado un MST del grafo y una arista (u,v) cualquiera del grafo que no este en el MST, si agregamos la arista (u,v) al MST se forma un ciclo. Que arista (distinta de (u,v)) nos conviene sacar para eliminar este ciclo y minimizar el costo?
+  <summary>Hint2</summary>
+  Dado un MST del grafo y una arista (u,v) cualquiera del grafo que no este en el MST, si agregamos la arista (u,v) al MST se forma un ciclo. ¿Que arista (distinta de (u,v)) nos conviene sacar para eliminar este ciclo y minimizar el costo?
 </details>
 <details> 
   <summary>Solución + código</summary>
   <p>
-  Dado una arista (u,v), el MST que la contiene es equivalente a un MST cualquiera al que se le remueve la arista mas cara en el camino u-v y luego se agrega la arista (u,v).
+  Dado una arista (u,v), el MST que la contiene es equivalente a un MST cualquiera al que se le remueve la arista mas cara en el camino u-v y luego se agrega la arista (u,v). Una forma de ver que esto es correcto es asi: Si fijamos la arista (u,v) y luego corremos kruskal, la ejecucion sería exactamente la misma excepto por la arista mas cara que completa el ciclo (que no seria agregada). Esta arista es precisamente la mas cara en el camino u-v del MST original.
 </p><p>
   Para calcular la arista mas cara entre u y v en el MST se puede utilizar Binary Lifting.
 </p>
