@@ -41,6 +41,35 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest5/C_Tree_2.cpp">Código de ejemplo</a>
 </details>
 
+### D - Edges in MST
+
+<details> 
+  <summary>Hint 1</summary>
+  Notar que todos los posibles MSTs de un grafo pueden ser generado por el algoritmo de Kruskal si es que ordenamos las aristas de la forma correcta: al ordenar las aristas de menor a mayor costo, cuando haya empates ponemos primero las aristas del MST que queremos generar (queda como ejercicio teórico para el lector conveserse 100% de que esto funciona). Y del mismo modo, Kruskal es un algoritmo correcto, por lo que siempre encuentra MSTs válidos de un grafo. Es decir, el conjunto de MSTs de un grafo y el conjunto de posibles outputs de Kruskal son iguales.
+</details>
+
+<details> 
+  <summary>Hint 2</summary>
+  Notar que lo único que determina qué MST va a encontrar Kruskal es la forma en que ordenamos las aristas cuando hay empate por costo. si todas las aristas tuviesen costos distintos, entonces sólo hay una única forma de ordenar las aristas y por consiguiente Kruskal sólo puede generar un único MST. En cambio, si hay empates por costo, según cómo ordenemos las aristas empatadas, el MST encontrado por Kruskal podría ser diferente.
+</details>
+
+<details> 
+  <summary>Hint 3</summary>
+  Una vez que las aristas ya están ordenadas, recordemos que Kruskal usa un union-find por debajo para tomar la decisión de qué aristas poner y qué aristas no. Ahora, cuando Kruskal itera sobre las aristas, podemos mentalmente visualizar este proceso en "batches", donde cada batch son todas las aristas que empatan en un costo dado. Por ej. el primer batch son todas las aristas que empatan en costo C1, el segundo batch son todas las aristas que empatan en costo C2, etc. El orden de los batches es fijo, pero cómo están las aristas ordenadas dentro de cada batch puede variar. La observación clave que hay que hacer aquí es que el estado del Union-Find al momento de procesar el i-ésimo batch <strong>es siempre el mismo, independiente de cómo hayan estado permutadas las aristas en los batches previos</strong>. ¿Por qué? Básicamente porque las aristas que van antes del batch i-ésimo son siempre las mismas, y cada arista es una instrucción de unir 2 conjuntos en el Union-Find, y da lo mismo en qué orden ejecutemos las instrucciones, el resultado final es siempre el mismo.
+</details>
+
+
+<details> 
+  <summary>Hint 4</summary>
+  ¿Entonces de qué depende qué aristas del batch i-ésimo Kruskal va a poner y qué aristas va a ignorar? Sabemos que no depende del orden de los batches previos, pero sí puede depender del orden dentro del batch i-ésimo mismo. Si vemos los conjuntos del Union-Find como nodos, entonces cada arista e=(u,v) del batch i-ésimo se puede reinterpretar como una arista e' = (findSet(u), findSet(v)). Entonces si e' es un self-loop, <strong>NUNCA</strong> va, si e' forma parte de un ciclo, <strong>A VECES</strong> va, y e' es una <strong>arista de corte</strong> (la única otra opción que queda) entonces <strong>SIEMPRE</strong> va.
+</details>
+
+<details> 
+  <summary>Solución + código</summary>
+  Lo que hacemos es ejecutar Kruskal pero con la modificación de procesar las aristas empatadas en batches. Para cada batch primero armamos un grafo temporal donde los nodos son los conjuntos del Union-Find en ese instante, y las aristas del batch actual las traducimos a aristas en este grafo temporal. Los self-loops los podemos omitir y taggear como "none" altiro, y en el grafo temporal debemos encontrar las arista de corte y las aristas que forman parte de ciclos. Esto lo podemos hacer con el algoritmo de Tarjan para encontrar aristas de corte en un grafo (cuidado: el grafo no es necesariamente conexo, hay que correrlo por cada componente conexa del grafo). Las de corte las tageamos como "any" y el resto como "at least one". Luego seguimos ejecutando Kruskal normalmente y repetimos lo mismo para el siguiente batch y así hasta el final. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/160D_EdgesInMST.cpp">Código de ejemplo</a>
+</details>
+
+
 ### E - Minimum spanning tree for each edge
 
 <details> 
