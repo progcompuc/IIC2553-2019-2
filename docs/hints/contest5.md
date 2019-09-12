@@ -61,7 +61,7 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
 
 <details> 
   <summary>Hint 4</summary>
-  ¿Entonces de qué depende qué aristas del batch i-ésimo Kruskal va a poner y qué aristas va a ignorar? Sabemos que no depende del orden de los batches previos, pero sí puede depender del orden dentro del batch i-ésimo mismo. Si vemos los conjuntos del Union-Find como nodos, entonces cada arista e=(u,v) del batch i-ésimo se puede reinterpretar como una arista e' = (findSet(u), findSet(v)). Entonces si e' es un self-loop, <strong>NUNCA</strong> va, si e' forma parte de un ciclo, <strong>A VECES</strong> va, y e' es una <strong>arista de corte</strong> (la única otra opción que queda) entonces <strong>SIEMPRE</strong> va.
+  ¿Entonces de qué depende qué aristas del batch i-ésimo Kruskal va a poner y qué aristas va a ignorar? Sabemos que no depende del orden de los batches previos, pero sí puede depender del orden dentro del batch i-ésimo mismo. Si vemos los conjuntos del Union-Find como nodos, entonces cada arista e=(u,v) del batch i-ésimo se puede reinterpretar como una arista e' = (findSet(u), findSet(v)). Entonces si e' es un self-loop, <strong>NUNCA</strong> va, si e' forma parte de un ciclo, <strong>A VECES</strong> va, y si e' es una <strong>arista de corte</strong> (la única otra opción que queda) entonces <strong>SIEMPRE</strong> va.
 </details>
 
 <details> 
