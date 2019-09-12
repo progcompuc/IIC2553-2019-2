@@ -50,7 +50,7 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
 
 <details> 
   <summary>Hint 2</summary>
-  Notar que lo único que determina qué MST va a encontrar Kruskal es la forma en que ordenamos las aristas cuando hay empate por costo. si todas las aristas tuviesen costos distintos, entonces sólo hay una única forma de ordenar las aristas y por consiguiente Kruskal sólo puede generar un único MST. En cambio, si hay empates por costo, según cómo ordenemos las aristas empatadas, el MST encontrado por Kruskal podría ser diferente.
+  Notar que lo único que determina qué MST va a encontrar Kruskal es la forma en que ordenamos las aristas cuando hay empate por costo. Si todas las aristas tuviesen costos distintos, entonces sólo hay una única forma de ordenar las aristas y por consiguiente Kruskal sólo puede generar un único MST. En cambio, si hay empates por costo, según cómo ordenemos las aristas empatadas el MST encontrado por Kruskal podría ser diferente.
 </details>
 
 <details> 
