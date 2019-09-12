@@ -45,7 +45,7 @@ La demostracion de estas propiedades queda como ejercicio. La propiedad 1 puede 
 
 <details> 
   <summary>Hint 1</summary>
-  Notar que todos los posibles MSTs de un grafo pueden ser generado por el algoritmo de Kruskal si es que ordenamos las aristas de la forma correcta: al ordenar las aristas de menor a mayor costo, cuando haya empates ponemos primero las aristas del MST que queremos generar (queda como ejercicio teórico para el lector conveserse 100% de que esto funciona). Y del mismo modo, Kruskal es un algoritmo correcto, por lo que siempre encuentra MSTs válidos de un grafo. Es decir, el conjunto de MSTs de un grafo y el conjunto de posibles outputs de Kruskal son iguales.
+  Notar que todos los posibles MSTs de un grafo pueden ser generados por el algoritmo de Kruskal si es que ordenamos las aristas de la forma correcta: al ordenar las aristas de menor a mayor costo, cuando haya empates ponemos primero las aristas del MST que queremos generar (queda como ejercicio teórico para el lector convencerse 100% de que esto funciona). Y del mismo modo, Kruskal es un algoritmo correcto, por lo que siempre encuentra MSTs válidos de un grafo. Es decir, el conjunto de MSTs de un grafo y el conjunto de posibles outputs de Kruskal son iguales.
 </details>
 
 <details> 
