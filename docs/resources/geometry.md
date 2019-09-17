@@ -72,5 +72,8 @@ title: "Geometría"
 - Convex Hull Trick:
   - <https://wcipeg.com/wiki/Convex_hull_trick>
   - <https://stackoverflow.com/questions/17834699/what-is-convex-hull-trick-exactly>
+- Pick's Theorem:
+  - https://cp-algorithms.com/geometry/picks-theorem.html
+  - https://cp-algorithms.com/geometry/lattice-points.html
 
 [Index](../index) > [Recursos](resources) > ```{{page.title}}```
