@@ -33,9 +33,11 @@ title: contest 6 - hints y códigos de ejemplo
 
 <details> 
   <summary>Hint 1</summary>
+  <p>
   Guardemos un contador c[u] para cada nodo u. Sea d(u) el ancestro mas lejano al que podemos llegar desde u con el combustible que nos dan en u. Para cada nodo u realizemos lo siguiente: Aumentemos c[u] en 1, y disminuyamos c[d(u)] en 1. Luego para calcular cuan atractiva es una ciudad, basta sumar c[v] para cada v en el subarbol de u (sin incluir u). Esto funciona porque las ciudades del subarbol que no alcanzan a llegar a u aportan con un 1 y un -1 a la suma, por lo que no se cuentan. Las ciudades que si logran llegar a u aportan solo con un 1.
-  
+  </p><p>
   Como calcular d(u) y como calcular la suma de c[v] en el subarbol de u de manera eficiente?
+  </p>
 </details>
 <details> 
   <summary>Hint 2</summary>
