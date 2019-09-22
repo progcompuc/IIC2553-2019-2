@@ -41,7 +41,7 @@ Septiembre 04, 12 días, [link a **contest**](https://vjudge.net/contest/324233)
 
 ## Contest 6
 Septiembre 11, 12 días, [link a **contest**](https://vjudge.net/contest/325517), google doc para bonus de **explicaciones**: _pending_\\
-links a problemas que no se ven bien: [C - Join two Kingdoms](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4545), [D - Joining Couples](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4151)
+links a problemas que no se ven bien: [C - Join two Kingdoms](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4545), [D - Joining Couples](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4151)\\
 **Tópicos**: [Grafos](resources/graphs): LCA (lowest common ancestor) y más cosas ...\\
 **Puntos**: _pending_\\
 **Puntaje Mínimo Esperado**: _pending_\\
