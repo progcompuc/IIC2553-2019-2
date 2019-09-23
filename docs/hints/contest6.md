@@ -17,10 +17,26 @@ title: contest 6 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   <p>
-  Hacemos un BFS explorando todos los números válidos en orden lexicográfico, partiendo desde los dígitos solos (de menor a mayor) y cada vez que sacamos un número de la cola visitamo sus "vecinos" que son los números que se forman concatenando cada dígito permitido al final (de menor a mayor). A la vez, vamos trackeando el valor (módulo N) de cada número. Si en algún instante generamos un número con algún valor (módulo N) ya visto antes, lo descartamos. La primera vez que lleguemos a un número congruente a 0 (módulo N) estamos listos, de lo contrario la cola del BFS se nos va a vaciar (ya que a lo más hay N nodos válidos), en cuyo caso imprimimos -1.
+  Hacemos un BFS explorando todos los números válidos en orden lexicográfico, partiendo desde los dígitos solos (de menor a mayor) y cada vez que sacamos un número de la cola visitamos sus "vecinos" que son los números que se forman concatenando cada dígito permitido al final (de menor a mayor). A la vez, vamos trackeando el valor (módulo N) de cada número. Si en algún instante generamos un número con algún valor (módulo N) ya visto antes, lo descartamos. La primera vez que lleguemos a un número congruente a 0 (módulo N) estamos listos, de lo contrario la cola del BFS se nos va a vaciar (ya que a lo más hay N nodos válidos), en cuyo caso imprimimos -1.
 </p><p>
   <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/MULTII_YetAnotherMultipleProblem.cpp">Código de ejemplo</a>
   </p>
+</details>
+
+### B - Longest Path Problem
+
+<details> 
+  <summary>Hint</summary>
+  Cuando sacamos una arista e=(u,v), el árbol se nos divide en 2 subárboles (llamémoslo T_u y T_v) . Cuando pongamos la arista de nuevo, debemos escoger un nodo u' en T_u y un nodo v' en T_v para unirlos. Notar que el largo del camino más largo que pase por nuestra arista va a ser la distancia al nodo más alejado de u' en T_u + la distancia al nodo más alejado de v' en T_v + largo(e). Por lo tanto, notar que si somos inteligentes siempre debemos escoger un u' que minimice la distancia al más lejano en T_u y un v' que minimice la distancia al más lejano en T_v. Y por definición conceptual esos nodos se llaman <a href="https://en.wikipedia.org/wiki/Graph_center">centros del grafo</a>. Es decir, nos conviene escoger u' = centro de T_u y v' = centro de T_v. Así, el camino más largo (a.k.a. diámetro) de nuestro árbol modificado va a ser lo máximo entre lo mencionado anteriormente, el diámetro de T_u por sí solo y el diámetro de T_v por sí solo.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Cuando removemos una arista, nos quedan 2 subárboles. Podemos indexar estos subárboles con 2 variables: 1) la arista (N-1 opciones) y 2) la dirección (forward o backward). Si tengo la arista e=(u,v) y la dirección forward, me refiero al subárbol que tiene como raíz a v y donde u es padre de v. Si uso backward, me refiero al árbol que tiene como raíz a u y donde v es padre de u. Así, para cacular el diámetro del subárbol (arista,dirección) podemos usar programación dinámica. Básicamente definimos una función DP(arista,dirección) con la cual podemos computar recurrentemente varias cosas respecto del subárbol (arista, dirección): su diámetro, un par de nodos extremos de un diámetro, la profundidad máxima y un nodo hoja ubicado a dicha profundidad máxima. Ahora bien, para encontrar el centro de un subárbol, podemos aprovechar el hecho de que un centro es cualquier nodo ubicado en un camino diametral tal que minimiza la distancia al extremo más lejano de dicho diámetro. Así, podemos hacer búsqueda binaria (usando LCA y binary lifting en el predicado) para encontrar el punto medio en el camino entre los extremos del diámetro. Para calcular distancias entre nodos podemos usar LCA también. Implementando todo con cuidado la complejidad resultante es O(N log N).    
+</p><p>
+  <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/MULTII_YetAnotherMultipleProblem.cpp">Código de ejemplo</a>
+  </p>
+  <p><strong>Nota: el tiempo límite está muy severo, así que cualquier solución con una complejidad teórica de O(N log N) y que dé TLE en un testcase >= al 53 se considerará como accepted</strong></p>
 </details>
 
 
