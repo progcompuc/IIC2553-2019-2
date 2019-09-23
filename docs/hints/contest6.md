@@ -4,6 +4,26 @@ title: contest 6 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 6](../contests#contest-6) > ```{{page.title}}```
 
+### A - Yet Another Multiple Problem
+
+<details> 
+  <summary>Hint</summary>
+  Un número construido sólo con dígitos permitidos es un candidato a múltiplo (puede no serlo). Un número X es menor a otro número Y ssi el string de X en base 10 es lexicográficamente menor al string Y en base 10. Piensa en una forma de generar todos los números (strings) válidos en orden lexicográfico. El primero que generes que sea múltiplo de N es la respuesta (cualquier otro que encuentres después va a ser mayor).
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Obviamente no podemos buscar números infinitamente, sin embargo hay un criterio podar búsquedas innecesarias. Notar que si un número X es múltiplo de N, significa que X = 0 (mod N). Ahora si vamos generando números en orden lexicográfico, cada número es congruente a algún valor (mod N), eso significa que hay a lo más N posibilidades. Ahora, supongamos que queremos alargar el string de X con nuevos dígitos, con eso generaríamos un nuevo número X' = X * 10 + algún_dígito, el cual tendría un nuevo valor modular asociado de (X' % N). La pregunta es: ¿qué pasa si el valor (X' % N) ya fue considerado (visitado) antes? Significa que ya hubo un número (string) lexicográficamente menor que produjo el mismo módulo, entonces cualquier sufijo válido que le agreguemos a X' se lo podemos agregar a ese número (string) anterior y producir los mismo valores y siendo lexicograficamente menores. Es decir, no vale la pena perder el tiempo explorando X'. Esto quiere decir que sólo nos conviene explorar números que produzcan un valor (modulo N) que no hayamos visto anteriormente, y eso lo podemos hacer a lo más N veces.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Hacemos un BFS explorando todos los números válidos lexicográficamente, partiendo de los dígitos solos de menor a mayor y cada vez que sacamos un número generamos nuevos números concatenando cada dígito permitido al final (de menor a mayor). A la vez, vamos trackeando el valor modular de cada número (modulo N) si en algún instante generamos un número con algún valor (modulo N) ya visto antes, lo descartamos. La primera vez que lleguemos a un número congruente a 0 (módulo N) estamos listos, de lo contrario la cola del BFS se nos va a vaciar (ya que a lo más hay N nodos válidos), en cuyo caso imprimimos -1.
+</p><p>
+  <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/MULTII_YetAnotherMultipleProblem.cpp">Código de ejemplo</a>
+  </p>
+</details>
+
+
 ### F - New Year Tree
 
 <details> 
