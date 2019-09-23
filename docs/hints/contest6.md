@@ -17,7 +17,7 @@ title: contest 6 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   <p>
-  Hacemos un BFS explorando todos los números válidos lexicográficamente, partiendo de los dígitos solos de menor a mayor y cada vez que sacamos un número generamos nuevos números concatenando cada dígito permitido al final (de menor a mayor). A la vez, vamos trackeando el valor modular de cada número (modulo N) si en algún instante generamos un número con algún valor (modulo N) ya visto antes, lo descartamos. La primera vez que lleguemos a un número congruente a 0 (módulo N) estamos listos, de lo contrario la cola del BFS se nos va a vaciar (ya que a lo más hay N nodos válidos), en cuyo caso imprimimos -1.
+  Hacemos un BFS explorando todos los números válidos en orden lexicográfico, partiendo desde los dígitos solos (de menor a mayor) y cada vez que sacamos un número de la cola visitamo sus "vecinos" que son los números que se forman concatenando cada dígito permitido al final (de menor a mayor). A la vez, vamos trackeando el valor (módulo N) de cada número. Si en algún instante generamos un número con algún valor (módulo N) ya visto antes, lo descartamos. La primera vez que lleguemos a un número congruente a 0 (módulo N) estamos listos, de lo contrario la cola del BFS se nos va a vaciar (ya que a lo más hay N nodos válidos), en cuyo caso imprimimos -1.
 </p><p>
   <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/MULTII_YetAnotherMultipleProblem.cpp">Código de ejemplo</a>
   </p>
