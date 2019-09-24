@@ -39,6 +39,29 @@ title: contest 6 - hints y códigos de ejemplo
   <p><strong>Nota: el tiempo límite está muy severo, así que cualquier solución con una complejidad teórica de O(N log N) y que dé TLE en un testcase >= al 53 se considerará como accepted</strong></p>
 </details>
 
+### C - Join two Kingdoms
+
+
+<details> 
+  <summary>Hint</summary>
+  Sean los dos árboles T1 y T2. Cuando usamos una arista e=(u,v) para conectar un nodo u de T1 y un nodo v de T2, el diámetro del árbol resultante es el máximo entre el diámetro de T1 por sí solo, el diámetro de T2 por sí solo y (la distancia al nodo más lejano de u en T1 + la distancia al nodo más lejano de v en T2 + 1).
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Si encontramos los extremos de un diámetro de un árbol, la distancia de un nodo u su más lejano es igual al máximo entre las distancias de u a cada extremo del diámetro.
+</details>
+<details> 
+  <summary>Hint 3</summary>
+  En lugar de probar todas las combinaciones de nodos (u,v) que nos daría cuadrático, piensa en una forma de considerar hartas combinaciones (u,v) "de un viaje" (sin necesitar iterar una por una explícitamente).
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Calculamos los diámetros y los extremos de un diámetro de T1 y T2. Eso se puede hacer con 2 BFSs (parto de un nodo, encuentro el más lejano y luego encuentro el más lejano del más lejano). Luego la distancia al más lejano de cada nodo es el máximo entre la distancia a cada extremo del diámetro (eso se puede hacer 2 BFSs más, aunque podemos ser más óptimos reutilizando uno de los BFSs anteriores). Con eso tenemos un arreglo maxdist1 y maxdist2 para T1 y T2, respectivamente. También tenemos diam1 y diam2 (el diámetro de cada árbol). Si llamamos max_diam = max {diam1, diam2}, entonces para una arista e=(u,v) el diámetro de la unión es max {max_diam, maxdist1[u] + maxdist2[v] + 1}. Para evitar iterar sobre todos los (u,v) posibles, lo que podemos hacer es ordenar maxdist2 de menor a mayor, iterar sobre los u's de T1 y para un u fijo podemos hacer búsqueda binaria sobre los v's de T2 encontrando el nodo v* a partir del cual (maxdist1[u] + maxdist2[v] + 1) le comienza a ganar a max_diam. De v* a la derecha usamos sumas acumuladas precomputadas, y a la izquierda de v* domina max_diam así que es multiplicar max_diam por con una constante. Así la complejidad resultante es N log (Q).
+</p><p>
+  <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/URI/JoinTwoKingdoms.cpp">Código de ejemplo</a>
+  </p>
+</details>
 
 ### F - New Year Tree
 
