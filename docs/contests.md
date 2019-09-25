@@ -54,4 +54,12 @@ Septiembre 18, 12 días, [link a **contest**](https://vjudge.net/contest/326948)
 **Puntaje Mínimo Esperado**: _pending_\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest7)
 
+## Contest 8
+Septiembre 25, 11.5 días, [link a **contest**](https://vjudge.net/contest/329285), google doc para bonus de **explicaciones**: _pending_\\
+links a problemas que no se ven bien: [D](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3807), [G](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2272)\\
+**Tópicos**: [Grafos](resources/graphs): SCC, Aristas de Corte y Puntos de Articulación\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest8)
+
 [Index](index) > ```{{page.title}}```
