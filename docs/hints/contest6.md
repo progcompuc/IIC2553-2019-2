@@ -100,22 +100,19 @@ title: contest 6 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Al igual que el problema anterior, es util "aplanar" el arbol, mapeando nodos a posiciones en un arreglo de manera que cada subarbol este representado por un subarreglo consecutivo de ese arreglo.
-</details>
-<details> 
-  <summary>Hint 3</summary>
   Se puede utilizar Binary Lifting para calcular d(u) en tiempo logaritmico.
 </details>
 <details> 
-  <summary>Solución + código</summary>
-  <p>
-  Para mapear nodos a posiciones en un arreglo, lo que podemos hacer es un recorrido en pre-orden de los nodos asignando indices crecientes. Luego tenemos arreglos left[n] y right[n], de manera que left[i] es la posicion en el arreglo del nodo i, y left[i]:right[i] es el subarbol que tiene al nodo i como raiz.
-  </p><p>
+  <summary>Hint 3</summary>
+  Se puede utilizar programacion dinamica para calcular las sumas de c[v] en tiempo lineal para el arbol completo.
+</details>
+<details> 
+  <summary>Solución + código</summary><p>
   Para calcular d(u) se puede utilizar Binary Lifting, moviendose lo mas posible hacia arriba del arbol mientras la suma acumulada de los costos no sea mayor al combustible con el que se parte.
 </p><p>
-  Luego, tenemos un arreglo c[n] inicializado con 0's. Para cada nodo u sumamos 1 a c[left[u]] y restamos 1 a c[left[d(u)]].
+  Luego, tenemos un arreglo c[n] inicializado con 0's. Para cada nodo u sumamos 1 a c[u] y restamos 1 a c[d(u)].
 </p><p>
-  Para cada nodo u, calculamos su atractividad como la suma del subarreglo c[left[u]:right[u]]. Esto puede hacerse simplemente con un arreglo de sumas acumuladas (si acc[i]=sum(c[0:i]), entonces sum(c[l:r])=acc[r]-acc[l]).
+  Para cada nodo u, calculamos su atractividad como la suma de (atractividad de v + c[v]) por cada hijo v de u. Esto se puede hacer de manera eficiente con programacion dinamica.
   </p><p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest6/G_Whistles_new_car.cpp">Código de ejemplo</a>
   </p>

@@ -2,6 +2,11 @@
 
 using namespace std;
 
+int64_t t, n;
+int64_t x[500000];
+int64_t c[500000];
+int64_t c_sum[500000];
+
 struct WeightedGraph {
   struct Edge {
     int64_t u, v, c;
@@ -32,11 +37,8 @@ struct WeightedLCA {
   int64_t root;
   vector<int64_t> depth;
   int64_t idx;
-  vector<int64_t> left;
-  vector<int64_t> right;
 
   void dfs(int64_t u) {
-    left[u] = idx++;
     for (auto e : graph.adj_list[u]) {
       if (depth[e.v] != -1) {
         continue;
@@ -46,15 +48,12 @@ struct WeightedLCA {
       SumC[e.v][0] = e.c;
       dfs(e.v);
     }
-    right[u] = idx;
   }
 
   WeightedLCA(WeightedGraph &graph, int64_t root = 0)
       : graph(graph), root(root) {
     maxlog = 32 - __builtin_clz(graph.size);
     A.assign(graph.size, vector<int64_t>(maxlog));
-    left.assign(graph.size, -1);
-    right.assign(graph.size, -1);
     SumC.assign(graph.size, vector<int64_t>(maxlog));
     depth.assign(graph.size, -1);
     A[root][0] = 0;
@@ -85,9 +84,18 @@ struct WeightedLCA {
   }
 };
 
-int64_t t, n;
-int64_t x[500000];
-int64_t arr[500000];
+int64_t attrac(int64_t u, WeightedLCA &lca) {
+  if (c_sum[u] == -1) {
+    c_sum[u] = 0;
+    for (auto e : lca.graph.adj_list[u]) {
+      if (e.v == lca.A[u][0]) {
+        continue;
+      }
+      c_sum[u] += attrac(e.v, lca) + c[e.v];
+    }
+  }
+  return c_sum[u];
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -99,7 +107,8 @@ int main() {
     WeightedGraph graph(n);
     for (int64_t i = 0; i < n; i++) {
       cin >> x[i];
-      arr[i] = 0;
+      c[i] = 0;
+      c_sum[i] = -1;
     }
     for (int64_t i = 0; i < n - 1; i++) {
       int64_t u, v, c;
@@ -110,14 +119,11 @@ int main() {
     }
     WeightedLCA lca(graph);
     for (int64_t i = 0; i < n; i++) {
-      arr[lca.left[i]] += 1;
-      arr[lca.left[lca.lift(i, x[i])]] -= 1;
-    }
-    for (int64_t i = 1; i < n; i++) {
-      arr[i] += arr[i - 1];
+      c[i] += 1;
+      c[lca.lift(i, x[i])] -= 1;
     }
     for (int64_t i = 0; i < n; i++) {
-      cout << arr[lca.right[i] - 1] - arr[lca.left[i]] << " ";
+      cout << attrac(i, lca) << " ";
     }
     cout << '\n';
   }
