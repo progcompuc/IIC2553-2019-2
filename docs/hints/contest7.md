@@ -25,7 +25,7 @@ title: contest 7 - hints y códigos de ejemplo
 ### D - Keep it Covered
 <details> 
   <summary>Hint</summary>
-  Las celdas las podemos separar en 2 grupos: las blancas y las negras (si es que pintamos la matriz como tablero de ajedrez). Visto así, la celdas blancas con círculo deben escoger una celda negra vecina a que conectarse, y las celdas blancas sin círculo deben escoger 2 celdas blancas vecinas a las que conectarse. Las celdas negras con círculo sólo pueden ser escogidas por una celda blanca, mientras que las celdas negras sin sírculo sólo pueden ser escogidas por dos celdas blancas.
+  Las celdas las podemos separar en 2 grupos: las blancas y las negras (si es que pintamos la matriz como tablero de ajedrez). Visto así, la celdas blancas con círculo deben escoger una celda negra vecina a la que conectarse, y las celdas blancas sin círculo deben escoger 2 celdas blancas vecinas a las que conectarse. Las celdas negras con círculo sólo pueden ser escogidas por una celda blanca, mientras que las celdas negras sin sírculo sólo pueden ser escogidas por dos celdas blancas.
 </details>
 <details> 
   <summary>Solución + código</summary>
