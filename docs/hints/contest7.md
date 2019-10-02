@@ -31,7 +31,7 @@ title: contest 7 - hints y códigos de ejemplo
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/A_surely_you_congest.cpp">Código de ejemplo</a>
 </details>
 
-### B Boa Viagem, Roim
+### B - Boa Viagem, Roim
 <details> 
   <summary>Hint 1</summary>   
   Existen algoritmos que calculan el flujo máximo con costo mínimo (osea, de todos los flujos con costo maximo, eligen el de menor costo). Un algoritmo consiste en utilizar Edmonds-Karp, pero en lugar de elegir caminos mas cortos en numero de aristas elige siempre los caminos más baratos para enviar flujo. Más detalles <a href="https://cp-algorithms.com/graph/min_cost_flow.html">acá</a>.
