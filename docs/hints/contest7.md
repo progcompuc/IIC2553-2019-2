@@ -16,10 +16,11 @@ title: contest 7 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  <p>Primero podemos correr un dijsktra inicial para encontrar las distancias mas cortas hacia cada nodo desde el nodo 1. Tambien podemos inmediatamente identificar que aristas pertenecen a caminos optimos. Utilizamos estas aristas (poniendoles capacidad unitaria)  y las intersecciones de la ciudad para armar un grafo sobre el que calcularemos flujo, donde el destino es la interseccion 1 y la fuente es un nodo virtual.<p>
+  <p>Primero podemos correr un dijsktra inicial para encontrar las distancias mas cortas hacia cada nodo desde el nodo 1. Tambien podemos inmediatamente identificar que aristas pertenecen a caminos optimos. Utilizamos estas aristas (poniendoles capacidad unitaria)  y las intersecciones de la ciudad para armar un grafo sobre el que calcularemos flujo, donde el destino es la interseccion 1 y la fuente es un nodo virtual. Sea <strong>G</strong> este grafo. <p>
   
   <p> Luego agrupamos los autos segun su distancia inicial del destino. La gracia es que autos en grupos distintos no pueden causar congestion. Por cada grupo hacemos lo siguiente:</p>
   <ul>
+    <li>Tomamos el grafo <strong>G</strong> obtenido en la primera parte.</li>
     <li>Por cada auto en el grupo conectamos la fuente con el nodo donde parte el auto (con una arista de capacidad 1)</li>
     <li>Calculamos el flujo maximo de la fuente al destino</li>
   </ul>
@@ -27,8 +28,8 @@ title: contest 7 - hints y códigos de ejemplo
   <p>Luego, la respuesta final es la suma de los flujos de cada grupo.</p>
 
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/A_surely_you_congest.cpp">Código de ejemplo</a>
+  
 </details>
-
 
 ### C - In Case of Invasion, Please ...
 <details> 
