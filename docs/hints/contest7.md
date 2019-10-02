@@ -48,7 +48,7 @@ title: contest 7 - hints y códigos de ejemplo
   <p>
   La gracia es que si tomamos un flujo por este grafo (donde todas las aristas tienen capacidad unitaria), el costo siempre se va a ver de la forma C = (# chartered flights) * TC + (costo real), donde el costo real es siempre menor a TC. Por lo tanto, si tenemos un algoritmo que minimiza C, entonces primero va a minimizar el numero de chartered flights y luego va a minimizar el costo real.
   </p><p>
-  Con esto, la solucion es computar el flujo desde el inicio al destino sobre el grafo modificado. Sea F y C el valor y el costo de este flujo, respectivamente. Si F es menor a 2, entonces no es posible que Roim y el compañero se vayan por rutas distintas. Si F es menor a 2, entonces utilizamos floor(C/TC) chartered flights, y el costo real es C % TC.
+  Con esto, la solucion es computar el flujo desde el inicio al destino sobre el grafo modificado. Sea F y C el valor y el costo de este flujo, respectivamente. Si F es menor a 2, entonces no es posible que Roim y el compañero se vayan por rutas distintas. Si F es igual a 2 entonces si es posible, y utilizamos floor(C/TC) chartered flights con un costo real total de C % TC.
   </p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/B_boa_viagem_roim.cpp">Código de ejemplo</a>
 </details>
