@@ -4,6 +4,32 @@ title: contest 7 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 7](../contests#contest-7) > ```{{page.title}}```
 
+
+### A - Surely You Congest
+<details> 
+  <summary>Hint 1</summary>
+  Solo es necesario considerar las aristas del grafo que forman parte de algun camino optimo entre el nodo 1 y algun otro nodo.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Si dos autos generan una congestion, entonces necesariamente partieron desde nodos que estan a la misma distancia desde el nodo 1.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>Primero podemos correr un dijsktra inicial para encontrar las distancias mas cortas hacia cada nodo desde el nodo 1. Tambien podemos inmediatamente identificar que aristas pertenecen a caminos optimos. Utilizamos estas aristas (poniendoles capacidad unitaria)  y las intersecciones de la ciudad para armar un grafo sobre el que calcularemos flujo, donde el destino es la interseccion 1 y la fuente es un nodo virtual.<p>
+  
+  <p> Luego agrupamos los autos segun su distancia inicial del destino. La gracia es que autos en grupos distintos no pueden causar congestion. Por cada grupo hacemos lo siguiente:</p>
+  <ul>
+    <li>Por cada auto en el grupo conectamos la fuente con el nodo donde parte el auto (con una arista de capacidad 1)</li>
+    <li>Calculamos el flujo maximo de la fuente al destino</li>
+  </ul>
+
+  <p>Luego, la respuesta final es la suma de los flujos de cada grupo.</p>
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/A_surely_you_congest.cpp">Código de ejemplo</a>
+</details>
+
+
 ### C - In Case of Invasion, Please ...
 <details> 
   <summary>Hint 1</summary>
@@ -30,6 +56,20 @@ title: contest 7 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   Armamos un grafo para maxflow. Creamos un source y lo conectamos a las celdas blancas. Si la celda blanca tiene círculo, la arista tiene capacidad 1, si no tiene círculo le damos capacidad 2. Luego por cada celda blanca agregamos aristas con capacidad infinita hacia las celdas negras vecinas. Finalmente de las celdas negras agregamos aristas hacia un nodo virtual target (si tiene círculo, con capacidad 1, si no, con capacidad 2). Encontramos el flujo máximo y si se cumple que es igual a la suma de las capacidades de entrada e igual a la suma de las capacidades de salida, entonces se puede, de lo contrario, no se puede. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/8198_KeepItCovered.cpp">Código de ejemplo</a>
+</details>
+
+### E - Domino Art
+<details> 
+  <summary>Hint</summary>
+  Si pintamos las celdas como un tablero de ajedrez, el problema se reduce a "conectar" celdas blancas con sus celdas negras adyacentes utilizando dominos. Por cada celda blanca, hay que tomar la decision de a cual celda negra conectarla.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>El problema se reduce a maximum matching entre las celdas blancas y negras si coloreamos la grilla como un tablero de ajedrez. </p>
+  
+  <p> Armamos un grafo para flujo maximo con r*c+2 nodos. Luego, para cada celda blanca se conecta una arista desde el nodo fuente hasta el nodo correspondiente a la celda con capacidad 1. Tambien agregamos aristas con capacidad 1 desde el nodo de la celda blanca hacia los nodos que representan las celdas vecinas. Por cada celda negra, conectamos su nodo con el destino con una arista de capacidad unitaria. Si el flujo maximo por este grafo es igual a la mitad de las celdas marcadas, entonces es posible cubrir la grilla con dominos.</p>
+
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/E_domino_art.cpp">Código de ejemplo</a>
 </details>
 
 ### H - Attacking Rooks
