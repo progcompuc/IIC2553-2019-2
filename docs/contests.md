@@ -51,8 +51,8 @@ links a problemas que no se ven bien: [C - Join two Kingdoms](https://icpcarchiv
 Septiembre 18, 12 días, [link a **contest**](https://vjudge.net/contest/326948), google doc para bonus de **explicaciones**: _pending_\\
 **Links a problemas que no se ven bien**: [A](https://open.kattis.com/problems/congest), [C](https://open.kattis.com/problems/incaseofinvasion), [D](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=788&page=show_problem&problem=6220), [E](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2012), [F](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5918), [G](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2480), [H](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4536)\\
 **Tópicos**: [Grafos](resources/graphs): Max Flow\\
-**Puntos**: _pending_\\
-**Puntaje Mínimo Esperado**: _pending_\\
+**Puntos**: 6, 6, 6, 4, 4, 4, 4, 4\\
+**Puntaje Mínimo Esperado**: 5\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest7)
 
 ## Contest 8
