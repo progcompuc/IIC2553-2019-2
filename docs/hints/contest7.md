@@ -29,8 +29,30 @@ title: contest 7 - hints y códigos de ejemplo
   <p>Luego, la respuesta final es la suma de los flujos de cada grupo.</p>
 
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/A_surely_you_congest.cpp">Código de ejemplo</a>
-  
 </details>
+
+### B Boa Viagem, Roim
+<details> 
+  <summary>Hint 1</summary>   
+  Existen algoritmos que calculan el flujo máximo con costo mínimo (osea, de todos los flujos con costo maximo, eligen el de menor costo). Un algoritmo consiste en utilizar Edmonds-Karp, pero en lugar de elegir caminos mas cortos en numero de aristas elige siempre los caminos más baratos para enviar flujo. Más detalles <a href="https://cp-algorithms.com/graph/min_cost_flow.html">acá</a>.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Piensa en como codificar los costos de las aristas en el grafo de manera que el algoritmo siempre elija la menor cantidad de chartered flights, y de los flujos que usan la menor cantidad de chartered flights que elija la de menor costo total.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Sea T = (suma de los costos de todas las aristas) + 1. Luego, a cada arista que representa un chartered flight sumamos T a su costo.
+  </p>
+  <p>
+  La gracia es que si tomamos un flujo por este grafo (donde todas las aristas tienen capacidad unitaria), el costo siempre se va a ver de la forma C = (# chartered flights) * TC + (costo real), donde el costo real es siempre menor a TC. Por lo tanto, si tenemos un algoritmo que minimiza C, entonces primero va a minimizar el numero de chartered flights y luego va a minimizar el costo real.
+  </p><p>
+  Con esto, la solucion es computar el flujo desde el inicio al destino sobre el grafo modificado. Sea F y C el valor y el costo de este flujo, respectivamente. Si F es menor a 2, entonces no es posible que Roim y el compañero se vayan por rutas distintas. Si F es menor a 2, entonces utilizamos floor(C/TC) chartered flights, y el costo real es C % TC.
+  </p>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest7/B_boa_viagem_roim.cpp">Código de ejemplo</a>
+</details>
+
 
 ### C - In Case of Invasion, Please ...
 <details> 
