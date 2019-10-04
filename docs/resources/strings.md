@@ -13,8 +13,16 @@ title: "Strings"
 
 ## Suffix Array:
 - ¿Qué es un suffix array?: [Youtube - Suffix Array introduction](https://www.youtube.com/watch?v=zqKlL3ZpTqs)
+- Motivación para Suffix Arrays: [Youtube - 35 6 Suffix Arrays](https://youtu.be/f8S05ZS-8KY)
+- Cómo construir un Suffix Array eficientemente:
+    - [Youtube - Construction of suffix arrays](https://youtu.be/_TUeAdu-U_k)
+    - <https://www.cs.helsinki.fi/u/tpkarkka/opetus/10s/spa/lecture11.pdf>
 - HackerRank - Suffix Array: <https://www.hackerrank.com/challenges/ashton-and-string/topics/suffix-array>
-- Suffix Array Construction: <https://www.cs.helsinki.fi/u/tpkarkka/opetus/10s/spa/lecture11.pdf>
+- **Longest Common Prefix (LCP)**:
+    - [Youtube - Longest Common Prefix (LCP) array](https://youtu.be/53VIWj8ksyI)
+    - [Codeforces - LCP from suffix array](https://codeforces.com/blog/entry/12796)
+    - [geeksforgeeks - kasai’s Algorithm for Construction of LCP array from Suffix Array
+B](https://www.geeksforgeeks.org/%C2%AD%C2%ADkasais-algorithm-for-construction-of-lcp-array-from-suffix-array/)
 - Códigos de Ejemplo:
     - <https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/suffix_array.cpp>
     - <http://codeforces.com/blog/entry/4025>
