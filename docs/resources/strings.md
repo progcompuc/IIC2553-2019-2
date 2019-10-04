@@ -24,8 +24,8 @@ title: "Strings"
     - [geeksforgeeks - kasai’s Algorithm for Construction of LCP array from Suffix Array
 B](https://www.geeksforgeeks.org/%C2%AD%C2%ADkasais-algorithm-for-construction-of-lcp-array-from-suffix-array/)
 - Códigos de Ejemplo:
-    - <https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/suffix_array.cpp>
-    - <http://codeforces.com/blog/entry/4025>
+    - [suffix_array.cpp](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/suffix_array.cpp)
+    - [Codeforces - Suffix Arrays](http://codeforces.com/blog/entry/4025)
 
 ## Rolling Hashing:
 - <https://progcomp.cl/rollinghashing>
