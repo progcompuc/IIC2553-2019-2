@@ -22,12 +22,12 @@ title: "Strings"
     - [Codeforces - Suffix Arrays](http://codeforces.com/blog/entry/4025)
 
 ## KMP (String Pattern Matching):
-- <https://www.youtube.com/watch?v=v82y5TCcBhQ>
-- <https://www.youtube.com/watch?v=V5-7GzOfADQ>
-- <https://www.youtube.com/watch?v=GTJr8OvyEVQ>
-- <https://www.youtube.com/watch?v=KG44VoDtsAA>
+- [youtube: KMP String matching algorithm](https://www.youtube.com/watch?v=v82y5TCcBhQ)
+- [youtube: 9.1 Knuth-Morris-Pratt KMP String Matching Algorithm](https://www.youtube.com/watch?v=V5-7GzOfADQ)
+- [youtube: Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search)](https://www.youtube.com/watch?v=GTJr8OvyEVQ)
+- [youtube: Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search) Part2](https://www.youtube.com/watch?v=KG44VoDtsAA)
 - [cp-algorithms: KMP](https://cp-algorithms.com/string/prefix-function.html)
-- <https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/KMP.cpp>
+- [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/KMP.cpp)
 
 ## Trie:
 - <https://en.wikipedia.org/wiki/Trie>
