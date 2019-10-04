@@ -23,6 +23,7 @@ title: "Strings"
 
 ## KMP (String Pattern Matching):
 - [youtube: KMP String matching algorithm](https://www.youtube.com/watch?v=v82y5TCcBhQ)
+- [youtube: KMP Searching Algorithm](https://www.youtube.com/watch?v=y2b94AxPlF8)
 - [youtube: 9.1 Knuth-Morris-Pratt KMP String Matching Algorithm](https://www.youtube.com/watch?v=V5-7GzOfADQ)
 - [youtube: Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search)](https://www.youtube.com/watch?v=GTJr8OvyEVQ)
 - [youtube: Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search) Part2](https://www.youtube.com/watch?v=KG44VoDtsAA)
