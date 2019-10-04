@@ -21,8 +21,7 @@ title: "Strings"
 - **Longest Common Prefix (LCP)**:
     - [Youtube - Longest Common Prefix (LCP) array](https://youtu.be/53VIWj8ksyI)
     - [Codeforces - LCP from suffix array](https://codeforces.com/blog/entry/12796)
-    - [geeksforgeeks - kasai’s Algorithm for Construction of LCP array from Suffix Array
-B](https://www.geeksforgeeks.org/%C2%AD%C2%ADkasais-algorithm-for-construction-of-lcp-array-from-suffix-array/)
+    - [geeksforgeeks - kasai’s Algorithm for Construction of LCP array from Suffix Array](https://www.geeksforgeeks.org/%C2%AD%C2%ADkasais-algorithm-for-construction-of-lcp-array-from-suffix-array/)
 - Códigos de Ejemplo:
     - [suffix_array.cpp](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/suffix_array.cpp)
     - [Codeforces - Suffix Arrays](http://codeforces.com/blog/entry/4025)
