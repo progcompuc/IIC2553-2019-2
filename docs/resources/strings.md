@@ -28,6 +28,10 @@ title: "Strings"
 - [youtube: Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search) Part2](https://www.youtube.com/watch?v=KG44VoDtsAA)
 - [cp-algorithms: KMP](https://cp-algorithms.com/string/prefix-function.html)
 - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/KMP.cpp)
+- Shortest Repeating Cycle
+  - <http://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/>
+  - <http://stackoverflow.com/questions/6021274/finding-shortest-repeating-cycle-in-word>
+  - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/shortest_repeating_cycle.cpp)
 
 ## Trie:
 - <https://en.wikipedia.org/wiki/Trie>
@@ -39,10 +43,5 @@ title: "Strings"
 - <https://progcomp.cl/rollinghashing>
 - [cp-algorithms: String Hashing](https://cp-algorithms.com/string/string-hashing.html)
 - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/RollingHashing.cpp)
-
-## Shortest Repeating Cycle:
-  - <http://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/>
-  - <http://stackoverflow.com/questions/6021274/finding-shortest-repeating-cycle-in-word>
-  - <https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/shortest_repeating_cycle.cpp>
 
 [Index](../index) > [Recursos](resources) > ```{{page.title}}```
