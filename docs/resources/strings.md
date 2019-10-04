@@ -17,7 +17,7 @@ title: "Strings"
 - Cómo construir un Suffix Array eficientemente:
     - [Youtube - Construction of suffix arrays](https://youtu.be/_TUeAdu-U_k)
     - <https://www.cs.helsinki.fi/u/tpkarkka/opetus/10s/spa/lecture11.pdf>
-- HackerRank - Suffix Array: <https://www.hackerrank.com/challenges/ashton-and-string/topics/suffix-array>
+    - [HackerRank - Suffix Array](https://www.hackerrank.com/challenges/ashton-and-string/topics/suffix-array)
 - **Longest Common Prefix (LCP)**:
     - [Youtube - Longest Common Prefix (LCP) array](https://youtu.be/53VIWj8ksyI)
     - [Codeforces - LCP from suffix array](https://codeforces.com/blog/entry/12796)
