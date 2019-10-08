@@ -41,7 +41,7 @@ title: contest 8 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Si tomamos un camino simple entre S y T y todas las aristas en este camino son aristas de corte, entonces este camino es el unico camino simple entre S y T.
+  Si tomamos un camino simple entre S y T, este camino simple es unico si y solo si todas las aristas en este camino son aristas de corte.
 </details>
 <details> 
   <summary>Solución + código</summary>
