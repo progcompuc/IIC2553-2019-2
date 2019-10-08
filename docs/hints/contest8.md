@@ -45,8 +45,9 @@ title: contest 8 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
+  <p>
   Como dicen los hints, la solucion para cada query (S,T) consiste en encontrar un camino simple entre S y T y luego revisar que todas las aristas utilizadas sean aristas de corte. Para realizar esto eficientemente se puede utilizar binary lifting.
-
+  </p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest8/D_Hedge_Mazes.cpp">Código de ejemplo</a>
 </details>
 
