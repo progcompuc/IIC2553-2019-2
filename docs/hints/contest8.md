@@ -34,6 +34,7 @@ title: contest 8 - hints y códigos de ejemplo
     <li>
         La arista (u,v) es el unico camino entre los nodos u y v
     </li>
+  </ol>
   <p>
   Si estamos en el primer caso, entonces hay otro camino simple entre los nodos S y T que no utiliza la arista (u,v).
   </p>
