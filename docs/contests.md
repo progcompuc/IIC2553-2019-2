@@ -60,7 +60,7 @@ Septiembre 25, 11.5 días, [link a **contest**](https://vjudge.net/contest/32928
 links a problemas que no se ven bien: [D](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3807), [G](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2272)\\
 **Tópicos**: [Grafos](resources/graphs): SCC, Aristas de Corte y Puntos de Articulación\\
 **Puntos**: _pending_\\
-**Puntaje Mínimo Esperado**: _pending_\\
+**Puntaje Mínimo Esperado**: 9\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest8)
 
 ## Contest 9
@@ -69,7 +69,7 @@ Septiembre 30, 15 días, [link a **contest**](https://vjudge.net/contest/330757)
 **Links directos a los problemas**: [A](https://open.kattis.com/problems/isomorphicinversion), [B](https://codeforces.com/problemset/problem/958/A2), [C](https://www.hackerrank.com/challenges/string-similarity/problem), [D](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5914), [E](https://codeforces.com/problemset/problem/346/B), [F](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=531&page=show_problem&problem=3803), [G](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4144), [H](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=6222), [I](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=756), [J](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=365&page=show_problem&problem=2478)\\
 **Tópicos**: [Strings](resources/strings)\\
 **Puntos**: _pending_\\
-**Puntaje Mínimo Esperado**: _pending_\\
+**Puntaje Mínimo Esperado**: 12\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest9)
 
 
@@ -78,7 +78,7 @@ Septiembre 30, 15 días, [link a **contest**](https://vjudge.net/contest/330757)
 Octubre 08, 12 días, [link a **contest**](https://vjudge.net/contest/333057), google doc para bonus de **explicaciones**: _pending_\\
 **Tópicos**: [Geometría](resources/geometry)\\
 **Puntos**: _pending_\\
-**Puntaje Mínimo Esperado**: _pending_\\
+**Puntaje Mínimo Esperado**: 12\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest10)
 
 [Index](index) > ```{{page.title}}```
