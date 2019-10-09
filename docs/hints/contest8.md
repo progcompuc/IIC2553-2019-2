@@ -6,7 +6,7 @@ title: contest 8 - hints y códigos de ejemplo
 
 ### A - Jobbery
 <details> 
-  <summary>Hint 1</summary>
+  <summary>Hint</summary>
   Básicamente nos piden encontrar todos los nodos pertenecientes a la SCC raíz del DAG de SCCs (si es que hay). Si no hay una única SCC raíz para todo el DAG, entonces no hay ningún senador peligroso.
 </details>
 <details> 
