@@ -72,4 +72,13 @@ Septiembre 30, 15 días, [link a **contest**](https://vjudge.net/contest/330757)
 **Puntaje Mínimo Esperado**: _pending_\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest9)
 
+
+## Contest 10
+#### (\*\* GRUPAL, equipos de hasta 3 personas, se puede hacer equipo con oyentes y/o ayudantes)
+Octubre 08, 12 días, [link a **contest**](https://vjudge.net/contest/333057), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [Geometría](resources/geometry)\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: _pending_\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest10)
+
 [Index](index) > ```{{page.title}}```
