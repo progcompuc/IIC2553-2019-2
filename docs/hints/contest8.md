@@ -41,7 +41,7 @@ title: contest 8 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Corremos tarjan y encontramos todos los SCCs, por cada SCC encontramos el nodo de costo mínimo y cuántos nodos dentro de la SCC empatan a ese costo mínimo. El costo total es la sumatoria sobre el costo mínimo de cada SCC. Las formas de lograrlo es el productoria sobre la frecuencia del costo mínimo en cada SCC. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/427C_Checkposts.cpp">Código de ejemplo</a>
+  Corremos tarjan y encontramos todos los SCCs, por cada SCC encontramos el nodo de costo mínimo y cuántos nodos dentro de la SCC empatan a ese costo mínimo. El costo total es la sumatoria sobre el costo mínimo de cada SCC. Las formas de lograrlo es la productoria sobre la frecuencia del costo mínimo en cada SCC. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/427C_Checkposts.cpp">Código de ejemplo</a>
 </details>
 
 ### D - Hedge Mazes
