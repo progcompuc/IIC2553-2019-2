@@ -16,7 +16,7 @@ title: contest 9 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  La solucion consiste en utilizar KMP, pero en lugar de hacer match revisando que los caracteres del patron y string sean iguales, lo que hay que hacer es:
+  <p>La solucion consiste en utilizar KMP, pero en lugar de hacer match revisando que los caracteres del patron y string sean iguales, lo que hay que hacer es:</p>
 
   <ul>
     <li>Leer un caracter del string</li>
@@ -24,7 +24,7 @@ title: contest 9 - hints y códigos de ejemplo
     <li>Si el caracter si tiene asignado un numero, entonces revisar que el numero que toca leer en el patron sea este mismo numero</li>
   </ul>
 
-  Si lo anterior se cumple, avanzar el match. Si no, entonces retroceder en el patron.
+  <p>Si lo anterior se cumple, avanzar el match. Si no, entonces retroceder en el patron.</p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/D_game_of_matchings.cpp">Código de ejemplo</a>
 </details>
 
