@@ -13,16 +13,19 @@ int kmp(vector<int> &p, int N) {
   int count = 0;
   int n = p.size();
   lps.assign(n, 0);
-  last_seen.assign(27, -1);
+  last_seen.assign(26, -1);
   prev.assign(n, -1);
   int j = 0;
   last_seen[p[0]] = 0;
   for (int i = 1; i < n; i++) {
+    if (i == N) {
+      j = 0;
+    }
     prev[i] = last_seen[p[i]];
     while (true) {
       bool match;
       if (i - prev[i] > j) {                  // char has not been assigned a number
-        match = prev[j] == -1;                // check that this number has not appear before in the pattern
+        match = prev[j] == -1;                // check that this number has not appeared before in the pattern
       } else {                                // char has been assigned a number
         match = p[j - (i - prev[i])] == p[j]; // check that the pattern has this number next
       }
@@ -32,9 +35,6 @@ int kmp(vector<int> &p, int N) {
       } else {
         j = lps[j - 1];
       }
-    }
-    if (i == N) {
-      j = 0;
     }
     if (j == N) {
       j = lps[j - 1];
@@ -57,7 +57,6 @@ int main() {
       cin >> d;
       p.push_back(d - 1);
     }
-    p.push_back(26);
     stringstream line(str);
     char c;
     while (line >> c) {

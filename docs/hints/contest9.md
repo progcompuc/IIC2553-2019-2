@@ -28,8 +28,6 @@ title: contest 9 - hints y códigos de ejemplo
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/D_game_of_matchings.cpp">Código de ejemplo</a>
 </details>
 
-
-
 <!-- <details> 
   <summary>Hint</summary>   
 </details>
