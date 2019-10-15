@@ -114,7 +114,6 @@ title: contest 9 - hints y códigos de ejemplo
   Una vez que sacamos todos los marbles solo queda computar la cantidad de impuestos que hay que pagar.
   </p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/H_marblecoin.cpp">Código de ejemplo</a>
-  </p>
 </details>
 
 <!-- <details> 
