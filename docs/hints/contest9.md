@@ -16,10 +16,9 @@ title: contest 9 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  <p>La solucion consiste en utilizar KMP, pero en lugar de hacer match revisando que los caracteres del patron y string sean iguales, lo que hay que hacer es:</p>
+  <p>La solucion consiste en utilizar KMP, pero en lugar de hacer match revisando que los caracteres del patron y string sean iguales, lo que hay que hacer al leer un caracter del string es:</p>
 
   <ol>
-    <li>Leer un caracter del string</li>
     <li>Si el caracter no tiene asignado un numero, entonces revisar que el numero que toca leer en el patron no haya aparecido antes</li>
     <li>Si el caracter si tiene asignado un numero, entonces revisar que el numero que toca leer en el patron sea este mismo numero</li>
   </ol>
