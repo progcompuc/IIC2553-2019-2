@@ -56,16 +56,21 @@ title: contest 9 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   <p>
-  Si contamos una palabra dos veces, es porque hay un prefijo de largo mayor a 1 de una palabra en portugues que termina en un caracter c y un sufijo de largo mayor a 1 de una palabra en español que empieza en ese mismo caracter c.
-  </p><p>
-  Por ejemplo, si tenemos un prefijo qwe y un sufijo ert, entonces vamos a contar qw+ert y qwe+rt.
-  </p><p>
-  Por lo tanto, por cada caracter c, hay que sumar la cantidad de prefijos de largo mayor a 1 en portugues que terminan en c y la cantidad de sufijos de largo mayor a 1 en español que empiezan con c, y descontar el producto del contador.
-  </p><p>
-  En otras palabras, hay que computar A*B-sum_c((\# prefijos que terminan en c)*(\# sufijos que empiezan con c)), donde A y B estan definidos en el hint 2.
-  </p><p>
+  Si para un caracter c tenemos X sufijos de largo mayor a 1 de palabras en español que terminan en c, entonces para cada prefijo de largo mayor a 1 en portugues que termine en c vamos a contar X palabras repetidas.
+  </p>
+  <p>
+  Por ejemplo, si tenemos un prefijo qwe y dos sufijos ert y easd, entonces vamos a contar qw+ert, qwe+rt, qwe+asd y qw+easd. Aca hay 2 repeticiones, por lo que tenemos 4-2 palabras sin contar repetidos.
+  </p>
+  <p>
+  Por lo tanto, por cada caracter c, hay que sumar la cantidad de prefijos de largo mayor a 1 en portugues que terminan en c y la cantidad de sufijos de largo mayor a 1 en español que empiezan con c, y descontar el producto de A*B, donde A y B estan definidos en el hint 2.
+  </p>
+  <p>
+  En otras palabras, hay que computar A*B-sum_c((\# prefijos que terminan en c)*(\# sufijos que empiezan con c)).
+  </p>
+  <p>
   Para poder contar estas cosas de manera eficiente se pueden utilizar tries.
-  </p><p>
+  </p>
+  <p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/F_diccionario_portunol.cpp">Código de ejemplo</a>
   </p>
 </details>
