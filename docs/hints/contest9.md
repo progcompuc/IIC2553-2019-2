@@ -46,6 +46,7 @@ title: contest 9 - hints y códigos de ejemplo
   Podemos utilizar esta misma estructura para enumerar/contar los sufijos de un conjunto de strings.
   </p>
 </details>
+<details>
   <summary>Hint 2</summary>
   <p>
   Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A\*B palabras en portuñol <strong>menos</strong> las palabras que estamos contando dos veces.
