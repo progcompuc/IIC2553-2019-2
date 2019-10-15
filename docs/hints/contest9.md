@@ -48,7 +48,7 @@ title: contest 9 - hints y códigos de ejemplo
 <details>
   <summary>Hint 2</summary>
   <p>
-  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A*B palabras en portuñol <strong>menos</strong> las palabras que estamos contando dos veces.
+  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A*B palabras en portuñol <strong>menos</strong> las palabras que estamos repetidas.
   </p><p>
   Por ejemplo, si tenemos la palabra en portugues aabb y la palabra en español cab entonces estamos contando la palabra a+ab y la palabra aa+b, que son la misma palabra. Como contar la cantidad de veces que contamos una palabra repetida? Si tenemos esto, entonces estamos listos: basta descontar esta cantidad de A*B.
   </p>
