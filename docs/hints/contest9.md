@@ -49,9 +49,9 @@ title: contest 9 - hints y códigos de ejemplo
 <details>
   <summary>Hint 2</summary>
   <p>
-  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A\*B palabras en portuñol <strong>menos</strong> las palabras que estamos contando dos veces.
+  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A*B palabras en portuñol <strong>menos</strong> las palabras que estamos contando dos veces.
   </p><p>
-  Por ejemplo, si tenemos la palabra en portugues aabb y la palabra en español cab entonces estamos contando la palabra a+ab y la palabra aa+b, que son la misma palabra. Como contar la cantidad de palabras que estamos contando dos veces? Si tenemos esto, entonces estamos listos: basta descontar esta cantidad de A\*B.
+  Por ejemplo, si tenemos la palabra en portugues aabb y la palabra en español cab entonces estamos contando la palabra a+ab y la palabra aa+b, que son la misma palabra. Como contar la cantidad de palabras que estamos contando dos veces? Si tenemos esto, entonces estamos listos: basta descontar esta cantidad de A*B.
   </p>
 </details>
 <details> 
@@ -63,7 +63,7 @@ title: contest 9 - hints y códigos de ejemplo
   </p><p>
   Por lo tanto, por cada caracter c, hay que sumar la cantidad de prefijos de largo mayor a 1 en portugues que terminan en c y la cantidad de sufijos de largo mayor a 1 en español que empiezan con c, y descontar el producto del contador.
   </p><p>
-  En otras palabras, hay que computar A\*B-sum_c((\# prefijos que terminan en c)*(\# sufijos que empiezan con c)), donde A y B estan definidos en el hint 2.
+  En otras palabras, hay que computar A*B-sum_c((\# prefijos que terminan en c)*(\# sufijos que empiezan con c)), donde A y B estan definidos en el hint 2.
   </p><p>
   Para poder contar estas cosas de manera eficiente se pueden utilizar tries.
   </p><p>
