@@ -81,4 +81,14 @@ Octubre 08, 12 días, [link a **contest**](https://vjudge.net/contest/333057), g
 **Puntaje Mínimo Esperado**: 12\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest10)
 
+
+## Contest 11
+#### (\*\* GRUPAL, equipos de hasta 3 personas, se puede hacer equipo con oyentes y/o ayudantes)
+Octubre 15, 30 días, [link a **contest**](https://vjudge.net/contest/335209), google doc para bonus de **explicaciones**: _pending_\\
+**Tópicos**: [De Todo](resources/resources)\\
+**Puntos**: _pending_\\
+**Puntaje Mínimo Esperado**: 50\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest11)
+
+
 [Index](index) > ```{{page.title}}```
