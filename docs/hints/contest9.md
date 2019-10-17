@@ -48,7 +48,7 @@ title: contest 9 - hints y códigos de ejemplo
 <details>
   <summary>Hint 2</summary>
   <p>
-  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A*B palabras en portuñol <strong>menos</strong> las palabras que estamos repetidas.
+  Si tenemos A prefijos de palabras en portugues (sin repeticiones) y B sufijos de palabras en español, entonces tenemos A*B palabras en portuñol <strong>menos</strong> las palabras repetidas.
   </p><p>
   Por ejemplo, si tenemos la palabra en portugues aabb y la palabra en español cab entonces estamos contando la palabra a+ab y la palabra aa+b, que son la misma palabra. Como contar la cantidad de veces que contamos una palabra repetida? Si tenemos esto, entonces estamos listos: basta descontar esta cantidad de A*B.
   </p>
@@ -56,10 +56,10 @@ title: contest 9 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   <p>
-  Si para un caracter c tenemos X sufijos de largo mayor a 1 de palabras en español que terminan en c, entonces para cada prefijo de largo mayor a 1 en portugues que termine en c vamos a contar X palabras repetidas.
+  Si para un caracter c tenemos X sufijos de largo mayor a 1 de palabras en español que empiezan con c, entonces para cada prefijo de largo mayor a 1 en portugues que termine en c vamos a contar X palabras repetidas.
   </p>
   <p>
-  Por ejemplo, si tenemos un prefijo qwe y dos sufijos ert y easd, entonces vamos a contar qw+ert, qwe+rt, qwe+asd y qw+easd. Aca hay 2 repeticiones, por lo que tenemos 4-2 palabras sin contar repetidos.
+  Por ejemplo, si tenemos un prefijo qwe y dos sufijos ert y easd, entonces vamos a contar qw+ert, qwe+rt, qwe+asd y qw+easd. Aca hay X=2 repeticiones, por lo que tenemos 4-2=2 palabras sin contar repeticiones.
   </p>
   <p>
   Por lo tanto, por cada caracter c, hay que sumar la cantidad de prefijos de largo mayor a 1 en portugues que terminan en c y la cantidad de sufijos de largo mayor a 1 en español que empiezan con c, y descontar el producto de A*B, donde A y B estan definidos en el hint 2.
