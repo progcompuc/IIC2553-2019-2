@@ -22,7 +22,7 @@ title: "Geometría"
 - <https://cp-algorithms.com> (ir a la sección "Geometry")
 
 ## Apuntes varios de Geometría 3D
-- - [implementaciones varias de geometría 3D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Geometry3DUtils.cpp)
+- [implementaciones varias de geometría 3D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Geometry3DUtils.cpp)
   
 ## Trigonometría:
 - [implementaciones varias de trigonometría](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Trigonometry.cpp)
