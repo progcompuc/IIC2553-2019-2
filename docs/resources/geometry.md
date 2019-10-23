@@ -8,7 +8,7 @@ title: "Geometría"
 ## Producto Punto y Producto Cruz
 - [youtube: Cross Product and Dot Product: Visual explanation](https://www.youtube.com/watch?v=h0NJK4mEIJU)
 - Producto Cruz:
-  - Cross Product - Math is fun: <https://www.mathsisfun.com/algebra/vectors-cross-product.html>
+  - [Math is fun: Vector Cross Product](https://www.mathsisfun.com/algebra/vectors-cross-product.html)
   - [youtube: Cross products - Essence of linear algebra, Chapter 10](https://www.youtube.com/watch?v=eu6i7WJeinw)
   - [stackoverlfow: Calculating a 2D Vector's Cross Product](https://stackoverflow.com/questions/243945/calculating-a-2d-vectors-cross-product)
   - [codeforces: Geometry: 2D points and lines [Tutorial]](https://codeforces.com/blog/entry/48122) (saltarse a la parte cross product)
@@ -20,6 +20,9 @@ title: "Geometría"
 - [implementaciones varias de geometría 2D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Geometry2DUtils.cpp)
 - Video Repaso de Geometría (muy bueno): [youtube: Geometría Computacional [ICPCCL 2016]](https://youtu.be/nk5ejrBWORw?list=PL-c_98SOXhxaXMMfnemh2ihniZsj57L8-)
 - <https://cp-algorithms.com> (ir a la sección "Geometry")
+
+## Apuntes varios de Geometría 3D
+- - [implementaciones varias de geometría 3D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Geometry3DUtils.cpp)
   
 ## Trigonometría:
 - [implementaciones varias de trigonometría](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/Trigonometry.cpp)
@@ -29,6 +32,7 @@ title: "Geometría"
 - Detectar si un punto está dentro de un polígono:
   - [geomalgorithms: Inclusion of a Point in a Polygon](http://geomalgorithms.com/a03-_inclusion.html)
   - [wikipedia: Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
+- Puntos extremos en un polígono convexo: <http://geomalgorithms.com/a14-_extreme_pts.html>
 - Pick's Theorem:
   - https://cp-algorithms.com/geometry/picks-theorem.html
   - https://cp-algorithms.com/geometry/lattice-points.html
