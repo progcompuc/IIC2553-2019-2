@@ -32,10 +32,11 @@ title: "Geometría"
 - Detectar si un punto está dentro de un polígono:
   - [geomalgorithms: Inclusion of a Point in a Polygon](http://geomalgorithms.com/a03-_inclusion.html)
   - [wikipedia: Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
-- Puntos extremos en un polígono convexo: <http://geomalgorithms.com/a14-_extreme_pts.html>
+- Puntos extremos en un polígono convexo:
+  - [geomalgorithms: Extreme Points of Convex Polygons](http://geomalgorithms.com/a14-_extreme_pts.html)
 - Pick's Theorem:
-  - https://cp-algorithms.com/geometry/picks-theorem.html
-  - https://cp-algorithms.com/geometry/lattice-points.html
+  - <https://cp-algorithms.com/geometry/picks-theorem.html>
+  - <https://cp-algorithms.com/geometry/lattice-points.html>
     
 ## Convex Hull:
 - Buen video explicando Convex Hull: [youtube: 5 6 Convex Hull 1350](https://www.youtube.com/watch?v=wRTGDig3jx8)
