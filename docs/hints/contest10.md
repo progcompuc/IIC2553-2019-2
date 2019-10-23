@@ -7,7 +7,7 @@ title: contest 10 - hints y códigos de ejemplo
 ### A - Convex Hull and Triangle
 <details> 
   <summary>Hint 1</summary>
-  Pensar en alguna forma logarítmica de encontrara la intersección entre un segmento de recta y un convex hull
+  Pensar en alguna forma logarítmica de encontrar la intersección entre un segmento de recta y un convex hull
 </details>
 <details> 
   <summary>Hint 2</summary>
