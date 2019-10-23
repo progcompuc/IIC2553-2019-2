@@ -4,6 +4,20 @@ title: contest 10 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 10](../contests#contest-10) > ```{{page.title}}```
 
+### A - Convex Hull and Triangle
+<details> 
+  <summary>Hint 1</summary>
+  Pensar en alguna forma logarítmica de encontrara la intersección entre un segmento de recta y un convex hull
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Al calcular el área de la intersección, no es necesario iterar por cada vértice del perímetro de la intersección, podemos ser más eficientes precomputando la sumatoria sobre el área del convex hull y luego usar estas sumas acumuladas en O(1).
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Para cada triángulo iteramos sobre sus aristas ccw y detectamos los puntos extremos donde comienza y termina la intersección con el convex hull. Esto puntos los taggeamos con "Saliendo" y "NO saliendo" del convex hull. La clave está en que una vez que recolectamos todos estos puntos, el área de la intersección entre el triángulo y el convex hull se puede computar por tramos definidos por pares consecutivos de estos puntos: 1) si P_i es "Saliendo" y P_{i+1} es "NO saliendo", entonces ese tramo de la intersección se hace sobre el perímetro del convexhull, 2) en cualquier otro caso el tramo se hace sobre el triángulo (el segmento de recta que va de P_i a P_{i+1}). En el primer caso se puede usar sumas acumuladas precomputadas y el segundo caso trivial, así que en ambos casos computar la contribución al área del tramo es O(1) (revisar apuntes geo, teorema de Green). Para encontrar los puntos de intersección de una arista a -> b de un triángulo con el convex hull se puede usar 4 búsquedas binarias: 2 búsquedas binarias para encontrar los puntos "extremos" del convex hull (el más a la izquierda y el más a la derecha desde el punto de vista del vector a -> b) y luego hacer una búsqueda binaria del extremo 1 al extremo 2 ccw y otra búsqueda binaria del extremo 2 al extremo 1 ccw para encontrar el primer punto donde hay cambio de orientación (donde las orientaciones posibles son "izquierda", "derecha" y "colineal") (revisar apuntes de producto cruz). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/POJ/2839_ConvexHullAndTriangle/solution.cpp">Código de ejemplo</a>
+</details>
+
 ### B - Flight Plan Evaluation
 
 <details>
