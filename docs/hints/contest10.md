@@ -37,6 +37,107 @@ title: contest 10 - hints y códigos de ejemplo
   Los hints ya revelan muchos detalles, pero básicamente hacemos lo siguiente: por cada arco (A_i, B_i) del vuelo encontramos todos los ángulos de rotación de A_i hacia B_i en los cuales ocurre una intersección (comparamos el arco (A_i, B_i) con cada arco (C_i, D_i) de cada continente, encontramos las intersecciones como se mencionó en los hints y recolectamos los ángulos que habría que rotar A_i para generar esos puntos de intersección). Ordenamos los ángulos de menor a mayor con un sort() e iteramos sobre ellos, además tenemos una variable booleana para ir trackeando si estamos dentro o fuera de un continente, si estamos dentro y pasamos por una intersección ahora estamos fuera, y si estabamos fuera pasamos a estar dentro (recordar que el punto de partida siempre es en continente). La distancia recorrida desde un ángulo alpha_j a un ángulo alpha_(j+1) es (alpha_(j+1) - alpha_j) * R. Cada vez que calculamos la distancia recorrida entre 2 pares consecutivos de ángulos, si ese tramo lo hicimos sobre el océano lo agregamos a nuestra suma total. Para más detalles de implementación revisar el siguiente <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/kattis/flightplan.cpp">código de ejemplo</a>.
 </details>
 
+### D - The Skyline Problem
+<details> 
+  <summary>Hint</summary>
+  Conviene procesar los inicios y terminos de edificios en orden.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  <p>
+  Supongamos que hemos procesado todos los inicios y terminos de edificios en coordenadas menores a x y hemos guardado la informacion relevante en alguna estructura de datos. Luego en la coordenada x comienza un edificio con altura h. Que condicion tiene que cumplir ese edificio para que me afecte la solucion en este punto? Similarmente, si en la coordenada x terminara un edificio con altura h, que condicion tiene que cumplir para afectar la solucion?
+  </p><p>
+  Que estructura de datos tengo que mantener para poder chequear estas condiciones eficientemente?
+  </p>
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  <p>
+  Hay que hacer sweep line. La estructura de datos que mantenemos es un map<int,int> que mapea de alturas a cantidad de edificios activos con esa altura. 
+  </p><p>
+  Cuando comienza un edificio con altura h, si es mayor a cualquier edificio en el map entonces agregamos su coordenada x y su altura h a la solucion. Luego hacemos map[h]+=1;
+  </p><p>
+  Cuando termina un edificio con altura h, entonces hacemos map[h]-=1 y si despues de eso map[h]==0 entonces sacamos h del map. Sea h' la altura del edificio mas alto despues de sacar este edificio del map. Si h>h', agregamos x y h' a la solucion.
+  </p><p>
+  Hay que tener cuidado en como se ordenan los eventos si hay multiples inicios y terminos en una misma coordenada.
+  </p>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/D_the_skyline_problem.cpp">Código de ejemplo</a>
+</details>
+
+
+### J - Triangles
+<details>
+  <summary> Hint triangulo mas grande </summary>
+  <details>
+    <summary>Hint</summary>
+    Los vertices del triangulo mas grande tienen que cumplir una propiedad especifica que hace mas facil entontrarlos.
+  </details>
+  <details> 
+    <summary>Hint 2</summary>
+    Los vertices del triangulo mas grande tienen que estar en el convex hull de los puntos. Dado dos vertices cualquiera en el convex hull, como encontrar eficientemente el tercer punto que forma el triangulo mas grande?
+  </details>
+  <details> 
+    <summary>Hint 3</summary>
+    Dado dos vertices, podemos hacer ternary search sobre los vertices del convex hull para encontrar el tercer vertice que maximice el area. Tambien podemos encontrar los puntos extremos del convex hull segun el vector direccion perpendicular al vector que uno los dos vertices originales (<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/D_the_skyline_problem.cpp">mas detalles</a>).
+  </details>
+</details>
+<details>
+  <summary> Hint triangulo mas chico </summary>
+  <details>
+    <summary>Hint</summary>
+    <p>
+    Supongamos que estamos considerando un par de puntos (u,v) como la base del triangulo, y necesitamos un punto w que minimice el area del triangulo (u,v,w).
+    Supongamos que tenemos ordenamos todos los puntos segun una funcion lineal cuyas curvas de nivel son paralelas a la recta que pasa por (u,v). Entonces u y v son consecutivos en este arreglo ordenado (a menos que haya un tercer punto colineal entre medio, pero en este caso el area es 0 y terminamos), y el w optimo es el inmediatamente posterior o anterior a u y v en el arreglo.
+    </p>
+    <p>
+    Esto es correcto, pero no es muy eficiente (no podemos tomar todos los pares p_i=(u_i,v_i) y luego ordenar todos los puntos en base a la recta que pasa por ellos).
+    Sin embargo, existe una manera de ordenar los pares de puntos de manera que si tenemos los puntos ordenados segun la recta que pasa por un par p_i=(u_i,v_i), entonces podemos obtener los puntos ordenados segun la recta que pasa por p_{i+1}=(u_{i+1},v_{i+1}) en tiempo constante. Con esto nos basta ordenar los puntos una vez, y luego podemos en tiempo constante procesar cada par de puntos.
+    </p>
+    <p>
+    Cual es esta manera de ordenar los pares de puntos? Como pasar de un orden de los puntos al siguiente en tiempo constante?
+    </p>
+  </details>
+  <details> 
+    <summary>Hint 2</summary>
+    La manera de ordenar los pares de puntos es segun la pendiente de la recta que pasa por ellos.
+  </details>
+  <details> 
+    <summary>Hint 3</summary>
+    Para pasar del orden dado por p_i=(u_i,v_i) al orden dado por p_{i+1}=(u_{i+1},v_{i+1}), basta hacer swap de u_i y v_i en el arreglo. Demostrar la correctitud queda como ejercicio al lector.
+  </details>
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Seguir los hints.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/J_triangles.cpp">Código de ejemplo</a>
+</details>
+
+
+### K - Cake Cut
+<details> 
+  <summary>Hint</summary>
+  Si hacemos un preprocesamiento lineal al comienzo, luego podemos en tiempo constante calcular el area de los pedazos para cualquier corte (v,w).
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Sea P_{vw} el area del pedazo mas grande si hacemos el corte (v,w). El area del pedazo de carol esta dado por max_v{ min_w {P_{vw}} }. Este valor lo podemos obtener en tiempo cuadratico con un doble for sobre v y w. Esto es correcto, pero no pasa en el tiempo. Como evitarnos el doble for?
+</details>
+<details> 
+  <summary>Hint 3</summary>
+  <p>
+  Si tenemos un v fijo, entonces P_{vw} es una funcion convexa sobre w. Basta avanzar w hasta justo antes que P_{vw} comienze a aumentar.
+  </p>
+  <p>
+  Ademas, si dado un v tenemos que el w optimo es w_v, y para un v'>v el optimo es w_{v'}, entonces w_v &lt; w_{v'} &lt; v' (considerando el arreglo ciclico de puntos). En otras palabras, no necesitamos comenzar a iterar w desde el comienzo, nos basta comenzar desde el optimo para el v anterior y luego iterar sobre w modulo n. Esto hace no iteremos mas de 2*n veces sobre w, lo que hace que el tiempo total sea lineal.
+  </p>
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  El area del poligono puede ser calculada como la suma y resta del area de los trapecios bajo cada arista. Ademas podemos guardar las sumas parciales para poder calcular el area de los pedazos en tiempo constante.
+
+  Luego basta hacer lo que dicen los hints 2 y 3: Hacer un for sobre v, y mantener un puntero al w optimo. Luego en cada iteracion de v, aumentar w (modulo n) hasta justo antes que el area del pedazo mas grande empieze a aumentar. Este es el w optimo. Actualizar la maxima area con este (v,w), y luego pasar a la siguiente iteracion sobre v.
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/K_cake_cut.cpp">Código de ejemplo</a>
+</details>
 
 <!-- <details> 
   <summary>Hint</summary>   
