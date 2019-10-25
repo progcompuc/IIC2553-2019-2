@@ -61,7 +61,7 @@ title: contest 10 - hints y códigos de ejemplo
   </p><p>
   Hay que tener cuidado en como se ordenan los eventos si hay multiples inicios y terminos en una misma coordenada.
   </p>
-  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest9/D_the_skyline_problem.cpp">Código de ejemplo</a>
+  <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/D_the_skyline_problem.cpp">Código de ejemplo</a>
 </details>
 
 
@@ -78,7 +78,7 @@ title: contest 10 - hints y códigos de ejemplo
   </details>
   <details> 
     <summary>Hint 3</summary>
-    Dado dos vertices, podemos hacer ternary search sobre los vertices del convex hull para encontrar el tercer vertice que maximice el area. Tambien podemos encontrar los puntos extremos del convex hull segun el vector direccion perpendicular al vector que uno los dos vertices originales (<a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/D_the_skyline_problem.cpp">mas detalles</a>).
+    Dado dos vertices, podemos hacer ternary search sobre los vertices del convex hull para encontrar el tercer vertice que maximice el area. Tambien podemos encontrar los puntos extremos del convex hull segun el vector direccion perpendicular al vector que uno los dos vertices originales (<a href="http://geomalgorithms.com/a14-_extreme_pts.html">mas detalles</a>).
   </details>
 </details>
 <details>
