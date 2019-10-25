@@ -133,9 +133,11 @@ title: contest 10 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
+  <p>
   El area del poligono puede ser calculada como la suma y resta del area de los trapecios bajo cada arista. Ademas podemos guardar las sumas parciales para poder calcular el area de los pedazos en tiempo constante.
-
+  </p><p>
   Luego basta hacer lo que dicen los hints 2 y 3: Hacer un for sobre v, y mantener un puntero al w optimo. Luego en cada iteracion de v, aumentar w (modulo n) hasta justo antes que el area del pedazo mas grande empieze a aumentar. Este es el w optimo. Actualizar la maxima area con este (v,w), y luego pasar a la siguiente iteracion sobre v.
+  </p>
   <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2019-2/blob/master/code_samples/contest10/K_cake_cut.cpp">Código de ejemplo</a>
 </details>
 
