@@ -30,20 +30,20 @@ title: contest 11 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   <p>
-  El DP es sobre los subconjuntos de filas, para cada columna. En la columna c, el DP[c][mask] va a ser el maximo de DP[c-1][mask1] + maxcol(c, mask2), para los pares mask1 y mask2, donde mask1 | mask2 = mask, mask1 & mask2 = 0, y para calcular maxcol(c, mask2) necesitas revisar todas las rotaciones de mask2 y evaluarlas . Esto tiene complejidad O(2^2n · m · n^2) para cada caso, lo que aun no es suficiente.
+  El DP es sobre los subconjuntos de filas, para cada columna. En la columna c, el DP[c][mask] va a ser el maximo de DP[c-1][mask1] + maxcol(c, mask2), para los pares mask1 y mask2, donde mask1 | mask2 = mask, mask1 & mask2 = 0, y para calcular maxcol(c, mask2) necesitas revisar todas las rotaciones de mask2 y evaluarlas. Esto tiene complejidad O(2^2n · m · n^2) para cada test, lo que aun no es suficiente.
   </p>
   <p>
-  Optimizamos usando el hint 3. Se puede hacer un preproceso sobre los masks y las columnas. Esto mejora la complejidad a O(n^2 · m + 2^2n · m) para cada caso.
+  Optimizamos usando el hint 3. Se puede hacer un preproceso sobre los masks y las columnas para tener los maxcol(c, mask). Esto mejora la complejidad a O(2^n · n^2 · m + 2^2n · m) para cada test.
   </p>
   <p>
-  Finalmente, con el hint 4, sabemos que no hay que ver todas las columnas. Lo que se puede hacer, es ordenar las columnas por su valor máximo, y considerar solo las n primeras. Esto mejora la complejidad a O(n^3 + 2^2n · n) por caso, lo que pasa raspando.
+  Finalmente, con el hint 4, sabemos que no hay que ver todas las columnas. Lo que se puede hacer, es ordenar las columnas por su valor máximo, y considerar solo las n primeras. Esto mejora la complejidad a O(2^n · n^3 + 2^2n · n) por test, lo que pasa raspando.
   </p>
   <a href="https://codeforces.com/contest/1209/submission/63502896">Código de ejemplo</a>
 </details>
 <details> 
   <summary>Extra</summary>
   <p>
-  Si usas un lenguaje lento (Java) vas a necesitar un par de optimizaciones extra:</br></br>
+  Si usas un lenguaje lento (Java) vas a necesitar un par de optimizaciones extra:
   </p>
   <p>
   * Las posibles rotaciones para un bitmask forman una clase de equivalencia. Por ejemplo, para n = 4 las clases son {0000}, {0001, 0010, 0100, 1000}, {0011, 0110, 1100, 1001}, {0101, 1010}, {0111, 1110}, {1111}. El DP no necesitas hacerlo sobre todos los bitmask, sino sobre las clases de equivalencia. Para n = 12, los bitmask posibles son 4096 y las clases son 352, lo que mejora el tiempo en un factor de ~11,6.
