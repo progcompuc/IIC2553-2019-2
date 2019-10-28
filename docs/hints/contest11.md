@@ -4,6 +4,25 @@ title: contest 11 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 11](../contests#contest-11) > ```{{page.title}}```
 
+### I - Go up the ultras
+
+<details> 
+  <summary>Hint 1</summary>
+  Dado un punto i-ésimo del input, podemos separar el problema en 2: encontrar el D_derecha y el D_izquierda. Así, el D será min(D_izquierda, D_derecha).
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Notar que para calcular D_izquierda de un punto i-ésimo, sólo importa la altura mínima que hay entre i y la primera cúspide mayor estricta hacia la izquierda. Cualquier otra cúspide mayor estricta que esté más a la izquierda implica que para llegar a ella debo pasar por el mismo mínimo que está entre i y la primera cúspide mayor estricta, y lo que pase más allá da lo mismo. El mismo razonamiento aplica a D_derecha.
+</details>
+<details> 
+  <summary>Hint 3</summary>
+  Para calcular D_izquierda para cada punto, piensa en una forma de iterar sobre los puntos de izquierda a derecha e ir manteniendo en el proceso una estructura de datos que resuma de manera compacta el relieve a la izquierda del punto actual en la iteración, de tal manera que sea fácil calcular D_izquierda para el punto actual. Y luego repite lo mismo pero al revés para D_derecha.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  El problema se puede resolver usando stacks, de una forma análoga a como se resuelve el problema de encontrar el rectángulo más grande en un histograma con stacks (<a href="https://www.spoj.com/problems/HISTOGRA/">link al problema</a>, recomendado como ejercicio al lector). Veamos cómo calcular D_izquierda para cada punto (para D_derecha es simétrico): Imaginemos que en la iteración actual estamos parados en el punto i-ésimo, y definamos la función F(j) = max{ H[k] for k = j .. i } (con j < i). Si graficamos F(j) se ve como una función escalonada creciente (de derecha a izquierda). Intuitivamente a medida que avanzamos hacia la izquierda desde i y vemos una nueva cumbre más alta que todas las anteriores, comienza un nuevo "peldaño" de la función F (se recomienda graficar con lápiz y papel esto). Imaginemos que identificamos los puntos en que comienzan (hacia la izquierda) estos "peldaños" y además junto con este punto inicial guardamos la altura mínima de los puntos bajo la sombra del peldaño asociado. La idea es que toda esta info la podemos representar a través de un stack de pares (h_peldaño, min_h_en_peldaño). A medida que iteramos sobre los puntos podemos ir actualizando este stack (hacemos pop mientras H[i] sea >= al h_peldaño del tope del stack y al final pusheamos el H[i] actual, y en el proceso podemos ir calculando el min_h_en_peldaño nuevo que pushearemos también). Así, podemos computar un arreglo L donde L[i] = la altura mínima desde i hacia la cúspide mayor estricta ubicada a la izquierda. Y análogamente podemos calcular un R[i] hacia la derecha. Finalmente D[i] = H[i] - max(L[i], R[i]), y si D[i] >= 150000, i es ultra. El algoritmo est O(N) porque un punto es pusheado y popeado del stack a lo más 1 vez. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/12674_GoUpTheUltras.cpp">Código de ejemplo</a>
+</details>
+
 ### Z - Rotate Columns (hard version)
 
 <details> 
