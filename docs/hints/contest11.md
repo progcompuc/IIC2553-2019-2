@@ -31,7 +31,7 @@ title: contest 11 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Armamos un grafo donde los nodos son el robot + las manchas y las aristas tienen peso igual a la distancia entre 2 nodos en el tablero. Las distancias se pueden calcular con BFS. Después queremos encontrar el tour más corto que parte en el robot y visita a todas las manchas. Esto se puede hacer con TSP (TSP = travelling salesman problem, un DP muy estándar con bitmask con complejidad O(N^2 log N)). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/CLEANRBT_CleaningRobot.cpp">Código de ejemplo</a>
+  Armamos un grafo donde los nodos son el robot + las manchas y las aristas tienen peso igual a la distancia entre 2 nodos en el tablero. Las distancias se pueden calcular con BFS. Después queremos encontrar el tour más corto que parte en el robot y visita a todas las manchas. Esto se puede hacer con TSP (TSP = travelling salesman problem, un DP muy estándar con bitmask con complejidad O(N x 2^N)). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/CLEANRBT_CleaningRobot.cpp">Código de ejemplo</a>
 </details>
  
 ### Y - Sign of Matrix
