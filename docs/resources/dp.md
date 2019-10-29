@@ -18,7 +18,7 @@ title: "Programación Dinámica (DP)"
 - Matrix Chain Multiplication: [video1](https://youtu.be/prx1psByp7U), [video2](https://youtu.be/eKkXU3uu2zk)
 - Longest Increasing Subsequence (LIS): [video](https://youtu.be/fV-TF4OvZpk), [explicación stackoverflow](https://stackoverflow.com/questions/2631726/how-to-determine-the-longest-increasing-subsequence-using-dynamic-programming), [código ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Dynamic_Programming/LIS.cpp)
 - Knapsack problem: [video](https://youtu.be/nLmhmB6NzcM)
-- Traveling Salesman Problem (TSP): [video](https://youtu.be/XaXsJJh-Q5Y), [implementación usando bitmasks](https://www.geeksforgeeks.org/bitmasking-dynamic-programming-set-2-tsp/), [código ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Dynamic_Programming/TSP%20(travelling%20salesman%20problem).cpp)
+- Traveling Salesman Problem (TSP): [video](https://youtu.be/XaXsJJh-Q5Y), [implementación usando bitmasks](https://www.geeksforgeeks.org/bitmasking-dynamic-programming-set-2-tsp/), [código ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Dynamic_Programming/TSP.cpp)
 - Minimum Edit Distance Between 2 Strings - The Levenshtein Distance: [video1](https://youtu.be/Xxx0b7djCrs), [video2](https://youtu.be/MiqoA-yF-0M)
 - Otros ejemplos: [playlist](https://www.youtube.com/watch?v=8LusJS5-AGo&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr)
 
