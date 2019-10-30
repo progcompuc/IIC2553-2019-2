@@ -35,7 +35,7 @@ title: contest 11 - hints y códigos de ejemplo
   
   <p>U -1-> M0 -2-> M1 -0-> M2 -4-> M3 -5-> V</p>
   <p>V -1-> M4 -2-> M5 -0-> M6 -4-> M7 -5-> U</p>
- Donde los M_i son nodos intermedios nuevos, y las notación usada [nodoA] -[peso]-> [nodoB] denota una arista dirigida de nodoA a nodoB con peso <peso>.  
+ Donde los M_i son nodos intermedios nuevos, y las notación usada [nodoA] -[peso]-> [nodoB] denota una arista dirigida del nodo [nodoA] al nodo [nodoB] con peso [peso].  
 </details>
 <details> 
   <summary>Solución + código</summary>
