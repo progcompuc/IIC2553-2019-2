@@ -54,6 +54,68 @@ title: contest 11 - hints y códigos de ejemplo
   <summary>Solución + código</summary>
   Armamos un grafo donde los nodos son el robot + las manchas y las aristas tienen peso igual a la distancia entre 2 nodos en el tablero. Las distancias se pueden calcular con BFS. Después queremos encontrar el tour más corto que parte en el robot y visita a todas las manchas. Esto se puede hacer con TSP (TSP = travelling salesman problem, un DP muy estándar con bitmask con complejidad O(N x 2^N)). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/CLEANRBT_CleaningRobot.cpp">Código de ejemplo</a>
 </details>
+
+### V - Reklame
+
+<details> 
+  <summary>Hint</summary>
+  Si quieres comenzar un request después de que ya terminaron todos los requests, siempre te conviene hacer que comience inmediatamente después del último día con publicidad.
+</details>
+<details> 
+  <summary>Hint</summary>
+  Una vez haces que un request comience un día d, entonces para el siguiente request te puedes olvidar de lo que hubo en los días d' < d.
+</details>
+ <details> 
+  <summary>Hint</summary>
+  Fíjate que nunca vas a hacer que un request comience antes de 7 días previo al último día con publicidad.
+</details>
+<details> 
+  <summary>Hint</summary>
+  Antes de considerar los hints de arriba, podemos pensar en un DP mas o menos naive que describe la distribución completa de ads en el banner, para los primeros d días. Pero esto no pasa porque son demasiados estados. Con los hints nos damos cuenta que solo hace falta recordar los últimos 7 días, y una de sus dimensiones del DP va a ser (k+1)^7.
+</details>
+<details> 
+  <summary>Hint</summary>
+  <p>
+  Con los tres hints de arriba, podemos armar un DP booleano de dimensiones (k+1)^7 × n × (7n+1), es decir, cada estado va a ser (mask, i, r) donde mask es la descripción de los últimos 7 días del banner, i es el request que estoy revisando, y r es el día en que termino todos los requests hasta el i. Por lo tanto dp[mask][i][r] va a ser true si es que existe una distribución de los primeros i requests, cuyos últimos 7 días se ven como mask, que termina el día r. Después retornamos el mínimo r para dp[][n-1][]. Esto todavía es muy lento.
+  </p>
+  <p>
+  Ahora, imagina que los primeros cuatro requests son:
+  </p>  
+<table><tr><th>A</th><th>_</th><th>_</th><th>A</th><th>A</th><th>A</th><th>A</th></tr></table>
+<table><tr><th>B</th><th>_</th><th>_</th><th>B</th><th>_</th><th>_</th><th>B</th></tr></table>
+<table><tr><th>C</th><th>C</th><th>C</th><th>_</th><th>_</th><th>_</th><th>_</th></tr></table>
+<table><tr><th>D</th><th>_</th><th>D</th><th>_</th><th>_</th><th>_</th><th>D</th></tr></table>
+  <p>
+  Y tienes estas dos formas de colocarlos en los primeros días, con k = 2:
+  </p>  
+  <table>
+  <tr>
+    <th>A</th><th>_</th><th>_</th><th>A</th><th>A</th><th>A</th><th>A</th><th>C</th><th>C</th><th>C</th><th>_</th><th>_</th><th>_</th><th>_</th>
+    </tr>
+    <tr>
+    <th>B</th><th>_</th><th>_</th><th>B</th><th>_</th><th>_</th><th>B</th><th>D</th><th>_</th><th>D</th><th>_</th><th>_</th><th>_</th><th>D</th>
+  </tr>
+  </table>
+<table><tr><th>A</th><th>B</th><th>_</th><th>A</th><th>A</th><th>A</th><th>A</th><th>B</th><th>_</th><th>_</th><th>_</th><th>_</th><th>_</th><th>_</th></tr>
+<tr><th>_</th><th>C</th><th>C</th><th>C</th><th>B</th><th>D</th><th>_</th><th>D</th><th>_</th><th>_</th><th>_</th><th>D</th><th>_</th><th>_</th></tr></table>
+  <p>
+  Fíjate que en cada distribución la cantidad de ads por día en el banner es:
+  </p>
+<table><th>2</th><th>0</th><th>0</th><th>2</th><th>1</th><th>1</th><th>2</th><th>2</th><th>1</th><th>2</th><th>0</th><th>0</th><th>0</th><th>1</th></table>
+<table><th>1</th><th>2</th><th>1</th><th>2</th><th>2</th><th>2</th><th>1</th><th>2</th><th>0</th><th>0</th><th>0</th><th>1</th></table>
+  <p>
+  Los últimos 7 días en las dos distribuciones se ven igual. Para el quinto request, ¿vale la pena recordar estas dos distribuciones?
+  </p>
+</details>
+  <details> 
+<summary>Solución</summary>
+    <p>
+  Es un DP de tamaño (k+1)^7 × n, donde cada estado (mask, i) guarda la forma más eficiente (que termina en la primera fecha posible) de distribuir los primeros i requests, y tal que los últimos 7 días se ven como mask. 
+    </p>
+    <a href="https://github.com/mmunos/cp/blob/master/Z_trening/807%20-%20Reklame">Código</a>
+</details>
+
+
  
 ### Y - Sign of Matrix
 <details> 
@@ -74,7 +136,7 @@ title: contest 11 - hints y códigos de ejemplo
    Para ver si hay ciclo necesitas igualar variables, esto se puede hacer con Union Find. Cuando ya verificaste que no hay ciclo puedes separar las variables en un vértice cada uno, o bien trabajar sobre el mismo grafo y recordar cuántas variables están metidas en cada vértice.
    </p>
    <p>
-   Lo que quieres es asignar valores de enteros a los niveles de este DAG con tal de que se respeten las desigualdades. Itera por todas y devuelve la de costo mínimo. El costo es la cantidad de <b>variables</b> por nivel × el valor absoluto del entero que estas asignando. Siempre hay una asignación que usa el 0 así que solo debes iterar por 2*n de ellas. Complejidad O(n^2 * T) para T tests.
+   Lo que quieres es asignar valores de enteros a los niveles de este DAG con tal de que se respeten las desigualdades. Itera por todas y devuelve la de costo mínimo. El costo es la cantidad de <b>variables</b> por nivel × el valor absoluto del entero que estas asignando. Siempre hay una asignación que usa el 0 así que solo debes iterar por 2n de ellas. Complejidad O(n^2 × T) para T tests.
    </p>
    <a href="https://github.com/mmunos/cp/tree/master/uva/11671%20-%20Sign%20Of%20Matrix">Codigo</a>
 </details>
@@ -84,7 +146,7 @@ title: contest 11 - hints y códigos de ejemplo
 
 <details> 
   <summary>Hint</summary>
-  Los límites sugieren que la complejidad debe ser O(m·2^n), piensa de qué te sirve ver los subconjuntos de cada columna.
+  Los límites sugieren que la complejidad debe ser O(m × 2^n), piensa de qué te sirve ver los subconjuntos de cada columna.
 </details>
 <details> 
   <summary>Hint</summary>
