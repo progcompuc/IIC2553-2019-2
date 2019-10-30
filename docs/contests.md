@@ -86,7 +86,7 @@ Octubre 08, 12 días, [link a **contest**](https://vjudge.net/contest/333057), g
 #### (\*\* GRUPAL, equipos de hasta 3 personas, se puede hacer equipo con oyentes y/o ayudantes)
 Octubre 15, 30 días, [link a **contest**](https://vjudge.net/contest/335209), google doc para bonus de **explicaciones**: _pending_\\
 **Tópicos**: [De Todo](resources/resources)\\
-**Puntos**: _pending_\\
+**Puntos**: 7, 8, 6, 3, 5, 8, 6, 6, 4, 4, 4, 4, 4, 7, 6, 7, 4, 5, 5, 7, 5, 6, 4, 4, 6, 7 \\
 **Puntaje Mínimo Esperado**: 50\\
 **Hints** y **códigos de ejemplo**: [link](hints/contest11)
 
