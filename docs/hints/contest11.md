@@ -22,6 +22,27 @@ title: contest 11 - hints y códigos de ejemplo
   <summary>Solución + código</summary>
   El problema se puede resolver usando stacks, de una forma análoga a como se resuelve el problema de encontrar el rectángulo más grande en un histograma con stacks (<a href="https://www.spoj.com/problems/HISTOGRA/">link al problema</a>, recomendado como ejercicio al lector). Veamos cómo calcular D_izquierda para cada punto (para D_derecha es simétrico): Imaginemos que en la iteración actual estamos parados en el punto i-ésimo, y definamos la función F(j) = max{ H[k] for k = j .. i } (con j <= i). Si graficamos F(j) se ve como una función escalonada creciente (de derecha a izquierda). Intuitivamente a medida que avanzamos hacia la izquierda desde i y vemos una nueva cumbre más alta que todas las anteriores, comienza un nuevo "peldaño" de la función F (se recomienda graficar con lápiz y papel esto). Imaginemos que identificamos los puntos en que comienzan (hacia la izquierda) estos "peldaños" y además junto con este punto inicial guardamos la altura mínima de los puntos bajo la sombra del peldaño asociado. La idea es que toda esta info la podemos representar a través de un stack de pares (h_peldaño, min_h_en_peldaño). A medida que iteramos sobre los puntos podemos ir actualizando este stack (hacemos pop mientras H[i] sea >= al h_peldaño del tope del stack y al final pusheamos el H[i] actual, y en el proceso podemos ir calculando el min_h_en_peldaño nuevo que pushearemos también). Así, podemos computar un arreglo L donde L[i] = la altura mínima desde i hacia la cúspide mayor estricta ubicada a la izquierda. Y análogamente podemos calcular un R[i] hacia la derecha. Finalmente D[i] = H[i] - max(L[i], R[i]), y si D[i] >= 150000, i es ultra. El algoritmo es O(N) porque un punto es pusheado y popeado del stack a lo más O(1) veces. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/12674_GoUpTheUltras.cpp">Código de ejemplo</a>
 </details>
+  
+ ### O - Koala and Notebook
+
+<details> 
+  <summary>Hint 1</summary>
+  Notar que si hay 2 caminos para llegar a un nodo X, siempre conviene el camino cuyo string asociado (concatenación de los números en el camino) sea el más corto posible (un número con menos dígitos es siempre menor). Si los 2 strings empatan en largo, en ese caso me conviene el camino con el string lexicográficamente menor.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Si tengo una arista bidireccional U-V etiquetada con el string "12045", podemos reemplazar dicha arista por 2 cadenas de aristas <strong>dirigidas</strong> obteniendo un nuevo grafo equivalente al original:
+  
+  <p>U -1-> M0 -2-> M1 -0-> M2 -4-> M3 -5-> V</p>
+  <p>V -1-> M4 -2-> M5 -0-> M6 -4-> M7 -5-> U</p>
+ Donde los M_i son nodos intermedios nuevos, y las notación usada <nodoA> -<peso>-> <nodoB> denota una arista dirigida de nodoA a nodoB con peso <peso>.  
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Modificamos el grafo usando el hint 2. Luego la idea es usar BFS por niveles, donde el i-ésimo nivel es el conjunto de todos los nodos que están a i pasos del nodo 1 (y no se puede llegar desde 1 en menos pasos). El nivel base es el nodo 1 solo que trivialmente tiene costo 0 llegar. Luego inductivamente podemos calcular el óptimo para todos los nodos del nivel i-ésimo asumiendo que tenemos y calculamos bien el óptimo para los nodos del (i-1)-ésimo. Para ello supongamos que por cada nivel tenemos (1) los nodos que están en ese nivel, (2) el costo óptimo para llegar a ellos y (3) un arreglo "rank" que resume cómo están compardos los strings de los caminos óptimos a cada uno de los nodos del nivel (si un string es mayor lexicográficamente que otro, su rank debe ser mayor al del otro, y si hay empate lexicográfico, los ranks deben empatar también). Inductivamente si asumimos que tenemos todo eso calculado bien para el nivel (i-1)-ésimo, no es díficil obtener lo mismo para el nivel i-ésimo: los nodos del nivel i-ésimo son nodos no visitados alcanzables en un paso por nodos del nivel (i-1)-ésimo, el string del camino óptimo a un nodo X del nivel i-ésimo es igual a un string óptimo a un nodo Y del nivel anterior + el dígito de la arista de Y a X (si hay más de una opción así, el óptimo es la menor lexicográficamente entre todas esas, lo cual se puede obtener comparando pares (rank[Y], digit[Y][X])). Finalmente los costos óptimos para el nivel i-ésimo se obtienen como costo[u] = (costo[p] * 10 + digit[p][u]) % MOD, donde p es el nodo "padre" del nivel anterior desde el cual llegamos al nodo u óptimamente.
+  
+  <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1209F_KoalaAndNotebook/sol.cpp">Código de ejemplo</a>
+</details>
  
 ### U - Cleaning Robot
 
