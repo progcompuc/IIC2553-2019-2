@@ -4,6 +4,40 @@ title: contest 11 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 11](../contests#contest-11) > ```{{page.title}}```
 
+### G - Candy's Candy
+
+<details>
+  <summary>Hint 1</summary>
+  Si la suma de todos los candies es totC, el tamaño de un pack debe ser divisor de totC
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Si armamos packs de tamaño d, entonces:
+  <ul>
+    <li>d debe ser divisor de totC</li>
+    <li>en total habrán k = totC/d packs</li>
+    <li>como deben haber al menos F flavored packs y 1 variety pack, k debe ser >= F+1</li>
+    <li>como debe haber un variety pack, entonces d debe ser múltiplo de F</li>
+    <li>llamemos minC = min { C[i] for i = 1 ... F }, como cada flavor forma parte de un flavored pack y un variety pack, entonces minC >= d + d/F</li>
+  </ul>
+</details>
+<details> 
+  <summary>Hint 3</summary>
+  Si tenemos una combinación (d, k) válida según el hint 2 (con d = tamaño del pack, k = número de packs), de base ya tenemos los F flavored packs y 1 variety pack obligatorios, por lo tanto por cada flavor nos sobra C[i] - (d + d/F) candies (para i = 1 .. F). Si vemos estos candies que nos sobran como F columnas de un histograma, podemos armar variety packs hasta la altura de la columna más chica. De ahí en adelante estamos obligados a usar flavored packs.
+</details>
+<details> 
+  <summary>Hint 4</summary>
+  Pensemos en una columna C[i] - (d + d/F) de nuestro histograma. Esta columna la tenemos que empaquetar con flavored packs (de tamaño d) o con variety packs (que van a restar d/F candies de esta columna). Esto significa que si calculamos el resto R[i] = (C[i]  - (d+d/F)) % d, este resto R[i] no puede ser empaquetado con flavored packs, la única opción es empaquetarlo con variety packs y por tanto R[i] debe ser múltiplo de (d/F). Además, si fijamos una cantidad n de variety packs y el resto lo empaquetamos con flavored packs, tenemos que asegurarnos de que el sobrante que dejamos para flavored packs sea múltiplo de d.
+</details>
+<details> 
+  <summary>Hint 5</summary>
+  Volviendo a nuestra definición R[i] = (C[i]  - (d+d/F)) % d del hint 4, este sobrante debe ser empaquetado con variety packs obligadamente, pero notar que un variety pack saca dulces de <strong>todos los flavors</strong> a la vez. Por lo tanto, concluimos que se debe cumplir que R[i] == R[j] para todo i, j (si no se cumple, no podemos empaquetar válidamente).
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Calculamos totC = sum { C[i] for i = 1 ... F }, encontramos todos los divisores d válidos según el hint 2. Luego por cada divisor contamos cuántos empaquetamientos distintos podemos hacer. Tenemos 2 casos: 1) Si con el empaquetamiento obligatorio quedó todo empaquetado (i.e. minC == maxC == d + (d/F)), entonces sumamos 1 al contador. 2) De lo contrario sobraron dulces en algunas columnas. Encontramos R[1] según el hint 4 y verificamos que R[i] == R[1] para i = 2 .. F, además calculamos Q[i] = (C[i] - (d+d/F)) / d (es decir, cuántos bloques de tamaño d nos caben en la columna i-ésima, usando división entera). Con eso podemos definir minQ = min { Q[i] para i = 1 .. F }. Entonces, volviendo a la visualización como histograma, estamos obligados a hacer variety packs hasta la altura R[1], y de ahí en adelante podemos hacer variety packs hasta la altura R[1] + d * 1, R[1] + d * 2, ..., R[1] + d * minQ (y en cada caso el resto lo empaquetamos con flavored packs). Por lo tanto sumaos minQ + 1 al contador. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/12358_Candy'sCandy.cpp">Código de ejemplo</a>
+</details>
+
 ### I - Go up the ultras
 
 <details> 
