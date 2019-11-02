@@ -92,7 +92,7 @@ title: contest 11 - hints y códigos de ejemplo
 <details> 
   <summary>Hint 3</summary>
   <p>El resumen del Hint 2 es que toda query tiene una query equivalente que corresponde a un rectángulo maximal en el "histograma" del arreglo LCP (un rectángulo que no podemos hacer más alto ni más ancho sin salirnos del histograma). Por lo tanto, todos los "searchable subsets" son los archivos distintos que aparecen en el rango de algún rectángulo maximal del arreglo LCP.</p>
-  <p>** Hay un caso borde: lo dicho anterior es verdad de las querys que hacen match en 2 o más sufijos, ¿pero qué pasa con las queries que hacen match con exactamente un solo sufijo?</p>
+  <p>** Hay un caso borde: lo dicho anteriormente es verdad de las querys que hacen match en 2 o más sufijos, ¿pero qué pasa con las queries que hacen match con exactamente un solo sufijo?</p>
 </details>
 <details>
   <summary>Solución + código</summary>
