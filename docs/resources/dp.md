@@ -32,6 +32,7 @@ title: "Programación Dinámica (DP)"
     - (youtube) [Dynamic Programming Optimization: Divide and Conquer technique](https://www.youtube.com/watch?v=wLXEWuDWnzI)
     - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Dynamic_Programming/Divide%26ConquerOptimization.cpp)    
 - Convex Hull Trick:
+    - [Codeforces: [Tutorial] Convex Hull Trick — Geometry being useful](https://codeforces.com/blog/entry/63823)
     - <https://jeffreyxiao.me/blog/convex-hull-trick>
 - Knuth's Optimization:
     - <https://jeffreyxiao.me/blog/knuths-optimization>
