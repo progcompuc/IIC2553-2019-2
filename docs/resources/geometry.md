@@ -5,6 +5,9 @@ title: "Geometría"
 
 # {{page.title}}
 
+## Apuntes genéricos de geometría:
+- <https://vlecomte.github.io/cp-geo.pdf> (buenísimo y muy completo)
+
 ## Producto Punto y Producto Cruz
 - [youtube: Cross Product and Dot Product: Visual explanation](https://www.youtube.com/watch?v=h0NJK4mEIJU)
 - Producto Cruz:
